@@ -14,17 +14,30 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 1. Full access to the platform
 2. Allow upload CSV/excel file
 3. Users should get the option to:
-*Highlight duplicates in a single file
-*Remove duplicates and return a single file
-*Remove duplicates and return 2 files
-*Highlight duplicates and return 2 files
-*Show usage examples to users
-*Allow user to save data and come back to download
+*Highlight duplicates in a single file*
+*Remove duplicates and return a single file*
+*Remove duplicates and return 2 files*
+*Highlight duplicates and return 2 files*
+*Show usage examples to users*
+*Allow user to save data and come back to download*
 
+## Project links
+
+- **Design link**: [figma](https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=0%3A1)
 
 ## Setup local environment
-1. `git clone https://github.com/zuri-training/EXCEL_COMP-Team-101.git` to your local. *Don't fork
+1. `git clone https://github.com/zuri-training/EXCEL_COMP-Team-101.git` to your local. *Don't fork*
 2. `cd EXCEL_COMP-Team-101`
 3. Run `git fetch origin` to fetch remote updates
-4. Pull latest changes from the main branch. `gir pull origin main
+4. Pull latest changes from the main branch. `git pull origin main`
 
+
+## Create new branch *(branch_name = task_title)*
+`git checkout -b (task title)`
+- Make all changes in this branch
+- Commit the changes and push to the repository
+- Create a pull request in the repository and link it to your issue
+- Allow review on your pull request *(Don't do it yourself)*
+
+## Contributors/Team Members
+Amarachi Iheakam
