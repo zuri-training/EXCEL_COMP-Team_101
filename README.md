@@ -40,8 +40,8 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - Allow review on your pull request *(Don't do it yourself)*
 
 ## Contributors/Team Members
-Amarachi Iheakam
-Gift Victor
-David Echendu
-Valerie Osuamkpe
-Ogundairo Abisola
+- Amarachi Iheakam
+- Gift Victor
+- David Echendu
+- Valerie Osuamkpe
+- Ogundairo Abisola
