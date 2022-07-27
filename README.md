@@ -25,6 +25,7 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 
 - **Design link**: [figma](https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=0%3A1)
 - **User research**: [Figjam](https://www.figma.com/file/res4sdWmcEBbOehYEF56al/User-research%2Fflow?node-id=0%3A1)
+- **Brainstorming**: [Notion](https://giftvictor.notion.site/giftvictor/Project-Team-101-6888931b86284f6c92d2d25acb6e4e37)
 
 ## Setup local environment
 1. `git clone https://github.com/zuri-training/EXCEL_COMP-Team-101.git` to your local. *Don't fork*
