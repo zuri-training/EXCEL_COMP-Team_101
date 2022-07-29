@@ -49,3 +49,4 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - Ogundairo Abisola
 - Olaniran Ibitoye
 - Oluwatobiloba Hunkuten
+- Chibundum Ehirim
