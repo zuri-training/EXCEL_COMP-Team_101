@@ -50,3 +50,19 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - Olaniran Ibitoye
 - Oluwatobiloba Hunkuten
 - Chibundum Ehirim
+- Benedict Chima Ogbulachi
+- Loren Gomez
+- Okereke Favour Oluomachi
+- Chioma Okeke
+- Obey Victoria Ayomide
+- Tony Obriku
+- Ariyo Olasunkanmi
+- Cynthia Nsek
+- Bishop Aruoture
+- Mbamarah Julia 
+- David Ayomide Olaniyi
+- Adeoye Olayinka
+- Joseph Joshua Oluwatobi
+- Ayogu Janefrances 
+- Oluwagbemiga Emmanuel Taiwo
+- Hamzat Abdulawwal Olalekan
