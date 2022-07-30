@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-# from decouple import config
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = config("DJANGO_SECRET_KEY", default='django-insecure-@b1@6p=z%$4!%u(#eilty+uc#ar!*)#2x^-qqyn&ojb44@4c_v')
-SECRET_KEY = 'django-insecure-@b1@6p=z%$4!%u(#eilty+uc#ar!*)#2x^-qqyn&ojb44@4c_v'
+SECRET_KEY = config("DJANGO_SECRET_KEY",
+                    default='django-insecure-@b1@6p=z%$4!%u(#eilty+uc#ar!*)#2x^-qqyn&ojb44@4c_v')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-DEBUG = False
+DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -42,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd Party.
-    # 'django_extensions',
+    'django_extensions',
 
     # Local Apps.
     'apps.accounts.apps.AccountsConfig',
@@ -90,6 +89,8 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -128,6 +129,7 @@ LOGIN_URL = 'base:login'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
