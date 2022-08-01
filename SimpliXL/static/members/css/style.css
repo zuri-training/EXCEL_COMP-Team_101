@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: lightcyan;
+  background-color: lightskyblue;
   margin: 0;
   padding: 0;
 }
@@ -15,6 +15,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.username {
+  text-align: right;
+  color: black;
+  padding: 10px 10px 0 0;
 }
 
 nav {
@@ -41,4 +47,9 @@ nav * {
 
 .nav-link:hover {
   background-color: green;
+  color: white;
+}
+
+h1 {
+  text-align: center;
 }

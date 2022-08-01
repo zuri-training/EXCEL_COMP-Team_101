@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # Local Apps.
     'apps.accounts.apps.AccountsConfig',
     'apps.home.apps.HomeConfig',
+    'apps.members.apps.MembersConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +124,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-LOGIN_URL = 'base:login'
+LOGIN_URL = 'accounts:login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
