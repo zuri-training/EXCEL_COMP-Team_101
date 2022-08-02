@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightskyblue;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.username {
+  text-align: right;
+  color: black;
+  padding: 10px 10px 0 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+nav * {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-link {
+  line-height: 50px;
+  display: block;
+  padding: 0 20px;
+}
+
+.nav-link:hover {
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<nav>
+    <li><a href="{% url 'base:home' %}" class="nav-link">Home</a></li>
+    <ul class="navbar">
+        <li><a href="{% url 'base:about' %}" class="nav-link">About</a></li>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'members:home' %}" class="nav-link">Dashboard</a></li>
+            <li><a href="{% url 'accounts:logout' %}" class="nav-link">Logout</a></li>
+        {% else %}
+                <li><a href="{% url 'accounts:login' %}" class="nav-link">Login</a></li>
+            <li><a href="{% url 'accounts:register' %}" class="nav-link">Register</a></li>
+        {% endif %}
+
+        <li><a href=" {% url 'base:authenticate' %}" class="nav-link" >Authenticate Trial</a></li>
+        <li><a href="sample.html" class="nav-link">Not Found</a></li>
+        
+        
+    </ul>
+</nav>
+<hr>

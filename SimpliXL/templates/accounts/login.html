@@ -1,0 +1,39 @@
+{% extends "home/base.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block content %}
+
+    <h1>Login</h1>
+    <hr>
+   
+    <form method="POST" class="login-form">
+         {% if 'next' in request.GET  %}
+            <div class="error">
+                Permission Denied, Login
+            </div>
+        {% endif %}
+
+        {% if form.non_field_errors %}
+            <div class="error">
+                {% for error in form.non_field_errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% csrf_token %}
+        <p>
+            Email:
+            <input type="email" name="username" autofocus="" placeholder="Enter your email address" autocomplete="username" required=""
+            value="{% if form.username.value %} {{form.username.value}} {% endif %}" 
+            >
+        </p>
+        <p>
+            Password:
+            <input type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required="">
+        </p>
+        <input type="submit" value="Login" class="submitBtn">
+    </form>
+    
+{% endblock content %}
