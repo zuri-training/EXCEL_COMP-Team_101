@@ -1,0 +1,14 @@
+{% extends "members/base.html" %}
+
+{% block title %}Upload File{% endblock title %}
+
+{% block content %}
+    <h1>Upload File</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Upload">
+    </form>
+{% endblock content %}

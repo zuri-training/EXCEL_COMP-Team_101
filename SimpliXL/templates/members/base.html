@@ -13,6 +13,26 @@
 <body>
     {% include 'members/nav.html' %}
 
-    {% block content %}{% endblock content %}
+    <div class="content">
+        
+        <aside>
+            <a href=" {% url 'members:home' %} ">Dashboard</a>
+
+            <h2>Account</h2>
+            <a href=" {% url 'members:profile' %} ">Profile</a>
+            <a href=" {% url 'members:delete' request.user.id %} ">Delete</a>
+
+
+            <h2>Files</h2>
+            <a href=" {% url 'members:upload' %} ">Upload</a>
+
+            <h2>Compare</h2>
+            <a href="#">Download</a>
+        </aside>
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+    </div>
+
 </body>
 </html>
