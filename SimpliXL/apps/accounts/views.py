@@ -2,7 +2,6 @@ from django.shortcuts import redirect
 
 from django.views.generic.edit import FormView
 from django.contrib.auth.views import LoginView
-# from django.contrib.auth.forms import UserCreationForm
 from .forms import CustomUserCreationForm
 from django.contrib.auth import login
 

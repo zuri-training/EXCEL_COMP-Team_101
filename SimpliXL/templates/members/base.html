@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title%}{% endblock title%}</title>
 
+    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} ">
     <link rel="stylesheet" href=" {% static 'members/css/style.css' %} ">
 </head>
 <body>
@@ -24,12 +25,21 @@
 
 
             <h2>Files</h2>
-            <a href=" {% url 'members:upload' %} ">Upload</a>
+            <a href=" {% url 'members:upload' %} ">New Upload</a>
+            <a href=" {% url 'members:upload-history' %} ">Upload History</a>
 
             <h2>Compare</h2>
-            <a href="#">Download</a>
+            <a href="#" disabled>Download</a>
         </aside>
         <main>
+            <div class="messages">
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="message {{ message.tags }} ">{{message | safe}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
             {% block content %}{% endblock content %}
         </main>
     </div>

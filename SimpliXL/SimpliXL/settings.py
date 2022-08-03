@@ -135,7 +135,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # UPLOAD FILE LOCATION
 MEDIA_URL = 'media/'
-MEDIA_ROOT = [BASE_DIR / 'media']
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Default primary key field type

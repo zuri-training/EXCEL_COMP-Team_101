@@ -1,0 +1,39 @@
+{% extends 'members/base.html' %}
+
+{% block title %}Upload History{% endblock title %}
+
+{% block content %}
+    <h1>Upload History</h1>
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>File Name</th>
+                <th>Date Uploaded</th>
+                <th colspan=4>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for upload in uploads %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td> {{ upload.file_name }}</td>
+                    <td> {{ upload.date_created }}</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                    <td><a href="#">Download</a></td>
+                    <td><a href="#">Open</a></td>
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table> 
+
+    
+
+{% endblock content %}
+
+
+
+

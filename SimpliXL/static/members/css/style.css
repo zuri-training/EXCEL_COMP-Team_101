@@ -103,3 +103,15 @@ main {
 .backBtn {
   background: green;
 }
+
+.danger {
+  color: red;
+  font-weight: 900;
+}
+
+.errorlist {
+  background-color: red;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
