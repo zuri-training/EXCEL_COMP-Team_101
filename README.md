@@ -38,7 +38,6 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 `git checkout -b (task title)`
 - Make all changes in this branch
 - Commit the changes and push to the repository
-- Create a pull request in the repository and link it to your issue
 - Allow review on your pull request *(Don't do it yourself)*
 
 ## Contributors/Team Members
@@ -61,7 +60,6 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - Bishop Aruoture
 - Mbamarah Julia 
 - David Ayomide Olaniyi
-- Adeoye Olayinka
 - Joseph Joshua Oluwatobi
 - Ayogu Janefrances 
 - Oluwagbemiga Emmanuel Taiwo
