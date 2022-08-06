@@ -14,12 +14,12 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 1. Full access to the platform
 2. Allow upload CSV/excel file
 3. Users should get the option to:
-*Highlight duplicates in a single file*
-*Remove duplicates and return a single file*
-*Remove duplicates and return 2 files*
-*Highlight duplicates and return 2 files*
-*Show usage examples to users*
-*Allow user to save data and come back to download*
+- *Highlight duplicates in a single file*
+- *Remove duplicates and return a single file*
+- *Remove duplicates and return 2 files*
+- *Highlight duplicates and return 2 files*
+- *Show usage examples to users*
+- *Allow user to save data and come back to download*
 
 ## Project links
 
