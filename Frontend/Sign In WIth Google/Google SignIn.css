@@ -1,0 +1,168 @@
+/*universal selector*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+    
+}
+body{
+  min-height: 100vh;
+  align-items:center;  
+  justify-content: center;
+  padding: 86px 367px;
+  background-color: #FCFCFC;
+  font-family: 'Axiforma';
+
+}
+/* styling the div containing all the contents of the page*/
+.container{
+    width: 704px;
+    height: 852px;
+    border: 1px solid #CCCCCC;
+    align-items: center;
+}
+
+/* styling and aligning the google icon and text on top the container*/
+.google-up{
+    width: 706px;
+    height: 44px;
+    border-radius: 5px;
+    margin-left:1.3rem;
+}
+#google-icon{
+    height: 20.28px;
+    width: 20.28px;
+    margin-top: 0.8rem;
+}
+#googleText{
+    width: 152px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+   
+}
+
+/* styling and aligning the logo and text at the center of the container */
+.logo{
+    width: 172px;
+    height:50px;
+    position: relative;
+    left: 19.5rem;
+    top:40px;
+}
+
+/* styling and aligning the  "choose account" text at the center of the container */
+.text{
+    width:351px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    top: 98px;
+    left: 170px;
+}
+
+h1{
+    height: 36px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #0D0D0D; 
+}
+.under-h1{
+    width:274px;
+    height: 44px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #262626;
+}
+
+/* styling and aligning the input*/
+.mail{
+    width:272px;
+    height: 54px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin-top: 160px;
+    margin-left: 68px;   
+}
+
+input{
+    border: none;
+    height: 20px;
+    width: 204px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #999999;
+
+}
+/* removing the border of the input on focus */
+input:focus{
+    outline:none
+}
+
+/* styling and aligning the "use a different account to login" */
+.choose-account{
+    width:273px;
+    height:32px;
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+    gap:32px;
+    margin-top: 30px;
+    margin-left: 68px;
+}
+/* adds animation to the "use a different account to login" */
+.choose-account:hover{
+    cursor: pointer;
+    color: #262626;
+    transition: 1s;
+    animation-name: btn;
+    animation-duration: 1s;
+ }
+ @keyframes btn{
+    from{background-color: white;}
+    to{background-color: rgb(230, 215, 215);}
+    
+ }
+ 
+/* styling and aligning the user icon and text*/
+#user{
+    width: 32px;
+    height:32px; 
+    margin-top: 10px;
+}
+#txt{
+    width: 209px;
+    height:20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #262626;
+    position: relative;
+    bottom:7px;
+    left:10px 
+}
+ 
+/* styling and aligning the last paragraph */
+.last-p{
+    width:572px;
+    height:109px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #4D4D4D;
+    margin: auto;
+    margin-top:4rem ;
+}
