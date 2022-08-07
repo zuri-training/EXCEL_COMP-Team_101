@@ -20,9 +20,9 @@
                     <td>{{ forloop.counter }}</td>
                     <td> {{ upload.file_name }}</td>
                     <td> {{ upload.date_created }}</td>
-                    <td><a href="#">Edit</a></td>
+                    <td><a href=" {% url 'members:file' upload.file_name %} ">Open</a></td>
                     <td><a href="#">Delete</a></td>
-                    <td><a href="#">Download</a></td>
+                    <td> <a href="{{ upload.file_url }}" download  class="btn btn-dark float-right">Download</a></td>
                     <td><a href="#">Open</a></td>
                 </tr>
                 

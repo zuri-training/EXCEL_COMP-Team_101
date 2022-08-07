@@ -8,5 +8,8 @@ urlpatterns = [
     path('profile/', views.UserDetails.as_view(), name='profile'),
     path('delete/<int:pk>', views.DeleteUser.as_view(), name='delete'),
     path('upload/', views.UploadFilesView.as_view(), name='upload'),
-    path('upload-history/', views.UploadFilesHistory.as_view(), name='upload-history')
+    path('upload-history/', views.UploadFilesHistory.as_view(),
+         name='upload-history'),
+    path('file/<str:file_name>', views.load_file, name='file'),
+    path('sample/', views.highlight, name='highlight')
 ]
