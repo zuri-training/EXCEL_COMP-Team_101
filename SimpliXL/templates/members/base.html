@@ -2,47 +2,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% block title%}{% endblock title%}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title%}{% endblock title%}</title>
 
-    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} ">
-    <link rel="stylesheet" href=" {% static 'members/css/style.css' %} ">
-</head>
-<body>
+    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} " />
+    <link rel="stylesheet" href=" {% static 'members/css/style.css' %} " />
+  </head>
+  <body>
     {% include 'members/nav.html' %}
 
     <div class="content">
-        
-        <aside>
-            <a href=" {% url 'members:home' %} ">Dashboard</a>
+      <aside>
+        <a href=" {% url 'members:home' %} ">Dashboard</a>
 
-            <h2>Account</h2>
-            <a href=" {% url 'members:profile' %} ">Profile</a>
-            <a href=" {% url 'members:delete' request.user.id %} ">Delete</a>
+        <h2>Account</h2>
+        <a href=" {% url 'members:profile' %} ">Profile</a>
+        <a href=" {% url 'members:delete' request.user.id %} ">Delete</a>
 
+        <h2>Files</h2>
+        <a href=" {% url 'members:upload' %} ">New Upload</a>
+        <a href=" {% url 'members:upload-history' %} ">Upload History</a>
 
-            <h2>Files</h2>
-            <a href=" {% url 'members:upload' %} ">New Upload</a>
-            <a href=" {% url 'members:upload-history' %} ">Upload History</a>
+        <h2>Compare</h2>
+        <a href=" {% url 'members:corrected' %} ">Edited Files</a>
+      </aside>
+      <main>
+        <div class="messages">
+          {% if messages %} {% for message in messages %}
+          <p class="message {{ message.tags }} ">{{message | safe}}</p>
+          {% endfor %} {% endif %}
+        </div>
 
-            <h2>Compare</h2>
-            <a href="#" disabled>Download</a>
-        </aside>
-        <main>
-            <div class="messages">
-                {% if messages %}
-                    {% for message in messages %}
-                        <p class="message {{ message.tags }} ">{{message | safe}}</p>
-                    {% endfor %}
-                {% endif %}
-            </div>
-
-            {% block content %}{% endblock content %}
-        </main>
+        {% block content %}{% endblock content %}
+      </main>
     </div>
-
-</body>
+  </body>
 </html>
