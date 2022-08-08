@@ -205,7 +205,14 @@ input {
   .gap {
    margin-top: 40px;
 }
-
+/* aligning forgot eye icon*/
+.eye{
+   width: 19.57px;
+   height: 16.55px;
+   position: absolute;
+   left:94.31%;
+   top: 28.62%;
+}
 /*aligning forgot password text*/
 .align {
    font-weight: 400;
