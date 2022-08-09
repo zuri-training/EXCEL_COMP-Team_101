@@ -1,0 +1,317 @@
+@import url('http://fonts.cdnfonts.com/css/axiforma');
+                
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Axiforma, sans-serif;
+  background-color: #E5E5E5;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-6 {
+  width: 50%;
+  flex-basis: 50%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  line-height: 40px;
+  background: #fcfcfc;
+  box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0 20px;
+  display: block;
+  transition: all 0.2s;
+}
+
+/* removes text decoration on all links */
+li a:visited {
+  color: #757472;
+}
+
+li a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #2691d9;
+  text-decoration-thickness: 3px;
+  color: #302e2b;
+}
+
+li > a:active {
+  color: #1a1a1a;
+}
+
+.btn {
+  padding: 10px 3px;
+  border-radius: 8px;
+}
+
+.btn-lg {
+  padding: 10px 60px;
+
+}
+
+.bg-blue {
+  background-color: #2691d9;
+}
+
+.bg-light-blue {
+  background: #d2ebf9;
+}
+
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #2691d9;
+}
+
+/* main code starts */
+hr {
+  position: absolute;
+  width: 600px;
+  height: 0px;
+  left: 370px;
+  top: 180px;
+  border: 2px solid #E9E9E9;
+}
+
+.request-content {
+  text-align: center;
+}
+
+label {
+  font-family: 'Axiforma', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  justify-items: left;
+  width: 44%;
+}
+
+.dot1 {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  left: 55px;
+  top: 210px;
+  background-color: #4ad147;
+  border-radius: 10px;
+}
+
+.dot2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1050px;
+  top: 180px;
+  background: #4AD147;
+  border-radius: 10px;
+}
+
+.dot3 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1200px;
+  top: 160px;
+  background: #F99520;
+  border-radius: 10px;
+}
+
+.dot4 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1150px;
+  top: 450px;
+  background: #4AD147;
+  border-radius: 10px;
+}
+
+.dot5 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1050px;
+  top: 630px;
+  background: #A76BDC;
+  border-radius: 10px;
+}
+
+.dot6 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 270px;
+  top: 540px;
+  background: #A76BDC;
+  border-radius: 10px;
+}
+
+.request-form {
+  font-family: 'Axiforma', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.form-fill {
+  width: 44%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.request-content h1 {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  /* line-height: 32px; */
+  margin-top: 30px;
+}
+
+.request-content p {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 400;
+  font-size: 14.5px;
+  /* line-height: 24px; */
+  margin-bottom: 100px;
+}
+
+#message {
+  height: 130px;
+}
+
+.submit-btn {
+  width: 44%;
+  justify-items: flex-start;
+}
+
+input, textarea {
+  background-color: #E5E5E5;
+}
+
+.request-form button {
+  padding: 10px 56px;
+  font-family: 'Axiforma', sans-serif;
+  margin-bottom: 70px;
+  color: white;
+  background-color: #2691d9;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* I added the footer code from here*/
+.footer-container {
+  padding: 40px 5px;
+  background: #081d2b;
+  color: white;
+}
+
+.footer-container{
+  display: flex;
+  justify-content:space-around;
+
+}
+
+.footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-heading {
+  width: 20%;
+  flex-basis: 20%;
+}
+
+.image {
+  max-width: 100%;
+  width: 50%;
+  /* width: 30px; */
+}
+
+#logo-text {
+  max-width: 80%;
+}
+
+.footer a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+#footer-email {
+  padding: 20px 10px;
+  width: 95%;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+#footer-email-btn {
+  width: 20%;
+  background-color: #2691d9;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+.line {
+  text-align: center;
+  border-top: 1px solid white;
+  padding: 20px 0;
+  margin-top: 20px;
+}
