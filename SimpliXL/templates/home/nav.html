@@ -4,6 +4,7 @@
         <li><a href="{% url 'base:about' %}" class="nav-link">About</a></li>
         {% if request.user.is_authenticated %}
             <li><a href="{% url 'members:home' %}" class="nav-link">Dashboard</a></li>
+            <li><a href="{% url 'members:setting' %}" class="nav-link">Settings</a></li>
             <li><a href="{% url 'accounts:logout' %}" class="nav-link">Logout</a></li>
         {% else %}
                 <li><a href="{% url 'accounts:login' %}" class="nav-link">Login</a></li>

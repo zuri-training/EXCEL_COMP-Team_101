@@ -54,3 +54,5 @@ def pan(full_file_name, operation, file_extension, file_name):
 
 # duplicates_index = duplicates.index.values
 # data.drop_duplicates(inplace=True)
+
+# df.style.apply(lambda x: ['background:lightgreen' if x.name in [2, 4] else '' for i in x], axis=1

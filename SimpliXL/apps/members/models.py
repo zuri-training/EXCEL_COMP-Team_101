@@ -6,6 +6,13 @@ from .validators import file_size_limiter
 # Create your models here.
 
 
+class Profile(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    company = models.TextField(blank=True)
+    profileimg = models.ImageField(upload_to='profile_images')
+    location = models.CharField(max_length=100, blank=True)
+
+
 class FileUpload(models.Model):
     user = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE)
