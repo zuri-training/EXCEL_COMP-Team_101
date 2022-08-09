@@ -1,8 +1,7 @@
 from django.shortcuts import redirect
 
 from django.views.generic.edit import FormView
-from django.contrib.auth.views import LoginView
-# from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 from .forms import CustomUserCreationForm
 from django.contrib.auth import login
 
@@ -40,3 +39,25 @@ class RegisterPage(FormView):
 
     def get_success_url(self):
         return reverse_lazy('members:home')
+
+
+class ResetPasswordView(PasswordResetView):
+    success_url = reverse_lazy("accounts:password_reset_done")
+    template_name = "password_reset/password_reset_form.html"
+
+    # Email related template
+    email_template_name = "password_reset/password_reset_email.html"
+    subject_template_name = "password_reset/password_reset_subject.txt"
+
+
+class ResetPasswordDoneView(PasswordResetDoneView):
+    template_name = "password_reset/password_reset_done.html"
+
+
+class ResetPasswordConfirmView(PasswordResetConfirmView):
+    template_name = "password_reset/password_reset_confirm.html"
+    success_url = reverse_lazy("accounts:password_reset_complete")
+
+
+class ResetPasswordCompleteView(PasswordResetCompleteView):
+    template_name = "password_reset/password_reset_complete.html"
