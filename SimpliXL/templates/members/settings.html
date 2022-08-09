@@ -1,0 +1,35 @@
+{% extends "members/base.html" %}
+
+{% block title %} Settings {% endblock title %}
+
+{% block content %}
+    <h1>Settings</h1>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+           <div>
+               <div >
+                   <label for=""> Profile image</label>
+                   <img width="100" height="100" src={{user_profile.profileimg.url}}>
+                   <input type="file" name="image" value="" class="shadow-none bg-gray-100">
+                </div>
+
+
+                <div>
+                    <label for="about">Company Name: </label>
+                    <input type="text" name="bio" value={{user_profile.company}}>
+                </div>
+               <br>
+                <div>
+                    <label for=""> Location: </label>
+                    <input type="text" name="location" value={{user_profile.location}}>
+                </div>
+            <br>
+           </div>
+
+               <div>
+                   <button> <a href="/">Cancel</a> </button>
+                   <button type="submit"> Save </button>
+               </div>
+       </form>
+{% endblock content %}

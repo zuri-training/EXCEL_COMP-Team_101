@@ -5,6 +5,8 @@ app_name = 'members'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    # settings urls
+    path('setting/', views.setting, name='setting'),
     # User Profile Urls
     path('profile/', views.UserDetails.as_view(), name='profile'),
     path('delete/<int:pk>', views.DeleteUser.as_view(), name='delete'),
