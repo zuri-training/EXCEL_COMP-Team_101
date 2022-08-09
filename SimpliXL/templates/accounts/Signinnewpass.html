@@ -30,44 +30,25 @@
                 <div class="f">  
                 <h2 class="five1" id="pwd1">Set New Password</h2>
                 <p class="five2" id="pwd2">Please enter your new password.</p>
-                {% if validlink %}
-                <form class="six" action="POST" id="form1">
-                     {% if form.errors %}
-                        <div class="error">
-                              {% for field in form %}
-                                 {% for error in field.errors %} 
-                                    <p>{{ error }}</p>
-                                 {% endfor %}
-                           {% endfor %}
-                        </div>
-                        {% endif %}
-
-                     {% csrf_token %}
+                <form class="six" action="" id="form1">
                     <div class="f1">
                          <label class="f1" for="password"><h4>New Password</h4></label>
                     </div> 
                     <div class="f5">  
                          
-                        <input class="f2" type="password" name="new_password1" autocomplete="new-password" required="" id="id_new_password1">
+                        <input class="f2" placeholder="Enter your new password" type="password">
                     </div>
                     <div class="f3">
                         <label class="f3" for="password"><h4>Confirm Password</h4></label>
                    </div> 
                    <div class="f4">  
                         
-                       <input class="f2" type="password" name="new_password2" autocomplete="new-password" required="" id="id_new_password2">
+                       <input class="f2" placeholder="Confirm password"p type="password">
                    </div>
-                   {% comment %} {{ form.as_p }} {% endcomment %}
                     </div> 
-
 
                 </form>
                 <button class="eight" id="btn"><a href="" id="btna">Reset Password</a></button>
-                {% else %}
-
-<p>The password reset link was invalid, possibly because it has already been used.  Please request a new password reset.</p>
-
-{% endif %}
                 <p class="nine" id="p">Back to <a href="signin.html">Sign In</a></p>
         </body>
 </html>

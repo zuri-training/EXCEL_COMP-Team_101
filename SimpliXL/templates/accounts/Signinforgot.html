@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Forgot Password</title>
-    <link rel="stylesheet" href="{% static 'base/css/Stylesign.css' %}">
+    <link rel="stylesheet" href="Stylesign.css">
 </head>
    
     <body> 
              <div class="one">
-                <img class="header1" src="{% static './images/firstlogo.png' %}" alt="">
+                <img class="header1" src="firstlogo.png" alt="">
                
                 <div class="grad"> 
                     <div class="grad1"></div>
@@ -27,29 +26,18 @@
                 <div class="e1">.</div>
                 <div class="e2">.</div>
                 <div class="e3">.</div>
-                <div><img class="fivelogo" src="{% static './images/secondlogo.png' %}" alt=""></div>
+                <div><img class="fivelogo" src="secondlogo.png" alt=""></div>
                 
                 <div class="f">  
                 <h2 class="five1" id="fpw">Forgot Password</h2>
                 <p class="five2" id="fpw2">Please enter your registered email address. We'll send instructions to help reset your password.</p>
                 <form class="six" action="" id="form2">
-                   {% csrf_token %}
-                      {% if form.errors %}
-                          <div class="error">
-                              {% for field in form %}
-                                {% for error in field.errors %} 
-                                    <p>{{ error }}</p>
-                                {% endfor %}
-                            {% endfor %}
-                          </div>
-                          {% endif %}
-
                     <div class="f1">
                          <label class="f1" for="email"><h4>Email Address</h4></label>
                     </div> 
                     
                          
-                        <input class="f2" type="email" name="email" value=" {% if form.email.value %}{{ form.email.value }}{% endif %} " autocomplete="email" maxlength="254" required="" id="id_email">
+                        <input class="f2" placeholder="Enter your email address" type="email">
                    
                     </div>  
                 </form>
