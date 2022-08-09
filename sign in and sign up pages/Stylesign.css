@@ -103,7 +103,6 @@ body{
     position: absolute;
     left: 80px;
     top: 180px;
-    width: 451px;
     height: 38px;    
     font-family: Axiforma;
     font-style: normal;
@@ -112,6 +111,15 @@ body{
     line-height: 38px; 
     color: #FFFFFF;
     overflow: hidden;
+    animation: accuracy 3s steps(28);
+}
+@keyframes accuracy {
+   0%{
+      width: 0ch;
+   }
+   100%{
+      width: 28ch;
+   }
 }
 
 @font-face {
@@ -131,23 +139,16 @@ body{
     top: 227px;
     border-radius: nullpx;
     position: absolute;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: upload 2s ease 2s forwards;
 }
-
-.four{
-    width: 491px;
-    height: 529px;
-    left: 181px;
-    top: 495px;
-}
-
-.four1{
-    left: 10%;
-    margin-top: 495px;
-    width: 532px;
-    height: 529px;
-    position: absolute;
-    
+@keyframes upload{
+    100%{
+      transform: translateX(0);
+      opacity: 1;
     }
+}
 
 .five{
     width: 750px;

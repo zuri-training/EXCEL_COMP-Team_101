@@ -98,17 +98,37 @@ li > a:active {
   margin: 0px 80px 0px 80px;
   align-items: center;
   width: auto;
+  }
+.img{
+  transform: scale(0);
+  opacity: 0;
+  animation: grow 2s ease-out 0s forwards;
 }
-
+@keyframes grow{
+  10%{
+     transform: scale(0.1);
+     opacity: 1; 
+  }
+  100%{
+     transform: scale(1.0);
+     opacity: 1; 
+  }
+}
 #about-us{
   font-weight: 900;
-  font-size: 56px;
+  font-size: 0px;
   position: absolute;
-  top: 540px;
+  top: 0;
   margin-top: -200px;
   color: #F4F9FD;
+  animation:  about 2s ease-out 0s forwards;
 }
-
+@keyframes about{
+  100%{
+     top: 540px;
+     font-size: 56px;
+  }
+}
 #we-changing{
   width: 900px;
   height: 88px;
@@ -119,8 +139,14 @@ li > a:active {
   top: 620px;
   margin-top: -200px;
   color:#D2EBF9;
+  opacity: 0;
+  animation: we 2s ease-out 1.5s forwards;
 }
-
+@keyframes we{
+  100%{
+     opacity: 1;
+  }
+}
 .sec-two {
   width: 100%;
   display: flex;
@@ -196,7 +222,9 @@ li > a:active {
   flex-direction: column;
   margin: auto;
 }
-
+.name-box-cont:hover{
+  transform: scale(1.2);
+}
 .name-box{
   display: flex;
   flex-direction: column;
@@ -256,23 +284,48 @@ button.secondary{
   font-size: 40px;
 }
 
-button.primary{
+.primary{
   margin-top: 36px;
   width: 200px;
   height: 80px;
   text-decoration: none;
   border: none;
   background: #2691D9;
-  border-radius: 8px; 
+  border-radius: 8px;
+  animation: up 5s ease-in 0s infinite;
 }
 
+@keyframes up {
+     0%{
+      background: aliceblue;
+     } 
+     50%{
+      background: skyblue;
+     }
+     100%{
+      background: #2691D9;
+     }
+}
 #sign-up{
   font-family: 'Axiforma', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   color: #FFFFFF;
+  animation: txt 5s ease-in 0s infinite;
 }
+@keyframes txt {
+      0%{
+        font-size: 12px;
+      }
+     50%{
+      font-size: 24px;
+     }
+     100%{
+      font-size: 36px;
+     }
+}
+
 /* I added the footer code from here */
 .footer-container {
   padding: 40px 0;
