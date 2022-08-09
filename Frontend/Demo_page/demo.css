@@ -86,6 +86,8 @@ li>a:active {
 
 .bg-blue {
   background-color: #2691d9;
+  height: 40px;
+  border-radius: 8px;
 }
 
 .bg-light-blue {
@@ -441,5 +443,5 @@ h1 {
   text-align: center;
   border-top: 1px solid white;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 90px;
 }

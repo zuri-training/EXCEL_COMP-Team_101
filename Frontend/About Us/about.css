@@ -77,6 +77,7 @@ li > a:active {
 .bg-blue {
   background-color: #2691d9;
   border-radius: 8px;
+  height: 40px;
 }
 
 .bg-light-blue {
@@ -391,5 +392,5 @@ button.secondary{
   text-align: center;
   border-top: 1px solid white;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 90px;
 }
