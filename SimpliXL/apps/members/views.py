@@ -74,7 +74,7 @@ def setting(request):
             user_profile.save()
 
         return redirect('settings')
-    return render(request, 'members/settings.html')
+    return render(request, 'members/settings.html', {'user_profile':user_profile})
 
 
 
