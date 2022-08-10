@@ -12,7 +12,7 @@ class Profile(models.Model):
     profileimg = models.ImageField(upload_to='profile_images')
     location = models.CharField(max_length=100, blank=True)
 
-
+  #
 class FileUpload(models.Model):
     user = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE)
