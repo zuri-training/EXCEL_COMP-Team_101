@@ -1,3 +1,5 @@
+Designed the header used in the website. https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=455%3A294
+
 Worked on the style guide for our Design. https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=0%3A1
 
 Worked on the designs for the landing page. https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=2738%3A37047
