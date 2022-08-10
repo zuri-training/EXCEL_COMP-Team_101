@@ -18,14 +18,14 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - *Remove duplicates and return a single file*
 - *Remove duplicates and return 2 files*
 - *Highlight duplicates and return 2 files*
-- *Show usage examples to users*
-- *Allow user to save data and come back to download*
+4. Show usage examples to users
+5. Allow user to save data and come back to download
 
 ## Project links
 
 - **Design link**: [figma](https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=0%3A1)
 - **User research**: [Figjam](https://www.figma.com/file/res4sdWmcEBbOehYEF56al/User-research%2Fflow?node-id=0%3A1)
-- **Notion**: [Notion Board](https://www.notion.so/giftvictor/Project-Team-101-6888931b86284f6c92d2d25acb6e4e37)
+- **Team's Info Board**: [Notion](https://www.notion.so/giftvictor/Project-Team-101-6888931b86284f6c92d2d25acb6e4e37)
 
 ## Setup local environment
 1. `git clone https://github.com/zuri-training/EXCEL_COMP-Team-101.git` to your local. *Don't fork*
