@@ -74,13 +74,13 @@
                 </form>
                 <p class="seven">By clicking the 'Create my Account' button, you confirm that you have read and accepted SimpliXL <a href="">Terms of service</a> and <a href="">Privacy policy.</a></p>
                 <button class="eight" ><a href="" id="btna">Create my Account</a></button>
-                <p class="nine">Already have an account? <a href="{%url 'login' %}">Sign In</a></p>
+                <p class="nine">Already have an account? <a href="{% url 'accounts:login' %}">Sign In</a></p>
                 <div class="ten"> 
                     <div class="l1"></div> 
                     <div class="1p"> or </div>
                     <div class="l2"></div>
                 </div>
-                <button class="eleven"><img class= "eleven1" src="{% static './images/Google.png' %}" alt=""><a href="">Sign up with Google</a></button>
+                <button class="eleven"><img class= "eleven1" src="{% static './images/Google.png' %}" alt=""><a href="{% url 'accounts:googlesignin' %}">Sign up with Google</a></button>
                 </div>
         </body>
 </html>

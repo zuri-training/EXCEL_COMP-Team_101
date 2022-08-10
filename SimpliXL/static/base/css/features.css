@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Axiforma, sans-serif;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.none {
+  display: none;
+}
+
+header {
+  background: #fcfcfc;
+  box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+}
+
+header .row {
+  height: 60px;
+  line-height: 60px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0 20px;
+  display: block;
+  transition: all 0.2s;
+  color: black;
+}
+
+/* removes text decoration on all links */
+.nav-link:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #2691d9;
+  text-decoration-thickness: 3px;
+  color: #302e2b;
+}
+
+.nav-link:active {
+  color: #1a1a1a;
+}
+.hamburger {
+  font-weight: 700;
+  font-size: 30px;
+  position: absolute;
+  left: 45%;
+  display: none;
+  transform: translate(-45%);
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 3px;
+  border-radius: 8px;
+}
+
+.btn-lg {
+  padding: 10px 60px;
+}
+
+.bg-blue {
+  background-color: #2691d9;
+  border-radius: 8px;
+}
+
+.bg-light-blue {
+  background: #d2ebf9;
+}
+
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #2691d9;
+}
+
+.show {
+  display: block !important;
+}
+
+@media screen and (max-width: 840px) {
+  header {
+    position: relative;
+  }
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    display: none;
+    background-color: #d8d0d0e8;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.585);
+  }
+  .navbar .nav-link {
+    padding-left: 5%;
+  }
+  .navbar .nav-link:hover {
+    display: block;
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header .container {
+    width: 95%;
+  }
+
+  .authenticate a {
+    font-size: 13px;
+  }
+}
+
+.head {
+  width: 60%;
+  text-align: center;
+  margin: 30px auto 0;
+}
+
+.head h2 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+.sectiontwo .container {
+  justify-content: space-between;
+  padding-top: 64px;
+}
+
+.sectiontwo .container > div {
+  width: 24%;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  background: #f4f9fd;
+  border-radius: 10px;
+}
+.sectiontwo h3 {
+  font-size: 20px;
+  color: #0d0d0d;
+}
+
+.sectiontwo p {
+  text-align: center;
+  color: #302e2b;
+}
+.sectionthree {
+  margin: 50px 0 0;
+}
+
+.sectionthree .row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page1 {
+  width: 23%;
+}
+
+.page1 img {
+  max-width: 100%;
+  margin-bottom: 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.page1 div {
+  margin-top: -20px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.254);
+  border-top: none;
+  border-radius: 20px;
+  line-height: 2;
+}
+
+.page1 div h3 {
+  margin-bottom: 10px;
+}
+
+.sectionfour {
+  padding: 100px 0;
+  margin: 40px auto;
+  background-color: #f4f9fd;
+}
+
+.b4-footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.b4-footer-text h2 {
+  font-size: 35px;
+  margin: 0 0 20px;
+}
+.b4-footer-text p {
+  font-size: 24px;
+  line-height: 36px;
+  width: 50%;
+  padding-bottom: 40px;
+}
+
+.b4-footer-video {
+  text-align: center;
+  padding-bottom: 55px;
+}
+.b4-footer-video img {
+  width: 100%;
+}
+.b4-footer-videobutton {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 12px;
+}
+.sectionfour a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 16pxs;
+}
+.btn_down {
+  font-weight: bold;
+  background-color: black;
+  padding: 10px 40px;
+  border-radius: 6px;
+  margin-right: 10px;
+  color: white !important;
+}
+
+/* I added the footer code from here*/
+.footer-container {
+  padding: 40px 0;
+  background: #081d2b;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-heading {
+  width: 20%;
+  flex-basis: 20%;
+}
+
+.image {
+  max-width: 100%;
+  width: 50%;
+  /* width: 30px; */
+}
+
+#logo-text {
+  max-width: 80%;
+}
+
+.footer a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+#footer-email {
+  padding: 20px 10px;
+  width: 95%;
+  border-radius: 10px 0 0 10px;
+  border: none;
+}
+
+#footer-email-btn {
+  width: 20%;
+  background-color: #2691d9;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .head {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .head {
+    width: 85%;
+  }
+
+  .sectiontwo .row {
+    flex-wrap: wrap;
+  }
+  .sectiontwo .row > div,
+  .page1 {
+    margin-bottom: 30px;
+    width: 48%;
+  }
+  .sectionthree .row {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .head h2 {
+    font-size: 30px;
+  }
+
+  .sectiontwo .row > div,
+  .page1 {
+    width: 100%;
+  }
+
+  .sectionfour {
+    padding: 30px;
+  }
+
+  .b4-footer-text p {
+    width: 100%;
+  }
+}

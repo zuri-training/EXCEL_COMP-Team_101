@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,44 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="{% static './base/css/about.css' %}" />
     <title>About Us</title>
   </head>
   <body>
     <header>
       <div class="container row">
-        <li><img src="./images/frame 58827.png" /></li>
+        <a href="#" class="logo">
+          <img src="{% static './images/frame 58827.png' %}" />
+        </a>
+
+        <div class="hamburger">&#9776;</div>
+
         <ul class="navbar">
           <li><a href="#" class="nav-link">Overview</a></li>
-          <li><a href="#" class="nav-link">Features</a></li>
-          <li><a href="#" class="nav-link">Request Tool</a></li>
+          <li>
+            <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
+          </li>
+          <li>
+            <a href="{% url 'base:how_to' %}" class="nav-link">Request Tool</a>
+          </li>
           <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
         <div class="authenticate row">
-          <a href="#" class="nav-link blue">Sign In</a>
-          <a href="#" class="nav-link white bg-blue">Sign Up</a>
+          <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>
+          <a href="{% url 'accounts:register' %}" class="nav-link white bg-blue"
+            >Sign Up</a
+          >
         </div>
       </div>
     </header>
 
     <main>
       <div class="sec-one">
-        <img src=".\images\Office.png" alt="" class="img" />
         <h1 id="about-us">About Us</h1>
         <h2 id="we-changing">
           We’re changing the game, What do you want to know about SimpliXL?
         </h2>
       </div>
 
-      <div class="sec-two">
-        <div class="sec-two-cont">
-          <div>
-            <img
-              src=".\images\our-story.png"
-              alt="our-story"
-              id="our-story-img"
-            />
-          </div>
+      <section class="container">
+        <div class="sec-two">
+          <div class="our-story-img"></div>
           <div class="our-story-body">
             <h2 id="our-story-text">
               Our <span style="color: #2691d9">Story</span>
@@ -66,258 +71,265 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="sec-three">
+      <section class="container">
         <div id="meet-team">
-          <p>Meet our <span style="color: #175782">Team</span></p>
-        </div>
-        <div id="professionals">
+          <h2>Meet our <span style="color: #175782">Team</span></h2>
           <p>They’re all professionals and are good at what they do</p>
         </div>
-      </div>
 
-      <div class="sec-four">
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2.0.png" alt="" />
-          <div class="name-box">
-            <h2>Robert Fox</h2>
-            <h4>Product lead</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
+        <div class="sec-four">
+          <div class="name-box-cont">
+            <img
+              src="{% static './images/Instagram post - 2.0.png' %}"
+              alt=""
+            />
+            <div class="name-box">
+              <h3>Robert Fox</h3>
+              <h4>Product lead</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="name-box-cont">
+            <img src="{% static './images/Instagram post - 2.png' %}" alt="" />
+            <div class="name-box">
+              <h3>Ralph Edwards</h3>
+              <h4>Lead developer</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="name-box-cont">
+            <img
+              src="{% static './images/Instagram post - 2-1.png' %}"
+              alt=""
+            />
+            <div class="name-box">
+              <h3>Savannah Nguyen</h3>
+              <h4>UI junior designer</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="name-box-cont">
+            <img
+              src="{% static './images/Instagram post - 2-2.png' %}"
+              alt=""
+            />
+            <div class="name-box">
+              <h3>Arlene McCoy</h3>
+              <h4>Project manager</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="name-box-cont">
+            <img
+              src="{% static './images/Instagram post - 2-3.png' %}"
+              alt=""
+            />
+            <div class="name-box">
+              <h3>Cody Fisher</h3>
+              <h4>Full stack developer</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="name-box-cont">
+            <img
+              src="{% static './images/Instagram post - 2-4.png' %}"
+              alt=""
+            />
+            <div class="name-box">
+              <h3>Kathryn Murphy</h3>
+              <h4>UX Research lead</h4>
+              <div class="icon-line">
+                <a href=""
+                  ><img
+                    src="{% static './images/insta.png' %}"
+                    alt="instagram"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/tweet.png' %}"
+                    alt="twitter"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/face.png' %}"
+                    alt="facebook"
+                    class="social-media-icons"
+                /></a>
+                <a href=""
+                  ><img
+                    src="{% static './images/yout.png' %}"
+                    alt="youtube"
+                    class="social-media-icons"
+                /></a>
+              </div>
+            </div>
           </div>
         </div>
+        <a href="" id="view-all">View all</a>
+      </section>
 
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2.png" alt="" />
-          <div class="name-box">
-            <h2>Ralph Edwards</h2>
-            <h4>Lead developer</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
-          </div>
+      <section class="container">
+        <div class="sec-five">
+          <h2>Have more questions?</h2>
+          <p>
+            You can contact our <span style="color: #1f74ad">Support team</span>
+          </p>
+          <p>
+            Or call us on: &nbsp
+            <span class="block" style="color: #1f74ad; font-weight: 700"
+              >(219) 555-0014</span
+            >
+          </p>
+          <a href="" id="sign-up" class="primary">Sign Up</a>
         </div>
-
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2-1.png" alt="" />
-          <div class="name-box">
-            <h2>Savannah Nguyen</h2>
-            <h4>UI junior designer</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2-2.png" alt="" />
-          <div class="name-box">
-            <h2>Arlene McCoy</h2>
-            <h4>Project manager</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2-3.png" alt="" />
-          <div class="name-box">
-            <h2>Cody Fisher</h2>
-            <h4>Full stack developer</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
-          </div>
-        </div>
-
-        <div class="name-box-cont">
-          <img src=".\images\Instagram post - 2-4.png" alt="" />
-          <div class="name-box">
-            <h2>Kathryn Murphy</h2>
-            <h4>UX Research lead</h4>
-            <p class="icon-line">
-              <a href=""
-                ><img
-                  src=".\images\insta.png"
-                  alt="instagram"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\tweet.png"
-                  alt="twitter"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\face.png"
-                  alt="facebook"
-                  class="social-media-icons"
-              /></a>
-              <a href=""
-                ><img
-                  src=".\images\yout.png"
-                  alt="youtube"
-                  class="social-media-icons"
-              /></a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="view-all-cont">
-        <button type="button" class="secondary">
-          <a href="" id="view-all">View all</a>
-        </button>
-      </div>
-
-      <div class="sec-five">
-        <h1>Have more questions?</h1>
-        <p>
-          You can contact our <span style="color: #1f74ad">Support team</span>
-        </p>
-        <p>
-          Or call us on: &nbsp
-          <span style="color: #1f74ad; font-weight: 700">(219) 555-0014</span>
-        </p>
-        <button type="button" class="primary">
-          <a href="" id="sign-up">Sign Up</a>
-        </button>
-      </div>
+      </section>
     </main>
 
-    <footer>
+    <footer class="none">
       <div class="footer-container">
         <div class="container">
           <div class="footer">
             <div class="footer-heading">
-              <h2><img class="image" src="images/Frame logo.png" /></h2>
+              <h2>
+                <img class="image" src="{% static 'images/Frame logo.png' %}" />
+              </h2>
               <p id="logo-text">
                 With SimpliXL, you can boost your accuracy by comparing and
                 finding discrepancies in the content of your excel files.
               </p>
-              <img src="images/instagram.png" />
-              <img src="images/Dribbble.png" />
-              <img src="images/twitter.png" />
-              <img src="images/youtube.png" />
+              <img src="{% static 'images/instagram.png' %}" />
+              <img src="{% static 'images/Dribbble.png' %}" />
+              <img src="{% static 'images/twitter.png' %}" />
+              <img src="{% static 'images/youtube.png' %}" />
             </div>
             <div class="footer-heading footer-1">
               <h2>Company</h2>
@@ -355,5 +367,6 @@
         </div>
       </div>
     </footer>
+    <script src="{% static '.base/css/app.js' %}"></script>
   </body>
 </html>

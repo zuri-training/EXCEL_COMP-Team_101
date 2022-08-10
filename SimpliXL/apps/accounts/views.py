@@ -1,4 +1,5 @@
 from django.shortcuts import redirect
+from django.shortcuts import render
 
 from django.views.generic.edit import FormView
 from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
@@ -61,3 +62,6 @@ class ResetPasswordConfirmView(PasswordResetConfirmView):
 
 class ResetPasswordCompleteView(PasswordResetCompleteView):
     template_name = "password_reset/password_reset_complete.html"
+
+def googlesign(request):
+    return render(request, 'accounts/googlesign.html')

@@ -1,0 +1,326 @@
+@import url("http://fonts.cdnfonts.com/css/axiforma");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Axiforma, sans-serif;
+  background-color: #f7f2fd;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-6 {
+  width: 50%;
+  flex-basis: 50%;
+}
+
+header {
+  background: #fcfcfc;
+  box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+}
+
+header .row {
+  height: 60px;
+  line-height: 60px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-link {
+  padding: 0 20px;
+  display: block;
+  transition: all 0.2s;
+  color: black;
+}
+
+/* removes text decoration on all links */
+.nav-link:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #2691d9;
+  text-decoration-thickness: 3px;
+  color: #302e2b;
+}
+
+.nav-link:active {
+  color: #1a1a1a;
+}
+.hamburger {
+  font-weight: 700;
+  font-size: 30px;
+  position: absolute;
+  left: 45%;
+  display: none;
+  transform: translate(-45%);
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 3px;
+  border-radius: 8px;
+}
+
+.btn-lg {
+  padding: 10px 60px;
+}
+
+.bg-blue {
+  background-color: #2691d9;
+  border-radius: 8px;
+}
+
+.bg-light-blue {
+  background: #d2ebf9;
+}
+
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #2691d9;
+}
+
+.show {
+  display: block !important;
+}
+
+@media screen and (max-width: 840px) {
+  header {
+    position: relative;
+  }
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    display: none;
+    background-color: #d8d0d0e8;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.585);
+  }
+  .navbar .nav-link {
+    padding-left: 5%;
+  }
+  .navbar .nav-link:hover {
+    display: block;
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header .container {
+    width: 95%;
+  }
+
+  .authenticate a {
+    font-size: 13px;
+  }
+}
+
+.none {
+  display: none;
+}
+
+/* main code starts */
+hr {
+  width: 45%;
+  margin: 40px auto 70px;
+  border: 1px solid #beb6b6;
+}
+
+.request-content {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+.request-content h1 {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.request-content p {
+  font-size: 15px;
+}
+
+form {
+  width: 40%;
+  margin: auto;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 40px;
+  display: block;
+}
+
+form input,
+form textarea {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+textarea {
+  height: 200px;
+  resize: none;
+}
+.request-form button {
+  padding: 10px 70px;
+  margin: 70px 0;
+  color: white;
+  background-color: #2691d9;
+  border: none;
+  border-radius: 5px;
+}
+
+/* I added the footer code from here*/
+footer {
+  background: #081d2b;
+}
+
+.footer-container {
+  font-weight: 400;
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  color: rgba(255, 255, 255, 0.726);
+  display: flex;
+  justify-content: space-between;
+}
+
+.dot1 {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  left: 55px;
+  top: 210px;
+  background-color: #4ad147;
+  border-radius: 10px;
+}
+
+.dot2 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1050px;
+  top: 180px;
+  background: #4ad147;
+  border-radius: 10px;
+}
+
+.dot3 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1200px;
+  top: 160px;
+  background: #f99520;
+  border-radius: 10px;
+}
+
+.dot4 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1150px;
+  top: 450px;
+  background: #4ad147;
+  border-radius: 10px;
+}
+
+.dot5 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 1050px;
+  top: 630px;
+  background: #a76bdc;
+  border-radius: 10px;
+}
+
+.dot6 {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 270px;
+  top: 540px;
+  background: #a76bdc;
+  border-radius: 10px;
+}
+
+span {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .request-content {
+    width: 80%;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .footer-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .request-form button {
+    display: block;
+    width: 100%;
+    margin: 20px 0 50px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container * {
+    margin-bottom: 10px;
+  }
+}
