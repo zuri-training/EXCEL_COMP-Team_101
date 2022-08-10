@@ -80,21 +80,52 @@ li > a:active {
 
 .bg-blue {
   background-color: #2691d9;
+  height: 40px;
+  border-radius: 8px;
 }
-
-.bg-light-blue {
-  background: #d2ebf9;
+.bg-blue-btn{
+  background-color: #2691d9;
+  height: 40px;
+  border-radius: 8px;
+  width: 170px;
+  text-align: center;
+  margin-top: 0px;
 }
 
 .white {
   color: #fff;
 }
 
-.blue {
-  color: #2691d9;
+.heading-btn {
+  margin-top: 20px;
 }
-
-
+.btn-1 {
+  width: 180px;
+  height: 40px;
+  background-color: #2691d9;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+.btn-1 a{
+  color: white;
+}
+.btn-2 {
+  margin-left: 15px;
+  height: 40px;
+  width: 200px;
+  position: absolute;
+  border-radius: 8px;
+  border: none;
+  background-color: #d2ebf9;
+  font-size: 14px;
+}
+.btn-2 a{
+  color: #34a4e4;
+}
+.img-2{
+  transform: scale(0.8);
+}
 section {
   padding: 30px 0;
   margin: 50px 0;
@@ -138,6 +169,7 @@ main .productivity {
 #freeforever {
   color: #565855;
   font-size: 12px;
+  margin-top: 10px;
 }
 
 .sectiontwo .container {
@@ -165,7 +197,11 @@ main .productivity {
 .sectionthree {
   display: flex;
 }
-
+#btn3{
+  width: 150px;
+  text-align: center;
+  margin-top: 20px;
+}
 #everything {
   font-size: 40px;
   line-height: 48px;
@@ -284,6 +320,6 @@ main .productivity {
   text-align: center;
   border-top: 1px solid white;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 90px;
 }
 

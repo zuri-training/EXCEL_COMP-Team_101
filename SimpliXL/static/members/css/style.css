@@ -53,3 +53,65 @@ nav * {
 h1 {
   text-align: center;
 }
+
+.content {
+  display: flex;
+}
+
+aside {
+  width: 20%;
+  height: 80vh;
+  background: green;
+  padding: 20px;
+}
+aside a {
+  color: white;
+  display: block;
+  padding: 10px 0;
+  transition: all 0.5s;
+}
+
+aside a:hover {
+  background: white;
+  color: black;
+  padding: 10px;
+  transform: scale(1.01);
+}
+
+main {
+  width: 80%;
+  padding: 0 30px;
+}
+
+.delPageBtn {
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.delPageBtn:hover {
+  transform: scale(1.3);
+}
+
+.deleteBtn {
+  background: red;
+}
+
+.backBtn {
+  background: green;
+}
+
+.danger {
+  color: red;
+  font-weight: 900;
+}
+
+.errorlist {
+  background-color: red;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}

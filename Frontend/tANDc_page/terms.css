@@ -79,6 +79,7 @@
   .bg-blue {
     background-color: #2691d9;
     border-radius: 8px;
+    height: 40px;
   }
   
   .bg-light-blue {
@@ -112,21 +113,25 @@
 }
 
 .tos-content p {
-    max-width: 1280px;
+    max-width: 1270px;
     font-size: 20px;
     font-weight: 500;
     color: #000000;
     line-height: 24px;
+    text-align: justify;
 }
-
+.tos-content a{
+  color: blue;
+}
 .button-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 24px;
-    margin-left: 50px;
+    margin-left: 47px;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .button-container a {

@@ -1,0 +1,38 @@
+{% extends 'members/base.html' %}
+
+{% block title %}User Profile{% endblock title %}
+
+{% block content %}
+    <h1>Profile  </h1>
+
+    <p>Email: {{ profile.email | upper }} </p>
+    <p>First Name: {{ profile.first_name | upper }} </p>
+    <p>Last Name: {{ profile.last_name | upper }} </p>
+
+    {% comment %} <table border=1>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th colspan=4>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ profile.email }}</td>
+                <td>{{ profile.first_name }}</td>
+                <td>{{ profile.last_name }}</td>
+                <td><a href="#">Edit</a></td>
+                <td><a href="#">Delete</a></td>
+                <td><a href="#">Download</a></td>
+                <td><a href="#">Open</a></td>
+            </tr>
+        </tbody>
+    </table> {% endcomment %}
+
+{% endblock content %}
+
+
+
+

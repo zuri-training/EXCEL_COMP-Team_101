@@ -26,10 +26,10 @@ body{
 
 /* styling and aligning the google icon and text on top the container*/
 .google-up{
-    width: 706px;
+    width: 704px;
     height: 44px;
-    border-radius: 5px;
-    margin-left:1.3rem;
+    border: 1px solid #CCCCCC;
+    margin-left:rem;
 }
 #google-icon{
     height: 20.28px;
@@ -120,7 +120,14 @@ input:focus{
     flex-direction:row; 
     align-items: center;
     gap:32px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 68px;
+}
+.l1{
+    height: 0.3px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 560px;
+    margin-top: 20px;
     margin-left: 68px;
 }
 /* adds animation to the "use a different account to login" */

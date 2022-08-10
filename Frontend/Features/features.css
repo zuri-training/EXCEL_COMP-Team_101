@@ -75,6 +75,8 @@ li > a:active {
 
 .bg-blue {
   background-color: #2691d9;
+  height: 40px;
+  border-radius: 8px;
 }
 
 .bg-light-blue {
@@ -256,9 +258,26 @@ li > a:active {
 
 .b4-footer-video {
   text-align: center;
-  padding-bottom: 183px;
+  padding-bottom: 55px;
 }
-
+.b4-footer-videobutton{
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 12px;
+}
+.btn_down {
+    font-weight: bold;
+    background-color: black;
+    width: 160px;
+    height: 30px;
+    border-radius: 6px;
+}
+.btn_down a{
+  color: white;
+}
+span{
+  margin-left: 10px;
+}
 /* I added the footer code from here*/
 .footer-container {
   padding: 40px 0;
@@ -324,7 +343,7 @@ li > a:active {
   text-align: center;
   border-top: 1px solid white;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 90px;
 }
 
 .sectionthree {

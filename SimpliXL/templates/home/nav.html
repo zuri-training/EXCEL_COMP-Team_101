@@ -10,6 +10,7 @@
             <li><a href="{% url 'accounts:register' %}" class="nav-link">Register</a></li>
         {% endif %}
 
+        <li><a href=" {% url 'accounts:password_reset' %}" class="nav-link" >Reset</a></li>
         <li><a href=" {% url 'base:authenticate' %}" class="nav-link" >Authenticate Trial</a></li>
         <li><a href="sample.html" class="nav-link">Not Found</a></li>
         

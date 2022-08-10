@@ -1,0 +1,11 @@
+{% extends 'members/base.html' %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+
+    <a href=" {% url 'members:upload-history' %} " class="back" style="margin-bottom:20px; display:inline-block; background:green; padding:10px 20px; color: white">Go Back</a>
+
+    {{ form | safe }}
+{% endblock content %}
+
