@@ -13,7 +13,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 
 from apps.accounts.models import CustomUser
-from .models import FileUpload, EditedFileUpload
+from .models import FileUpload, EditedFileUpload, Profile
 
 from django.conf import settings
 import pathlib
@@ -51,29 +51,29 @@ class DeleteUser(LoginRequiredMixin, DeleteView):
 
 @login_required
 def setting(request):
-    # user_profile = Profile.objects.get(user=request.user)
-    #
-    # if request.method == 'POST':
-    #     if request.FILES.get('image') == None:
-    #         image = user_profile.profileimg
-    #         company = request.POST['company']
-    #         location = request.POST['location']
-    #
-    #         user_profile.profileimg = image
-    #         user_profile.company = company
-    #         user_profile.location = location
-    #         user_profile.save()
-    #     if request.FILES.get('image') != None:
-    #         image = request.FILES.get('image')
-    #         company = request.POST['company']
-    #         location = request.POST['location']
-    #
-    #         user_profile.profileimg = image
-    #         user_profile.company = company
-    #         user_profile.location = location
-    #         user_profile.save()
-    #
-    #     return redirect('settings')
+    user_profile = Profile.objects.get(user=request.user)
+
+    if request.method == 'POST':
+        if request.FILES.get('image') == None:
+            image = user_profile.profileimg
+            company = request.POST['company']
+            location = request.POST['location']
+
+            user_profile.profileimg = image
+            user_profile.company = company
+            user_profile.location = location
+            user_profile.save()
+        if request.FILES.get('image') != None:
+            image = request.FILES.get('image')
+            company = request.POST['company']
+            location = request.POST['location']
+
+            user_profile.profileimg = image
+            user_profile.company = company
+            user_profile.location = location
+            user_profile.save()
+
+        return redirect('settings')
     return render(request, 'members/settings.html')
 
 
