@@ -24,9 +24,11 @@
             <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
           </li>
           <li>
-            <a href="{% url 'base:how_to' %}" class="nav-link">Request Tool</a>
+            <a href="{% url 'base:request' %}" class="nav-link">Request Tool</a>
           </li>
-          <li><a href="#" class="nav-link">Contact</a></li>
+          <li>
+            <a href="{% url 'base:contact' %}" class="nav-link">Contact</a>
+          </li>
         </ul>
         <div class="authenticate row">
           <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>

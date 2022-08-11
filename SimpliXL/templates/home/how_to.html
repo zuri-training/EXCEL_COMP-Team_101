@@ -30,7 +30,9 @@
             <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
           </li>
           <li><a href="{% url 'base:how_to' %}" class="nav-link">How To</a></li>
-          <li><a href="#" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="{% url 'base:contact' %}" class="nav-link">Contact Us</a>
+          </li>
         </ul>
         <div class="authenticate row">
           <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>
@@ -253,15 +255,15 @@
             </div>
             <div class="footer-heading footer-1">
               <h2>Company</h2>
-              <a href="#">Features</a>
+              <a href="{% url 'base:feature' %}">Features</a>
               <a href="#">Privacy Policy</a>
               <a href="#">Legal Service</a>
-              <a href="#">Contact Us</a>
+              <a href="{% url 'base:contact' %}">Contact Us</a>
             </div>
             <div class="footer-heading footer-2">
               <h2>Support</h2>
               <a href="#">Documentation</a>
-              <a href="#">Demo</a>
+              <a href="{% url 'base:how_to' %}">Demo</a>
               <a href="#">API Status</a>
             </div>
             <div class="footer-heading footer-3">

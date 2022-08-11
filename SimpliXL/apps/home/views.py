@@ -26,6 +26,12 @@ def request_tool(request):
 def terms(request):
     return render(request, 'home/terms.html')
 
+def contact_us(request):
+    return render(request, 'home/contactus.html')
+
+def help(request):
+    return render(request, 'home/help.html')
+
 
 
 @login_required
