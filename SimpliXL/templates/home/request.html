@@ -1,43 +1,11 @@
+{% extends "home/base.html" %} 
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static './base/css/request.css' %}" />
-  </head>
 
-  <body>
-    <header>
-      <div class="container row">
-        <a href="#" class="logo">
-          <img src="{% static './images/frame 58827.png' %}" />
-        </a>
-
-        <div class="hamburger">&#9776;</div>
-
-        <ul class="navbar">
-          <li><a href="#" class="nav-link">Overview</a></li>
-          <li>
-            <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
-          </li>
-          <li>
-            <a href="{% url 'base:request' %}" class="nav-link">Request Tool</a>
-          </li>
-          <li>
-            <a href="{% url 'base:contact' %}" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="authenticate row">
-          <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>
-          <a href="{% url 'accounts:register' %}" class="nav-link white bg-blue"
-            >Sign Up</a
-          >
-        </div>
-      </div>
-    </header>
+{% block title %}Request Feature{% endblock title %} 
+{% block css %}
+  <link rel="stylesheet" href=" {% static 'base/css/request.css' %} ">
+{% endblock css %} 
+{% block content %}
 
     <main>
       <div class="request-content">
@@ -73,10 +41,8 @@
 
     <footer>
       <div class="footer-container">
-        <p>Privacy Policy & Terms of Use</p>
+        <p>Privacy Policy &amp; Terms of Use</p>
         <p>&copy; Copyright SimpliXL, 2022. All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="{% static './base/css/app.js' %}"></script>
-  </body>
-</html>
+{% endblock content %}

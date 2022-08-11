@@ -1,0 +1,327 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Axiforma, sans-serif;
+  font-size: 1.6rem;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.img-flex {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 30px 0;
+  margin: 50px 0;
+}
+
+.sectionone .container {
+  align-items: center;
+  padding: 50px 0;
+}
+
+.sectionone .container > div {
+  width: 50%;
+}
+
+.sectionone .container > div:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boost {
+  font-size: 1.2rem;
+  color: #f38707;
+}
+
+.compare {
+  font-size: 5rem;
+  line-height: 66px;
+  color: #1a1a1a;
+  margin: 10px 0;
+}
+
+.productivity {
+  font-size: 2rem;
+  line-height: 30px;
+  color: #302e2b;
+  max-width: 85%;
+}
+
+.heading-btn {
+  display: flex;
+  margin-top: 20px;
+}
+
+.heading-btn a {
+  border-radius: 8px;
+  font-size: 1.4rem;
+  padding: 10px 40px;
+}
+
+.btn-1 {
+  background-color: #2691d9;
+  color: white;
+}
+
+.btn-2 {
+  margin-left: 15px;
+  background-color: #d2ebf9;
+  color: #34a4e4;
+}
+
+.img-2 {
+  transform: scale(0.8);
+}
+
+#freeforever {
+  color: #565855;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.sectiontwo .container {
+  justify-content: space-between;
+}
+
+.sectiontwo .container > div {
+  width: 27%;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  padding: 40px;
+  background: #fcfcfc;
+  border-radius: 16px;
+}
+
+.sectiontwo h3 {
+  font-size: 2.4rem;
+  color: #1a1a1a;
+  text-align: center;
+  justify-content: center;
+}
+
+.sectiontwo p {
+  text-align: center;
+  color: #302e2b;
+}
+
+.sectionthree img {
+  max-width: 100%;
+}
+
+#everything {
+  font-size: 4rem;
+  line-height: 48px;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+.border-left {
+  border-left: 3px solid blue;
+  padding-left: 10px;
+  max-width: 60%;
+}
+
+.sectionthree .tool {
+  margin: 20px 0;
+}
+
+#btn3 {
+  padding: 10px 40px;
+}
+
+.sectionthree .col-text {
+  max-width: 45%;
+}
+
+.sectionfour .col-text {
+  max-width: 40%;
+}
+
+.sectionfour p {
+  margin: 20px 0;
+}
+
+.sectionfive {
+  background: #f4f9fd;
+}
+
+.sectionfive .container {
+  align-items: stretch;
+  padding: 30px 0;
+}
+
+.sectionfive .container > div {
+  width: 30%;
+}
+
+.sectionfive h3 {
+  margin: 10px 0;
+}
+
+.sectionfive img {
+  width: 50px;
+}
+
+.subfooter {
+  text-align: center;
+}
+
+.subfooter h2 {
+  font-size: 4rem;
+}
+
+.subfooter p {
+  max-width: 48%;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 8px;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  .heading-btn a {
+    padding: 5px 20px;
+  }
+
+  .sectiontwo .container > div {
+    width: 31%;
+    padding: 30px;
+  }
+
+  #everything {
+    font-size: 3.5rem;
+  }
+
+  .sectionfour .col-text {
+    max-width: 45%;
+  }
+
+  .sectionfour p {
+    margin: 10px 0;
+  }
+
+  .sectionfive .container > div {
+    width: 30%;
+  }
+
+  .subfooter p {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .row {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .sectionone .container > div {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sectionone .container > div:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .compare {
+    font-size: 4.5rem;
+    line-height: 50px;
+  }
+
+  .productivity {
+    max-width: 100%;
+  }
+
+  .sectiontwo .container > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sectiontwo h3 {
+    margin-bottom: 20px;
+  }
+
+  .sectionthree .col-text,
+  .sectionfour .col-text {
+    max-width: 100%;
+  }
+
+  #everything {
+    margin-top: 20px;
+  }
+
+  .border-left {
+    max-width: 100%;
+  }
+
+  .sectionfour .col-6:nth-child(2) {
+    order: 1;
+  }
+
+  .sectionfour .col-text {
+    order: 2;
+  }
+
+  .sectionfive {
+    padding-bottom: 0;
+  }
+
+  .sectionfive .container > div {
+    width: 100%;
+  }
+
+  .sectionfive h3 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+  }
+
+  .sectionfive p {
+    margin-bottom: 40px;
+  }
+
+  .sectionfive img {
+    width: 40px;
+  }
+
+  .subfooter h2 {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .subfooter p {
+    max-width: 85%;
+    margin: 20px auto;
+  }
+}

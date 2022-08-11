@@ -1,210 +1,115 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static './base/css/features.css' %}" />
-    <link
-      rel="{% static './base/css/features.css' %}"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
-    <title>Features Page</title>
-  </head>
+{% extends "home/base.html" %} {% load static %} {% block title %}Features
+Page{% endblock title %} {% block css %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
 
-  <body>
-    <header>
-      <div class="container row">
-        <a href="#" class="logo">
-          <img src="{% static './images/frame 58827.png' %}" />
-        </a>
+<link rel="stylesheet" href=" {% static 'base/css/features.css' %} " />
+{% endblock css %} {% block content %}
 
-        <div class="hamburger">&#9776;</div>
+<main>
+  <section class="container">
+    <div class="head">
+      <h2>Working with a Comparison tool has never been easier</h2>
+      <p>Have a look at some of our features</p>
+    </div>
+  </section>
 
-        <ul class="navbar">
-          <li><a href="#" class="nav-link">Overview</a></li>
-          <li>
-            <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
-          </li>
-          <li>
-            <a href="{% url 'base:request' %}" class="nav-link">Request Tool</a>
-          </li>
-          <li>
-            <a href="{% url 'base:contact' %}" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="authenticate row">
-          <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>
-          <a href="{% url 'accounts:register' %}" class="nav-link white bg-blue"
-            >Sign Up</a
-          >
-        </div>
+  <section class="sectiontwo">
+    <div class="container row">
+      <div>
+        <h3>Upload <img src="{% static 'images/send-square.png' %}" /></h3>
+        <p>
+          Upload your CSV or Excel files hassle-free on SimpliXL. Always free.
+        </p>
       </div>
-    </header>
+      <div>
+        <h3>Compare <img src="{% static 'images/Group.png' %}" /></h3>
+        <p>
+          Compare the content of the file uploaded on SimpliXL. Always free.
+        </p>
+      </div>
+      <div>
+        <h3>Download <img src="{% static 'images/receive-square.png' %}" /></h3>
+        <p>Save your data and downlaod corrected file anytime. Always free.</p>
+      </div>
+      <div>
+        <h3>Discard <img src="{% static 'images/trash.png' %}" /></h3>
+        <p>Have the option to delete your error excel files.</p>
+      </div>
+    </div>
+  </section>
 
-    <main>
-      <section class="container">
-        <div class="head">
-          <h2>Working with a Comparison tool has never been easier</h2>
-          <p>Have a look at some of our features</p>
-        </div>
-      </section>
-
-      <section class="sectiontwo">
-        <div class="container row">
-          <div>
-            <h3>
-              Upload <img src="{% static './images/send-square.png' %}" />
-            </h3>
-            <p>
-              Upload your CSV or Excel files hassle-free on SimpliXL. Always
-              free.
-            </p>
-          </div>
-          <div>
-            <h3>Compare <img src="{% static './images/Group.png' %}" /></h3>
-            <p>
-              Compare the content of the file uploaded on SimpliXL. Always free.
-            </p>
-          </div>
-          <div>
-            <h3>
-              Download <img src="{% static './images/receive-square.png' %}" />
-            </h3>
-            <p>
-              Save your data and downlaod corrected file anytime. Always free.
-            </p>
-          </div>
-          <div>
-            <h3>Discard <img src="{% static './images/trash.png' %}" /></h3>
-            <p>Have the option to delete your error excel files.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="sectionthree">
-        <div class="container row">
-          <div class="page1">
-            <img src="{% static 'images/Rectangle 828186 1.png' %}" alt="" />
-            <div>
-              <h3>Upload your spreadsheet files</h3>
-              <p>
-                With SimpliXL, you are able to upload either CSV files or excel
-                files fore comparision
-              </p>
-            </div>
-          </div>
-
-          <div class="page1">
-            <img src="{% static './images/Rectangle 828186 1.png' %}" alt="" />
-            <div>
-              <h3>Compare the content of your files</h3>
-              <p>
-                After upload, compare the content of your files to discover
-                discrepancies or duplicates.
-              </p>
-            </div>
-          </div>
-
-          <div class="page1">
-            <img src="{% static 'images/Rectangle 828186-2.png' %}" alt="" />
-            <div>
-              <h3>Remove duplicates in your file.</h3>
-              <p>
-                During comparison, SimpliXL helps you highlight duplicates and
-                return one file or both files.
-              </p>
-            </div>
-          </div>
-
-          <div class="page1">
-            <img src="{% static './images/Rectangle 828186-2.png' %}" alt="" />
-            <div>
-              <h3>Download your corrected file</h3>
-              <p>
-                SimpliXL allows you save your work and come back to download
-                anytime hassle-free.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sectionfour b4-footer">
-        <div class="b4-footer-text">
-          <h2>Learn more about our features.</h2>
+  <section class="sectionthree">
+    <div class="container row">
+      <div class="page1">
+        <img src="{% static 'images/Rectangle 828186 1.png' %}" alt="" />
+        <div>
+          <h3>Upload your spreadsheet files</h3>
           <p>
-            Want to learn more about SimpliXL and how to use them? Then watch
-            this video..
+            With SimpliXL, you are able to upload either CSV files or excel
+            files fore comparision
           </p>
         </div>
-        <div class="b4-footer-video container">
-          <img src="{% static './images/Frame 29.png' %}" />
-        </div>
-        <div class="b4-footer-videobutton">
-          <a href="#" class="btn_down">Get Started</a>
-          <a href="#">Learn more</a>
-        </div>
-      </section>
-    </main>
+      </div>
 
-    <footer class="none">
-      <div class="footer-container">
-        <div class="container">
-          <div class="footer">
-            <div class="footer-heading">
-              <h2>
-                <img class="image" src="{% static 'images/Frame logo.png' %}" />
-              </h2>
-              <p id="logo-text">
-                With SimpliXL, you can boost your accuracy by comparing and
-                finding discrepancies in the content of your excel files.
-              </p>
-              <img src="{% static './images/instagram.png' %}" />
-              <img src="{% static './images/Dribbble.png' %}" />
-              <img src="{% static './images/twitter.png' %}" />
-              <img src="{% static './images/youtube.png' %}" />
-            </div>
-            <div class="footer-heading footer-1">
-              <h2>Company</h2>
-              <a href="{% url 'base:feature' %}">Features</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Legal Service</a>
-              <a href="{% url 'base:contact' %}">Contact Us</a>
-            </div>
-            <div class="footer-heading footer-2">
-              <h2>Support</h2>
-              <a href="#">Documentation</a>
-              <a href="{% url 'base:how_to' %}">Demo</a>
-              <a href="#">API Status</a>
-            </div>
-            <div class="footer-heading footer-3">
-              <h2>Solution</h2>
-              <a href="#">Analytics</a>
-            </div>
-            <div class="footer-email-form footer-heading">
-              <h2>Subscribe to our Newsletter</h2>
-              <p>
-                Be the first to know about exciting new features and get
-                updates.
-              </p>
-
-              <div class="footer-form">
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  id="footer-email"
-                />
-                <input type="submit" value="&rarr;" id="footer-email-btn" />
-              </div>
-            </div>
-          </div>
-          <p class="line">&copy; 2022 SimpliXL. All rights reserved</p>
+      <div class="page1">
+        <img src="{% static 'images/Rectangle 828186 1.png' %}" alt="" />
+        <div>
+          <h3>Compare the content of your files</h3>
+          <p>
+            After upload, compare the content of your files to discover
+            discrepancies or duplicates.
+          </p>
         </div>
       </div>
-    </footer>
-    <script src="{% static './base/css/app.js' %}"></script>
-  </body>
-</html>
+
+      <div class="page1">
+        <img src="{% static 'images/Rectangle 828186-2.png' %}" alt="" />
+        <div>
+          <h3>Remove duplicates in your file.</h3>
+          <p>
+            During comparison, SimpliXL helps you highlight duplicates and
+            return one file or both files.
+          </p>
+        </div>
+      </div>
+
+      <div class="page1">
+        <img src="{% static 'images/Rectangle 828186-2.png' %}" alt="" />
+        <div>
+          <h3>Download your corrected file</h3>
+          <p>
+            SimpliXL allows you save your work and come back to download anytime
+            hassle-free.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sectionfour b4-footer">
+    <div class="b4-footer-text">
+      <h2>Learn more about our features.</h2>
+      <p>
+        Want to learn more about SimpliXL and how to use them? Then watch this
+        video..
+      </p>
+    </div>
+    <div class="b4-footer-video container">
+      <img src="{% static 'images/Frame 29.png' %}" />
+    </div>
+    <div class="b4-footer-videobutton">
+      <a href=" {% url 'accounts:login' %} " class="btn_down">Get Started</a>
+      <a href="  {% url 'base:how_to' %}">Learn more</a>
+    </div>
+  </section>
+</main>
+
+{% endblock content %} 
+
+{% block footer %} 
+  {% include 'home/footer.html' %} 
+{% endblock footer %}

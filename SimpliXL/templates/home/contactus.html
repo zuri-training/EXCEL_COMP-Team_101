@@ -1,149 +1,70 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static './base/css/contact.css' %}" />
-  </head>
-  <body>
-    <header>
-      <div class="container row">
-        <li><img src="{% static './images/Frame 58827 copy.png' %}" /></li>
-        <ul class="navbar">
-          <li><a href="#" class="nav-link">Overview</a></li>
-          <li>
-            <a href="{% url 'base:feature' %}" class="nav-link">Features</a>
-          </li>
-          <li>
-            <a href="{% url 'base:request' %}" class="nav-link">Request Tool</a>
-          </li>
-          <li>
-            <a href="{% url 'base:contact' %}" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="authenticate row">
-          <a href="{% url 'accounts:login' %}" class="nav-link blue">Sign In</a>
-          <a href="{% url 'accounts:register' %}" class="nav-link white bg-blue"
-            >Sign Up</a
-          >
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="contact-container">
-        <div class="contact-content">
-          <h1>Get in touch with Us</h1>
-          <p>
-            We'd love to hear from you. Here's how to get in touch with us...
-          </p>
-        </div>
-        <div class="main-contact-container">
-          <div class="imag">
-            <p>
-              Fill out the form and our Team will get in touch with you in a
-              jiffy
-            </p>
-            <div class="info-container">
-              <img src="{% static './images/call.png' %}" />
-              <p>+234 002 123 4567</p>
-            </div>
-            <div class="info-container">
-              <img src="{% static './images/sms.png' %}" />
-              <p>hello@simplixL.com</p>
-            </div>
-            <div class="info-container">
-              <img src="{% static './images/location-minus.png' %}" />
-              <p>24 Proj_Team 101, Slack, Nigeria</p>
-            </div>
-          </div>
-          <div class="contact-form">
-            <label for="yourName">Full Name</label>
-            <input
-              class="form-fill"
-              type="text"
-              name="yourName"
-              placeholder="John Doe"
-            /><br />
-            <label for="email">Email</label>
-            <input
-              name="email"
-              class="form-f"
-              type="text"
-              placeholder="youremail@gmail.com"
-            /><br />
-            <label for="message">Message</label>
-            <textarea
-              class="form-fill"
-              name="message"
-              id="message"
-              placeholder="Write your message"
-            ></textarea
-            ><br />
-            <button>Send Message</button>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="container">
-          <div class="footer">
-            <div class="footer-heading">
-              <h2>
-                <img
-                  class="image"
-                  src="{% static './images/Frame logo.png' %}"
-                />
-              </h2>
-              <p id="logo-text">
-                With SimpliXL, you can boost your accuracy by comparing and
-                finding discrepancies in the content of your excel files.
-              </p>
-              <img src="{% static './images/instagram.png' %}" />
-              <img src="{% static './images/Dribbble.png' %}" />
-              <img src="{% static './images/twitter.png' %}" />
-              <img src="{% static './images/youtube.png' %}" />
-            </div>
-            <div class="footer-heading footer-1">
-              <h2>Company</h2>
-              <a href="{% url 'base:feature' %}">Features</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Legal Service</a>
-              <a href="{% url 'base:contact' %}">Contact Us</a>
-            </div>
-            <div class="footer-heading footer-2">
-              <h2>Support</h2>
-              <a href="#">Documentation</a>
-              <a href="{% url 'base:how_to' %}">Demo</a>
-              <a href="#">API Status</a>
-            </div>
-            <div class="footer-heading footer-3">
-              <h2>Solution</h2>
-              <a href="#">Analytics</a>
-            </div>
-            <div class="footer-email-form footer-heading">
-              <h2>Subscribe to our Newsletter</h2>
-              <p>
-                Be the first to know about exciting new features and get
-                updates.
-              </p>
+{% extends "home/base.html" %} 
 
-              <div class="footer-form">
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  id="footer-email"
-                />
-                <input type="submit" value="&rarr;" id="footer-email-btn" />
-              </div>
-            </div>
-          </div>
-          <p class="line">&copy; 2022 SimpliXL. All rights reserved</p>
+{% load static %} 
+
+{% block title %}Contact{% endblock title %} 
+
+{% block css %}
+  <link rel="stylesheet" href=" {% static 'base/css/contact.css' %} " />
+{% endblock css %} 
+
+{% block content %}
+
+<main>
+  <div class="contact-container">
+    <div class="contact-content">
+      <h1>Get in touch with Us</h1>
+      <p>We'd love to hear from you. Here's how to get in touch with us...</p>
+    </div>
+    <div class="main-contact-container">
+      <div class="imag">
+        <p>
+          Fill out the form and our Team will get in touch with you in a jiffy
+        </p>
+        <div class="info-container">
+          <img src="{% static './images/call.png' %}" />
+          <p>+234 002 123 4567</p>
+        </div>
+        <div class="info-container">
+          <img src="{% static './images/sms.png' %}" />
+          <p>hello@simplixL.com</p>
+        </div>
+        <div class="info-container">
+          <img src="{% static './images/location-minus.png' %}" />
+          <p>24 Proj_Team 101, Slack, Nigeria</p>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+      <div class="contact-form">
+        <label for="yourName">Full Name</label>
+        <input
+          class="form-fill"
+          type="text"
+          name="yourName"
+          placeholder="John Doe"
+        /><br />
+        <label for="email">Email</label>
+        <input
+          name="email"
+          class="form-f"
+          type="text"
+          placeholder="youremail@gmail.com"
+        /><br />
+        <label for="message">Message</label>
+        <textarea
+          class="form-fill"
+          name="message"
+          id="message"
+          placeholder="Write your message"
+        ></textarea
+        ><br />
+        <button>Send Message</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock content %} 
+
+{% block footer %} 
+  {% include 'home/footer.html' %}
+{% endblock footer %}
