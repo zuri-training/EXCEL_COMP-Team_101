@@ -30,6 +30,18 @@ def home(request):
     return render(request, "members/dashboard.html")
 
 
+def tools(request):
+    return render(request, "members/tools.html")
+
+
+def exist(request):
+    return render(request, "members/existing_dash.html")
+
+
+def welcome(request):
+    return render(request, "members/welcome_dash.html")
+
+
 class UserDetails(LoginRequiredMixin, ListView):
     model = CustomUser
     template_name = "members/profile.html"
@@ -74,8 +86,7 @@ def setting(request):
             user_profile.save()
 
         return redirect('settings')
-    return render(request, 'members/settings.html', {'user_profile':user_profile})
-
+    return render(request, 'members/settings.html', {'user_profile': user_profile})
 
 
 @login_required

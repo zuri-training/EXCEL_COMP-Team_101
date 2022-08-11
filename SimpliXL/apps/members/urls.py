@@ -7,6 +7,10 @@ urlpatterns = [
     path('', views.home, name='home'),
     # settings urls
     path('setting/', views.setting, name='setting'),
+    path('tools/', views.tools, name='tools'),
+    path('setting/', views.setting, name='setting'),
+    path('existing-dashboard/', views.exist, name='exist'),
+    path('welcome-dashboard/', views.welcome, name='welcome'),
     # User Profile Urls
     path('profile/', views.UserDetails.as_view(), name='profile'),
     path('delete/<int:pk>', views.DeleteUser.as_view(), name='delete'),
