@@ -50,6 +50,26 @@ def dash_history3(request):
     return render(request, "members/dashboard-tour3.html")
 
 
+def dash_tour4(request):
+    return render(request, "members/dash-tour4.html")
+
+
+def dash_tour5(request):
+    return render(request, "members/dashboardtour5.html")
+
+
+def dash_tour1(request):
+    return render(request, "members/tour1.html")
+
+
+def dash_tour2(request):
+    return render(request, "members/tour2.html")
+
+
+def dash_tour3(request):
+    return render(request, "members/tour3.html")
+
+
 def profile_dash(request):
     return render(request, "members/profile-dash.html")
 

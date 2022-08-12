@@ -1,17 +1,17 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in</title>
-    <link rel="stylesheet" href="{% static './general/Stylesign.css' %}">
-</head>
-   
-    <body> 
+    <link rel="stylesheet" href="{% static './general/Stylesign.css' %}" />
+  </head>
 
-<div class="one">
+  <body>
+
+                <div class="one">
                 <img class="header1" src="{% static './images/firstlogo.png' %}" alt="Website logo">
                
                 <div class="grad"> 
@@ -33,39 +33,44 @@
                 <div class="f">  
                 <h2 class="five1" id="wb">Welcome Back!</h2>
                 <p class="five2" id="pe">Please enter your information below.</p>
-                <form class="six" action="" id="frm" method="POST">
+                <form class="six" action="" id="frm">
+                     {% if 'next' in request.GET %}
+                        <div class="error">Permission Denied, Login</div>
+                        {% endif %} {% if form.non_field_errors %}
+                        <div class="error">
+                        {% for error in form.non_field_errors %} {{ error }} {% endfor %}
+                        </div>
+                    {% endif %}
 
-                    {% if 'next' in request.GET  %}
-                                 <div class="error">
-                                  Permission Denied, Login
-                                  </div>
-                            {% endif %}
-                            
-                            {% if form.non_field_errors %}
-                                <div class="error">
-                                    {% for error in form.non_field_errors %}
-                                        {{ error }}
-                                    {% endfor %}
-                                </div>
-                            {% endif %}
                     <div class="f1">
                         <label class="f1" for="email"><h4>Email Address</h4></label>
                     </div> 
                     <div class="">  
                          
-                        <input class="f2" type="email" name="username" autofocus="" placeholder="Enter your email address" autocomplete="username" required=""
-            value="{% if form.username.value %} {{form.username.value}} {% endif %}" >
+                        <input class="f2"
+                                type="email"
+                                name="username"
+                                autofocus=""
+                                placeholder="Enter your email address"
+                                autocomplete="username"
+                                required=""
+                                value="{% if form.username.value %} {{form.username.value}} {% endif %}" >
                     </div>
 
                     <div class="f1">
                         <label class="f1" for="password"><h4>Password</h4></label>
                     </div> 
                     <div class="">
-                        <input class="f2" id="icon" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required="">
+                        <input   class="f2"              id="icon"
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required="">
                     
                     </div> 
                     <div id="forgot">
-                        <p><a href="{% url 'accounts:password_reset' %}">Forgot password?</a></p>
+                        <a href="" >Forgot password?</a>
                     </div> 
                     <div id="box">
                         <input type="checkbox" name="remember" id="remember">
@@ -87,15 +92,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-              

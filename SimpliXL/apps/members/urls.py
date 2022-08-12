@@ -11,7 +11,13 @@ urlpatterns = [
     path('tour/', views.dash_history, name='tour'),
     path('existing-dashboard/', views.exist, name='exist'),
     path('profile-dashboard/', views.profile_dash, name='profile_dash'),
-    path('existing-dashboard3/', views.dash_history3, name='tour3'),
+    path('existing-dash3/', views.dash_history3, name='tour3'),
+    path('existing-dash1/', views.dash_tour1, name='tour1'),
+    path('existing-dash2/', views.dash_tour2, name='tour2'),
+    path('existing-dash3a/', views.dash_tour3, name='tour3a'),
+    path('existing-dash4/', views.dash_tour4, name='tour4'),
+    path('existing-dash5/', views.dash_tour5, name='tour5'),
+
     path('welcome-dashboard/', views.welcome, name='welcome'),
     # User Profile Urls
     path('profile/', views.UserDetails.as_view(), name='profile'),
