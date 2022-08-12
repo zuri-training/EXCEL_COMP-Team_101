@@ -92,43 +92,38 @@ li>a:active {
 }
 
 /*styling the select uploads by the left*/
-.select-files {
+.select-files{
     position: relative;
-    bottom: 10rem;
+    bottom:15rem;
     right: 10rem;
-    font-size: 16px;
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     margin-right: 1rem;
     color: #333333;
 }
-
-#choice {
-    font-size: 20px;
+#choice{
+    font-size:20px;
     font-weight: 500;
     line-height: 24px;
     margin-right: 1rem;
     color: #1A072C;
     margin-bottom: 1rem;
 }
-
-#radio {
-    margin-bottom: 1rem;
+#radio{
+    margin-bottom: 1.5rem;
 }
-
-input:hover {
+input:hover{
     cursor: pointer;
 }
-
 /*
-aligns the  first image (on thel eft) and its contents  correctly*/
-.images-flex {
-    display: flex;
-
+aligns the  upload and its contents  correctly*/
+.images-flex{
+   position: relative;
+   bottom: 5rem;
 }
-
-.box1 {
-    font-size: 16px;
+.box1{
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     position: relative;
@@ -138,37 +133,87 @@ aligns the  first image (on thel eft) and its contents  correctly*/
     height: 360px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
+     
 }
 
 #drag {
-    height: 80px;
+    height:80px;
     width: 80px;
     position: relative;
-    left: 7rem;
+    left:7rem;
     top: 3rem;
-
+     
 }
-
-.drag {
-    font-size: 20px;
+.drag{
+    font-size:20px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     margin-top: 5rem;
 }
-
 .or1 {
     text-align: center;
     margin-top: 1rem;
-    font-size: 12px;
+    font-size:12px;
     font-weight: 400;
-    line-height: 18px;
+    line-height:18px;
     color: #B3B3B3;
 }
 
 .btrow {
     text-align: center;
-    margin-top: 2.8rem;
+    margin-top: 2.8rem; 
+}
+/*progress section*/
+.progress {
+    position: relative;
+    top: 4.5rem;
+    left: 0.5rem;
+}
+
+#black{
+    width: 128.33px;
+    height: 8px;
+    background: #1A072C;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+
+#white{
+    width: 71.67px;
+    height: 8px;
+    background: #FAFAFA;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#percent{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1A072C;
+    margin-top:1.5rem;
+    margin-left: 6rem;
+}
+#closepic {
+    position: relative;
+    top: 0.5rem;
+    left: 1.5rem;
+    padding-right: 1.7rem;
+    height: 20px;
+}
+
+#cancel{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #E41D1D;
+    position: relative;
+    top: 0.3rem;
 }
 
 /*adds  a different color to the "enter url" text*/
@@ -192,15 +237,15 @@ button {
 
 /*aligns the link icons */
 
-#link {
+/*aligns the link icons */
 
+#link {
     position: relative;
     top: 0.6rem;
     padding-left: 1rem;
     padding-right: 1rem;
-
-
 }
+
 
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
@@ -215,13 +260,13 @@ button {
     right: 6px;
 }
 
-.box2 {
-    font-size: 16px;
+.box2{
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     position: relative;
-    bottom: 1rem;
-    right: 6rem;
+    bottom: 23.5rem;
+    left: 14rem;
     width: 328px;
     height: 360px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
@@ -230,9 +275,101 @@ button {
 
 .btrow2 {
     text-align: center;
-    margin-top: 2.8rem;
+    margin-top: 2.8rem; 
+}
+ 
+
+/*aligns the link icons */
+
+#link {
+    position: relative;
+    top: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1re
 }
 
+/*aligns the lines on both sides of the word "OR"*/
+#lineup {
+    position: relative;
+    bottom: 5px;
+    left: 6px;
+    width: 96px;
+}
+
+#lineUp {
+    position: relative;
+    bottom: 5px;
+    right: 6px;
+    width: 96px;
+}
+
+
+/*progress2 section*/
+
+.progress2{
+    position: relative;
+    bottom:23rem;
+    left: 15rem;
+}
+
+#blacK{
+    width: 128.33px;
+    height: 8px;
+    background: #1A072C;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#whitE{
+    width: 71.67px;
+    height: 8px;
+    background: #FAFAFA;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#percenT{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1A072C;
+    margin-top:1.5rem;
+    margin-left: 6rem;
+}
+
+#closepiC{
+    position: relative;
+    top: 0.5rem;
+    left: 1.5rem;
+    padding-right: 1.7rem;
+    height: 20px;
+    
+}
+
+#canceL{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #E41D1D;
+    position: relative;
+    top: 0.3rem;
+}
+
+#leave{
+    color: #E41D1D;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top:7rem;
+    position: relative;
+    right: 13.5rem;
+    
+}
+ 
 /* second section :dashboard menu panel - left column*/
 
 /*positions the items at the left-hand-side*/
@@ -244,7 +381,7 @@ button {
     width: 17%;
     margin: auto;
     line-height: 100px;
-    height: 67.6rem;
+    height: 88rem;
 }
 
 /*positions the logo */
@@ -368,7 +505,7 @@ button {
     right: 0rem;
     width: 18.1%;
     margin: auto;
-    height: 56rem;
+    height: 76rem;
     padding-left: 1rem;
     border-left: 1px solid #D9D9D9;
 }
