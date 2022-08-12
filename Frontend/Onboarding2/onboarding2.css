@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Axiforma, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+.center {
+   
+    margin: auto;
+    margin-top: 10rem;
+    margin-left: 11.3rem;
+}
+
+/*aligning the first div and items*/
+ 
+#head{
+    font-weight: 700;
+    font-size: 40px;
+    line-height:48px;
+    width: 962px;
+    text-align: center;
+    color: #4d4d4d;
+    margin-left: 8rem;
+}
+#board{
+    font-weight: 400;
+    font-size: 24px;
+    line-height:36px;
+    color: #4d4d4d;
+    margin-left:4rem; 
+    margin-right:0.5rem;
+    margin-top:1rem;
+}
+ 
+
+/*positions the uncompleted files in a row*/
+.image-row>p {
+    width: 338px;
+    margin: auto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 7rem;
+}
+
+#complete {
+    margin-left:20.5rem;
+}
+
+.images {
+    width: 780px;
+    margin: auto;
+    align-items: center;
+    padding: 8px 0px;
+    margin-top: 0.5rem;
+    margin-left:20rem;
+}
+/*pushes the first image up to align wtih the others*/
+#imgOne {
+    margin-bottom: 1.5rem;
+}
+
+/*positions the items at the left-hand-side*/
+.left-column {
+    background-color: #F7F2FD;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 17%;
+    margin: auto;
+    line-height: 100px;
+    height: 60rem;
+}
+
+/*positions the logo */
+#logo {
+    margin-top: 38px;
+    padding-top: 2.4rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+button{
+    position: relative;
+    margin-left: 31rem;
+    margin-top: 10rem;
+    width: 200px;
+    color: #FFFFFF;
+    background-color: #2691D9;
+    border: none;
+    border-radius: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+#arrow{
+    position: relative;
+    top:0.4rem
+}
