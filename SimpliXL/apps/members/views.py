@@ -41,8 +41,17 @@ def exist(request):
 def welcome(request):
     return render(request, "members/welcome_dash.html")
 
+
 def dash_history(request):
     return render(request, "members/dashboard-tour.html")
+
+
+def dash_history3(request):
+    return render(request, "members/dashboard-tour3.html")
+
+
+def profile_dash(request):
+    return render(request, "members/profile-dash.html")
 
 
 class UserDetails(LoginRequiredMixin, ListView):

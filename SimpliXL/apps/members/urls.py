@@ -10,6 +10,8 @@ urlpatterns = [
     path('tools/', views.tools, name='tools'),
     path('tour/', views.dash_history, name='tour'),
     path('existing-dashboard/', views.exist, name='exist'),
+    path('profile-dashboard/', views.profile_dash, name='profile_dash'),
+    path('existing-dashboard3/', views.dash_history3, name='tour3'),
     path('welcome-dashboard/', views.welcome, name='welcome'),
     # User Profile Urls
     path('profile/', views.UserDetails.as_view(), name='profile'),
