@@ -88,16 +88,21 @@ li>a:active {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    margin-right: 1rem;
 }
 /*aligns the  first image (on thel eft) and its contents  correctly*/
 .images-flex {
     display: flex;
+    box-shadow: 0px  2px 4px rgba(0, 0, 0, 0.12);
+    width: 500px;
+    height: 360px;
+    align-items: center;
 }
 
 .box {
     position: relative;
-    top: 1.5rem;
-    left: 1rem
+    top: 0.5rem;
+    left: 2rem
 }
 
 #drag {
@@ -120,67 +125,22 @@ li>a:active {
 
 .under {
     position: relative;
-    top: 4.8rem;
-    right: 10rem;
+    top: 4rem;
+    right: 11.4rem;
     width: 144px;
     text-align: center;
     font-size: 12px;
     font-weight: 400;
     line-height: 22px;
-
 }
  /*adds border to image*/
 #imgOne {
     border: 2px solid #2691d9;
     border-radius: 20px;
+    margin-left: 3rem;
+     
 }
 
-/*aligns the  second image (on the right) and its contents  correctly and adding shadow effects*/
-
-.image2 {
-    position: relative;
-    left: 26.6rem;
-    bottom: 11rem;
-    box-shadow: 0px  2px 4px rgba(0, 0, 0, 0.12);
-    width: 414px;
-    height: 300px;
-    padding: 0px 8px;
-}
-
-.box2 {
-    position: relative;
-    left: 38.5rem;
-    bottom: 28rem;
-}
-
-#dragD {
-    position: relative;
-    top: 0.6rem;
-    right: 0.5rem
-}
-
-.or2 {
-    position: relative;
-    top: 1.5rem;
-    left: 2rem
-}
-
-.btrow2 {
-    position: relative;
-    top: 2.8rem;
-}
-
-/*aligns the texts under the images*/
-.under2 {
-    position: relative;
-    top:4rem;
-    right: 10rem;
-    width: 144px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 22px;
-}
 /*adds  a different color to the "enter url" text*/
 #color {
     color: #2691d9;
@@ -208,11 +168,6 @@ button {
     padding-right: 1rem;
 }
 
-#linkMid {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
- 
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
     position: relative;
@@ -229,12 +184,12 @@ button {
 /*continue button below the page content */
 .continue {
     position: relative;
-    left: 23rem;
-    bottom: 5rem;
+    left: 7rem;
+    top: 16rem;
     font-size: 16px;
     font-weight: 400;
     padding: 8px 44px;
-
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 
 }
 
@@ -379,7 +334,6 @@ button {
 }
 
 /* adds styles to the more options section*/
-
 .more-options {
     margin-top: 2.5rem;
 }
