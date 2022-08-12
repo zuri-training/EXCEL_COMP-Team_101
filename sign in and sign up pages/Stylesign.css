@@ -40,9 +40,10 @@ body{
 }
 
 .one {
-    width: 100%;
     display: flex;
     background-color: #2691D9;
+    width: 100%;
+    min-height: 100vh;
     }   
 
  .section1{
@@ -56,8 +57,10 @@ body{
     width: 100%;
     height: 12%;
     transform: rotate(-54deg);
-    margin-top: -155px;
-    margin-left: 70px;
+    /*margin-top: -155px;
+    margin-left: 70px;*/
+    margin-top: -27%;
+    margin-left: 10%;
 }
 
 .grad2{
@@ -65,8 +68,10 @@ body{
     height: 12%;
     background: linear-gradient(89.89deg, rgba(38, 145, 217, 0) 3.1%, rgba(70, 161, 222, 0) 14.52%, rgba(89, 171, 226, 0) 21.39%, rgba(106, 180, 229, 0) 32%, rgba(126, 189, 232, 0.384428) 54.67%, rgba(255, 255, 255, 0.28) 81.69%);
     transform: rotate(35.66deg); 
-    margin-left: 70px;
-    margin-top: 70px;
+    /*margin-left: 70px;
+    margin-top: 70px;*/
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 .grad3{
@@ -74,9 +79,10 @@ body{
     height: 12%;
     background: linear-gradient(89.89deg, rgba(38, 145, 217, 0) 3.1%, rgba(70, 161, 222, 0) 3.1%, rgba(89, 171, 226, 0.2) 24.26%, rgba(106, 180, 229, 0.28) 39.14%, rgba(126, 189, 232, 0.384428) 69.4%, rgba(255, 255, 255, 0.18) 81.69%);
     transform: rotate(-50.33deg);
-    margin-top: 120px;
-    margin-left: -140px;    
-
+    /*margin-top: 120px;
+    margin-left: -140px;*/    
+    margin-top: 20%;
+    margin-left: -25%;
 }
 
 .three1{ 
@@ -121,8 +127,6 @@ body{
     }
 }
 .section2{
-     margin-left: 0px;
-    margin-top: 0px;
     background: #FFFFFF;
     border-radius: 30px 0px 0px 30px; 
     width: 55%; 
@@ -286,92 +290,91 @@ a{
 }
 /*additional style for the newpassword page*/
 #pwd1{
-    margin-top: 70px;
+    margin-top: 1%;
 }
+
 #pwd2{
-    margin-top: 60px;
-}
-#form1{
-    margin-top: 70px;
+    margin-top: 1%;
 }
 #btn{
-    margin-left: 125px;
-    top: 550px;
-    color: white;
+    margin-top: 2%;
 }
 #p{
-    margin-left: 340px;
-    top: 620px;
-    color: black;
+    margin-bottom: 30%;
+    margin-top: -8%;
 }
 /*additional style for forgotpassword page*/
 #fpw{
-    margin-top: 100px;
+    margin-top: 1%;
 }
 #fpw2{
-    margin-top: 90px;
+    margin-top: 1%;
     text-align: justify;
 }
-#form2{
-    margin-top: 130px;
-}
 #btn1{
-    margin-left: 125px;
-    top: 490px;
     color: white;
+    margin-top: 4%;
 }
 #p1{
-    margin-left: 340px;
-    top: 560px;
+    text-align: center;
     color: black;
+}
+#point{
+    margin-top: 7%;
+    margin-bottom: 32%;
 }
 /*additional reset successful page style*/
 .right{
     text-align: center;
-    margin-top: 200px;
 }
 .resend{
     color: blue;
     font-weight: normal;
-    margin-top: 25px;
-    position: absolute;
-    margin-left: -70px;
+}
+#purpledot{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    margin-left: -85%;
 }
 /*styling signin page*/
-#wb{
-    top: 200px;
-}
+
 #pe{
-    top: 240px;
-}
-#frm{
-    top: 300px;
-}
-#dwn1{
-    top: 590px;
-}
-#dwn2{
-    top: 660px;
-    margin-left: 160px;
-}
-#dwn3{
-    top: 740px;
-}
-#dwn4{
-    top: 790px;
+    margin-top: 1%;
 }
 #box{
-    margin-top: 35px;
-    margin-left: 7px;
+    margin-top: -3%;
+    margin-left: 1%;
 }
 #forgot{
     float: right;
     margin-top: -18px;
     color: blueviolet;
 }
+#dwn1{
+    margin-top: 5%;
+}
+#dwn2{
+    margin-top: -11%;
+}
+#dwn3{
+    margin-top: 4%;
+}
 #remember{
     transform: scale(2.0);
+    border-radius: 8px;
 }
 .checkbox{
     margin-left: 10px;
+}
+@media screen and (max-width: 700px){
+    .one{
+        display: block;
+    }
+    .section1{
+        display: none;
+    }
+    .section2{
+        width: 100%;
+        border-radius: 90px;
+    }
 }
