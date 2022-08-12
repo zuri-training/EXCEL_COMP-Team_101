@@ -117,9 +117,11 @@ li>a:active {
     margin-right: 1rem;
     color: #1A072C;
     margin-bottom: 1rem;
+
 }
 #radio{
     margin-bottom: 1.5rem;
+
 }
 input:hover{
     cursor: pointer;
@@ -355,12 +357,8 @@ button {
     font-weight: 600;
     font-size: 16px;
     color: #350F57;
-    background-color: #F7F2FD;
     line-height: 24px;
     padding:1.5rem 2.5rem;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-   
     margin-left: 0.6rem; 
     margin-top: 1.5rem ;
    
@@ -373,8 +371,6 @@ button {
     margin-left: 1.5rem; 
  }
 #blueBg{
-   background-color: #aad2ec;
-   border-radius: 10px;
    padding: 0.5rem;
    margin-top: 0.8rem;
 }
@@ -391,8 +387,7 @@ button {
     left:0.4rem;
     bottom:0.5rem;
 }
-.rowbg{
-    background-color: #F4F9FD;
+
 
 }
 .giv{

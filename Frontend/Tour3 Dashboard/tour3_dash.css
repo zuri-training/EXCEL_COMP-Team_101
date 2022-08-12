@@ -98,32 +98,7 @@ li>a:active {
     margin-right: 1rem;
 }
 
-/*styling the select uploads by the left*/
-.select-files{
-    position: relative;
-    bottom:13rem;
-    right: 10rem;
-    font-size:16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin-right: 1rem;
-    color: #333333;
-}
 
-#choice{
-    font-size:20px;
-    font-weight: 500;
-    line-height: 24px;
-    margin-right: 1rem;
-    color: #1A072C;
-    margin-bottom: 1rem;
-}
-#radio{
-    margin-bottom: 1.5rem;
-}
-input:hover{
-    cursor: pointer;
-}
 /*
 aligns the  first image (on thel eft) and its contents  correctly*/
 .images-flex {
@@ -196,8 +171,12 @@ button {
 /*aligns the link icons */
 
 #link {
+    position: relative;
+    top: 0.6rem;
     padding-left: 1rem;
     padding-right: 1rem;
+
+
 }
 
 /*aligns the lines on both sides of the word "OR"*/
@@ -215,6 +194,72 @@ button {
     width: 96px;
 }
 
+
+/*progress section*/
+
+.progress {
+    position: relative;
+    bottom: 6rem;
+    right: 2rem;
+}
+
+#black {
+    width: 228px;
+    height: 8px;
+    background: #1A072C;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+
+#white {
+    width: 128px;
+    height: 8px;
+    background: #FAFAFA;
+    border: 1px solid #1A072C;
+    border-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#percent {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1A072C;
+    margin-top: 0.6rem;
+    margin-left: 7.5rem;
+}
+
+
+#closepic {
+    position: relative;
+    top: 0.5rem;
+    left: 1.5rem;
+    padding-right: 1.7rem;
+    height: 20px;
+
+    
+}
+
+#cancel {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #E41D1D;
+    position: relative;
+    top: 0.3rem;
+}
+
+#leave {
+    margin-top: 12rem;
+    color: #E41D1D;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
 /* second section :dashboard menu panel - left column*/
 .left-column {
     background-color: #F7F2FD;
@@ -355,12 +400,8 @@ button {
     font-weight: 600;
     font-size: 16px;
     color: #350F57;
-    background-color: #F7F2FD;
     line-height: 24px;
     padding:1.5rem 2.5rem;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-   
     margin-left: 0.6rem; 
     margin-top: 1.5rem ;
    
@@ -373,8 +414,6 @@ button {
     margin-left: 1.5rem; 
  }
 #blueBg{
-   background-color: #aad2ec;
-   border-radius: 10px;
    padding: 0.5rem;
    margin-top: 0.8rem;
 }
@@ -391,8 +430,7 @@ button {
     left:0.4rem;
     bottom:0.5rem;
 }
-.rowbg{
-    background-color: #F4F9FD;
+
 
 }
 .giv{
