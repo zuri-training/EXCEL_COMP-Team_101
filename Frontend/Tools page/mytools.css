@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Axiforma, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+/* adding stlyes to the navigation bar*/
+li,
+ul {
+    list-style: none;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-6 {
+    width: 50%;
+    flex-basis: 50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    line-height: 40px;
+    background: #fcfcfc;
+    box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    display: flex;
+    margin-left: 28rem;
+}
+
+.nav-link {
+    padding: 0 20px;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* removes text decoration on all links */
+li a:visited {
+    color: #757472;
+}
+
+/*adds some animations*/
+li a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #2691d9;
+    text-decoration-thickness: 1px;
+    color: #302e2b;
+}
+
+/*first section :tools menu - center*/
+.your-tools, 
+.tool-box{
+    width: 75%;
+    margin: auto;
+    font-family: 500;
+    line-height: 24px;
+    margin-left: 11.56rem;
+}
+#title{
+   margin-left: 29rem;
+   margin-top: 5rem;
+   font-size: 36px;
+   line-height: 44px;
+}
+.tool-box{
+    margin-top: 5rem;
+   
+}
+/*adding background color to each item inthe tools box*/
+.bg{
+    background-color: #F7F2FD;
+    margin-bottom:1rem;
+}
+/*aligns the words in the tool box*/
+ .tols{
+    position:relative;
+    bottom:2.3rem; 
+    cursor: pointer;
+     
+}
+.tool-box >p{
+    height: 88px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+/*aligns the lock icon in the last two tools*/
+#loc{
+    position: relative;
+    bottom: 2.12rem;
+    left: 28.8rem;
+    cursor: pointer;
+}
+#lock{
+    position: relative;
+    bottom: 2.12rem;
+    left: 25rem;
+    cursor: pointer;
+}
+
+
+/* second section :dashboard menu panel - left column*/
+.left-column {
+    background-color: #F7F2FD;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 17%;
+    margin: auto;
+    line-height: 100px;
+    height: 67.6rem;
+
+}
+
+#logo {
+    margin-top: 38px;
+    padding-top: 2.4rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+#profileImage {
+    margin-top: 20px;
+    margin-left: 3.7rem;
+    align-items: center;
+}
+
+#name {
+    position: relative;
+    bottom: 1.5rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4D4D4D;
+}
+
+#line {
+    width: 220px;
+    margin-bottom: 2rem;
+}
+
+.dashboard {
+    position: relative;
+    bottom: 3rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#dashboard {
+    position: relative;
+    top: 0.4rem;
+}
+
+.tools {
+    position: relative;
+    top: 0.5rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#tools,
+#settings,
+#support,
+#logout {
+    position: relative;
+    top: 0.3rem;
+}
+
+#collapse {
+    position: absolute;
+    right: 0;
+    top: 33.5rem;
+}
+
+#line1 {
+    width: 200px;
+    position: relative;
+    bottom: 7.05rem;
+}
+
+.setting {
+    position: relative;
+    bottom: 6rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.support {
+    position: relative;
+    bottom: 2rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#line2 {
+    width: 220px;
+    position: relative;
+    bottom: 2rem;
+}
+
+.logout {
+    position: relative;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.left-column>a:visited {
+    color: #4D4D4D;
+}
+li>a:active {
+    color: #1a1a1a;
+}
+
+.user-icon {
+    margin: auto;
+}
