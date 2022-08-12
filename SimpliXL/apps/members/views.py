@@ -41,6 +41,9 @@ def exist(request):
 def welcome(request):
     return render(request, "members/welcome_dash.html")
 
+def dash_history(request):
+    return render(request, "members/dashboard-tour.html")
+
 
 class UserDetails(LoginRequiredMixin, ListView):
     model = CustomUser

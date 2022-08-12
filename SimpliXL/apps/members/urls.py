@@ -8,7 +8,7 @@ urlpatterns = [
     # settings urls
     path('setting/', views.setting, name='setting'),
     path('tools/', views.tools, name='tools'),
-    path('setting/', views.setting, name='setting'),
+    path('tour/', views.dash_history, name='tour'),
     path('existing-dashboard/', views.exist, name='exist'),
     path('welcome-dashboard/', views.welcome, name='welcome'),
     # User Profile Urls
