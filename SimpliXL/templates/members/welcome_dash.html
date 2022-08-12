@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{% static './members/css/welcome_dash.css' %}"
+    />
+  </head>
+  <body>
+    <section>
+      <aside>
+        <img
+          src="{% static './images/Brand Logo (big).png' %}"
+          alt=""
+          class="logo"
+        />
+      </aside>
+      <main>
+        <div class="container">
+          <h1>
+            <img src="{% static './images/Waving hand.png' %}" alt="" /> Welcome
+          </h1>
+          <p class="sideline">
+            SimpliXL is a comparing tool for CSV & Excel files
+          </p>
+          <a href="{% url 'base:how_to' %}" class="btn">Explore SimpliXL</a>
+          <p class="sam">
+            Got a hang of SimpliXL
+            <a href="{% url 'members:home' %}">Skip tutorials</a>
+          </p>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

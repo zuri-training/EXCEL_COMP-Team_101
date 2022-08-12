@@ -2,7 +2,7 @@ from django.urls import path, reverse_lazy
 from django.contrib.auth.views import LogoutView
 
 from .views import CustomLoginView, RegisterPage, ResetPasswordCompleteView, ResetPasswordConfirmView, ResetPasswordDoneView, ResetPasswordView
-
+from . import views
 
 app_name = 'accounts'
 
@@ -10,6 +10,7 @@ urlpatterns = [
     # Authentication System
     path('login/', CustomLoginView.as_view(), name='login'),
     path('register/', RegisterPage.as_view(), name='register'),
+    path('googlesign/', views.googlesign, name='googlesignin'),
     path('logout/', LogoutView.as_view(next_page='accounts:login'), name='logout'),
 
     # Password Reset

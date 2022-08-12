@@ -1,0 +1,95 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Axiforma, sans-serif;
+}
+
+.tos-content {
+  margin: 70px 0 50px;
+  line-height: 45px;
+  color: #000000;
+}
+
+.tos-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tos-content p {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.tos-content a {
+  color: blue;
+}
+
+.tos-content a:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  margin: 100px 0;
+}
+
+.button-container a {
+  padding: 10px 64px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.button-container .decline-button {
+  background-color: #d2ebf9;
+  color: #2691d9;
+}
+
+.button-container .accept-button {
+  background-color: #2691d9;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 7px;
+  }
+
+  .tos-content {
+    line-height: 30px;
+  }
+
+  .button-container {
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button-container {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .button-container a {
+    display: block;
+    width: 100%;
+  }
+}

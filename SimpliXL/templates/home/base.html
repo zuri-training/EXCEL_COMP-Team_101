@@ -1,27 +1,42 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    {% comment %} Website meta information {% endcomment %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% comment %} Site Title {% endcomment %}
     <title>{% block title %} {% endblock title %}</title>
-    <link rel="stylesheet" href=" {% static 'base/css/style.css' %} ">
-    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} ">
 
-</head>
-<body>
-    {% include "home/nav.html" %}
+     <link rel="icon" type="image/x-icon" href="{% static 'images/Frame 58827 copy.png' %}">
 
-    {% block content %}
-            <div class="messages">
-                {% if messages %}
-                    {% for message in messages %}
-                        <p class="message {{ message.tags }} ">{{message | safe}}</p>
-                    {% endfor %}
-                {% endif %}
-            </div>
-    
-    {% endblock content %}
-</body>
+    {% comment %} Stylesheet links {% endcomment %}
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
+    {% block css%}{% endblock css %}
+    <link rel="stylesheet" href=" {% static 'general/header.css' %} " />
+    <link rel="stylesheet" href=" {% static 'general/footer.css' %} " />
+
+    {% comment %}
+    <link rel="stylesheet" href=" {% static 'base/css/style.css' %} " />
+    {% endcomment %} {% comment %} Site general css {% endcomment %} {%comment%}
+    <link rel="stylesheet" href=" {% static 'base/css/style.css' %} " />
+    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} " />
+    {% endcomment %} {% comment %} Webpage css {% endcomment %}
+  </head>
+  <body>
+    {% include "home/nav.html" %} {% block content %} {% comment %}
+    <div class="messages">
+      {% if messages %} {% for message in messages %}
+      <p class="message {{ message.tags }} ">{{message | safe}}</p>
+      {% endfor %} {% endif %}
+    </div>
+    {% endcomment %} {% endblock content %}
+
+    {% block footer %}{% endblock footer %}
+
+    <script src="{% static 'general/app.js' %}"></script>
+  </body>
 </html>

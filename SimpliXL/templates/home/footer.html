@@ -1,0 +1,68 @@
+{% load static %}
+
+<footer>
+  <div class="main-footer-container">
+    <div class="container">
+      <div class="main-footer">
+        <div class="main-footer-heading main-footer-30">
+          <h2>
+            <img class="image" src=" {% static 'images/Frame logo.png' %} " />
+          </h2>
+
+          <p id="logo-text">
+            With SimpliXL, you can boost your accuracy by comparing and finding
+            discrepancies in the content of your excel files.
+          </p>
+
+          <a href="#" class="social-media"
+            ><img src=" {% static 'images/instagram.png' %} "
+          /></a>
+          <a href="#" class="social-media"
+            ><img src=" {% static 'images/Dribbble.png' %} "
+          /></a>
+          <a href="#" class="social-media"
+            ><img src=" {% static 'images/twitter.png' %} "
+          /></a>
+          <a href="#" class="social-media"
+            ><img src=" {% static 'images/youtube.png' %} "
+          /></a>
+        </div>
+
+        <div class="main-footer-heading">
+          <h2>Company</h2>
+          <a href=" {% url 'base:about' %} ">About Us</a>
+          <a href=" {% url 'base:terms' %} ">Privacy Policy</a>
+          <a href="#">Legal Service</a>
+        </div>
+
+        <div class="main-footer-heading">
+          <h2>Support</h2>
+          <a href="  {% url 'base:contact' %} ">Contact Us</a>
+        </div>
+
+        <div class="main-footer-heading">
+          <h2>Solution</h2>
+          <a href="#">Doc</a>
+          <a href=" {% url 'base:feature' %} ">Features</a>
+        </div>
+
+        <div class="main-footer-heading main-footer-30">
+          <h2>Subscribe to our Newsletter</h2>
+          <p>
+            Be the first to know about exciting new features and get updates.
+          </p>
+
+          <div class="main-footer-form">
+            <input
+              type="email"
+              placeholder="Email address"
+              id="main-footer-email"
+            />
+            <input type="submit" value="&rarr;" id="main-footer-email-btn" />
+          </div>
+        </div>
+      </div>
+      <p class="line">&copy; 2022 SimpliXL. All rights reserved</p>
+    </div>
+  </div>
+</footer>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
-    <link rel="stylesheet" href="{% static 'base/css/Stylesign.css' %}">
+    <link rel="stylesheet" href="{% static './general/Stylesign.css' %}">
 </head>
    
     <body> 
@@ -65,7 +65,7 @@
                     
                     </div> 
                     <div id="forgot">
-                        <a href="">Forgot password?</a>
+                        <p><a href="{% url 'accounts:password_reset' %}">Forgot password?</a></p>
                     </div> 
                     <div id="box">
                         <input type="checkbox" name="remember" id="remember">
@@ -73,7 +73,7 @@
                     </div>
                 </form>
                 <button class="eight" id="dwn1"><a href="" id="btna">Sign into my Account</a></button>
-                <p class="nine" id="dwn2">Don't have an account? <a href="Signup.html">Sign Up</a></p>
+                <p class="nine" id="dwn2">Don't have an account? <a href="{% url 'accounts:register' %}">Sign Up</a></p>
                 <div class="ten" id="dwn3"> 
                     <div class="l1"></div> 
                     <div class="1p"> or </div>
