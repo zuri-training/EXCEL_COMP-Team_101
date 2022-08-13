@@ -40,5 +40,5 @@
 
 5. **Implementation**: [Prototypes](https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=2%3A2) were done to show the flow of the app and I checked for functionalities. Screens were made to be [responsive](https://www.figma.com/file/UV7dpsrV768tBbfFN8eWsz/simpliXL?node-id=3007%3A57294) by using autolayouts and constraints in Figma.
 
-6. **Evaluation**: All testing happens at this stage and is ongoing at the moment. The design documentation is being worked upon and will be ready soon... 
+6. **Evaluation**: The [design documentation](https://docs.google.com/document/d/1JyFCwnTNvq4w8unjJTeqhAB9gXs-PpF-1cLrWa09D7M/edit?usp=sharing) is ready though not as detailed as we'd like but it explains our project, design process and contains the relevant design documents. 
 
