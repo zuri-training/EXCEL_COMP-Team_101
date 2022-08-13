@@ -23,6 +23,12 @@ urlpatterns = [
     path('existing-dash4/', views.dash_tour4, name='tour4'),
     path('existing-dash5/', views.dash_tour5, name='tour5'),
 
+    path('upload-file/', views.upload_file, name='upload_file'),
+    path('upload-files/', views.upload_files, name='upload_files'),
+    path('upload-one/', views.upload_one, name='upload_one'),
+    path('upload-two/', views.upload_two, name='upload_two'),
+
+
     path('welcome-dashboard/', views.welcome, name='welcome'),
 
     # User Profile Urls

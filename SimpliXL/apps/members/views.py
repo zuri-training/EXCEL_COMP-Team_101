@@ -93,6 +93,26 @@ def profile_dash(request):
     return render(request, "members/profile-dash.html")
 
 
+@login_required
+def upload_one(request):
+    return render(request, "members/upload-onefile.html")
+
+
+@login_required
+def upload_two(request):
+    return render(request, "members/upload-twofiles.html")
+
+
+@login_required
+def upload_files(request):
+    return render(request, "members/uploading-page-twofiles.html")
+
+
+@login_required
+def upload_file(request):
+    return render(request, "members/uploading-page.html")
+
+
 class UserDetails(LoginRequiredMixin, ListView):
     model = CustomUser
     template_name = "members/profile.html"

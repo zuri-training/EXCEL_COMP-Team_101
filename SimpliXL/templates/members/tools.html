@@ -1,20 +1,20 @@
-{% extends "members/base.html" %} {% load static %} {% block title%}My Tools {% endblock title%} 
-{% block css %}
+{% extends "members/base.html" %} {% load static %} {% block title%}My Tools {%
+endblock title%} {% block css %}
 <link rel="stylesheet" href=" {% static 'members/css/mytools.css' %} " />
 {% endblock css %} {% block content %}
 <!-- users tools section-->
 <section class="your-tools">
   <h1 id="title">Your Tools</h1>
   <div class="tool-box">
-    <a href="#" class="bg">
+    <a href="{% url 'members:exist' %}" class="bg">
       <img src="{% static './images/Frame 59278.png' %}" alt="files" />
       <span class="tols">Files</span>
     </a>
-    <a href="#" class="bg">
+    <a href="{% url 'members:upload_file' %}" class="bg">
       <img src="{% static './images/Frame 59278 (1).png' %}" alt="comp1" />
       <span class="tols">1 FIle Comparator</span>
     </a>
-    <a href="#" class="bg">
+    <a href="{% url 'members:upload_files' %}" class="bg">
       <img src="{% static './images/Frame 59278 (2).png' %}" alt="comp2" />
       <span class="tols">2 Files Comparator</span>
     </a>
@@ -31,9 +31,12 @@
     </a>
 
     <a href="#" class="bg">
-      <img src="{% static './images/Frame 59278 (4).png' %}" alt="adv analysis" />
+      <img
+        src="{% static './images/Frame 59278 (4).png' %}"
+        alt="adv analysis"
+      />
       <span class="tols">Advanced Data Analysis </span>
-      
+
       <img src="{% static './images/lock.png' %}" alt="lock" id="loc" />
     </a>
   </div>

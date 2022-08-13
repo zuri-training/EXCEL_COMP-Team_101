@@ -1,5 +1,5 @@
-{% extends "members/base.html" %} {% load static %} 
-{% block title%}Dashboard{% endblock title%} {% block css %}
+{% extends "members/base.html" %} {% load static %} {% block title%}Dashboard{%
+endblock title%} {% block css %}
 <link rel="stylesheet" href=" {% static 'members/css/NewUserFile.css' %} " />
 {% endblock css %} {% block content %}
 
@@ -8,22 +8,33 @@
     <div>
       <p class="complete">Recent Files - Uncompleted</p>
       <div class="images">
-        <a href="#"><img src="{% static 'images/Frame 59335.png' %}" alt="monthly budgets" id="imgOne" /></a>
+        <a href="#"
+          ><img
+            src="{% static 'images/Frame 59335.png' %}"
+            alt="monthly budgets"
+            id="imgOne"
+        /></a>
         <a href="#">
-          <img src="{% static 'images/Frame 59335.png' %}" alt="metero data"/>
+          <img src="{% static 'images/Frame 59335.png' %}" alt="metero data" />
         </a>
         <a href="#">
-          <img src="{% static 'images/Frame 59335.png' %}" alt="sales analysis"/>
+          <img
+            src="{% static 'images/Frame 59335.png' %}"
+            alt="sales analysis"
+          />
         </a>
         <a href="#">
-          <img src="{% static 'images/Frame 59335.png' %}" alt="annual travel"/>
+          <img
+            src="{% static 'images/Frame 59335.png' %}"
+            alt="annual travel"
+          />
         </a>
       </div>
     </div>
 
     <div>
       <p class="complete recent">Recent Files - Completed</p>
-      <table> 
+      <table>
         <thead>
           <tr>
             <th>File Name</th>
@@ -39,9 +50,7 @@
               <img src="{% static  './images/Frame 59074.png' %} " alt="xls" />
               Work Schedule.xls
             </td>
-            <td>
-              August 1, 2022
-            </td>
+            <td>August 1, 2022</td>
             <td>15MB</td>
             <td>August 1, 2022</td>
             <td>...</td>
@@ -50,13 +59,11 @@
           <tr></tr>
           <tr></tr>
           <tr></tr>
-  
-          
         </tbody>
       </table>
     </div>
   </div>
-  </section>
+</section>
 
 <section class="right">
   <div class="right-column">
@@ -134,7 +141,6 @@
         <div class="feedback">
           <p class="giv">Give Feedback</p>
           <div>
-
             <a href="#"
               ><img
                 src="{% static './images/Star 4.png' %}"
@@ -178,11 +184,9 @@
             <a href="{% url 'base:request' %}">Request New Feature</a>
           </p>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
 {% endblock content %}
-
