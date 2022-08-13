@@ -9,6 +9,7 @@ urlpatterns = [
     path('setting/', views.setting, name='setting'),
     path('tools/', views.tools, name='tools'),
     path('tour/', views.dash_history, name='tour'),
+    path('newuserfile/', views.newuserfile, name='newuser'),
     path('existing-dashboard/', views.exist, name='exist'),
     path('profile-dashboard/', views.profile_dash, name='profile_dash'),
     path('existing-dash3/', views.dash_history3, name='tour3'),

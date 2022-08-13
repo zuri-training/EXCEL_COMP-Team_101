@@ -41,6 +41,9 @@ def exist(request):
 def welcome(request):
     return render(request, "members/welcome_dash.html")
 
+def newuserfile(request):
+    return render(request, "members/NewUserFile.html")
+
 
 def dash_history(request):
     return render(request, "members/dashboard-tour.html")
