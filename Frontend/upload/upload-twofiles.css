@@ -217,3 +217,21 @@ label {
   font-weight: 400;
   font-size: 16px;
 }
+
+.upload-button {
+  position: relative;
+  margin-top: 20px;
+  left: 500px;
+  width: 300px;
+  height: 48px;
+  border: none;
+  background-color: #2691d9;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+#upload-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+}
