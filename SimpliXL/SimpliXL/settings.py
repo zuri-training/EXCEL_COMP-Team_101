@@ -39,14 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    'apps.accounts.apps.AccountsConfig',
+    'apps.home.apps.HomeConfig',
+    'apps.members.apps.MembersConfig',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
 
     # 3rd Party.
     'django_extensions',
 
     # Local Apps.
-    'apps.accounts.apps.AccountsConfig',
-    'apps.home.apps.HomeConfig',
-    'apps.members.apps.MembersConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +83,9 @@ TEMPLATES = [
             ],
         },
     },
+]
+AUTHENTICATION_BACKENDS = [
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'SimpliXL.wsgi.application'
@@ -151,3 +162,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SITE_ID = 2
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'

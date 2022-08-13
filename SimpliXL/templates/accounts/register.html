@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -116,7 +117,7 @@
               class="eleven1"
               src="{% static './images/Google.png' %}"
               alt=""
-            /><a href="{% url 'accounts:googlesignin' %}"
+            /><a href="{% provider_login_url 'google' %}" 'accounts:googlesignin'
               >Sign up with Google</a
             >
           </button>
