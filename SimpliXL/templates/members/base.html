@@ -8,36 +8,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title%}{% endblock title%}</title>
 
+    <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
+
+    {% block css %}{% endblock css %}
+    
     <link rel="stylesheet" href=" {% static 'base/css/message.css' %} " />
     <link rel="stylesheet" href=" {% static 'members/css/style.css' %} " />
+
+    {% comment %} <link rel="stylesheet" href="{% static './members/css/profile.css' %}" /> {% endcomment %}
   </head>
+
   <body>
-    {% include 'members/nav.html' %}
+        <aside class="left">
+          <div class="left-column">
+            <div class="side-logo">
+              <img
+                src="{% static './images/Brand Logo (big).png' %}"
+                alt="logo"
+                id="logo"
+              />
+            </div>
 
-    <div class="content">
-      <aside>
-        <a href=" {% url 'members:home' %} ">Dashboard</a>
+            <div class="user">
+              <img
+                src="{% static './images/Frame 59225.png' %}"
+                alt="profile image"
+                id="profileImage"
+              />
+              <p id="name">Danjuma Tyson</p>
+            </div>
 
-        <h2>Account</h2>
-        <a href=" {% url 'members:profile' %} ">Profile</a>
-        <a href=" {% url 'members:delete' request.user.id %} ">Delete</a>
+            <div class="cate">
+              <a href=" {% url 'members:exist' %} " class="dashboard">
+                <p>
+                  <img
+                    src="{% static './images/element-2.png' %}"
+                    alt="dashboard"
+                    id="dashboard"
+                  />
+                  Dashboard
+                </p>
+              </a>
+              <a href="{% url 'members:tools' %}" class="tools">
+                <p>
+                  <img
+                    src="{% static './images/category-2.png' %}"
+                    alt="tools"
+                    id="tools"
+                  />
+                  Tools
+                </p>
+              </a>
+            </div>
 
-        <h2>Files</h2>
-        <a href=" {% url 'members:upload' %} ">New Upload</a>
-        <a href=" {% url 'members:upload-history' %} ">Upload History</a>
 
-        <h2>Compare</h2>
-        <a href=" {% url 'members:corrected' %} ">Edited Files</a>
-      </aside>
-      <main>
-        <div class="messages">
-          {% if messages %} {% for message in messages %}
-          <p class="message {{ message.tags }} ">{{message | safe}}</p>
-          {% endfor %} {% endif %}
-        </div>
+            <div class="cate">
+              <a href="{% url 'members:profile_dash' %}" class="setting">
+                <p>
+                  <img
+                    src="{% static './images/setting-2.png' %}"
+                    alt="setings"
+                    id="settings"
+                  />
+                  Settings
+                </p>
+              </a>
+              <a href="{% url 'base:contact' %}" class="support">
+                <p>
+                  <img
+                    src="{% static './images/24-support.png' %}"
+                    alt="support"
+                    id="support"
+                  />
+                  Support
+                </p>
+              </a>
+            </div>
+            <div class="cate">
+              <a href="{% url 'accounts:logout' %}" class="logout">
+                <p>
+                  <img
+                    src="{% static './images/logout.png' %}"
+                    alt="logout"
+                    id="logout"
+                  />
+                  Log out
+                </p>
+              </a>
+            </div>
+          </div>
+        </aside>
 
-        {% block content %}{% endblock content %}
-      </main>
-    </div>
+        <main>
+          {% include 'members/nav.html' %}
+          
+          <div class="main-container">
+            
+            <div class="messages">
+              {% if messages %} {% for message in messages %}
+                <p class="message {{ message.tags }} ">{{message | safe}}</p>
+              {% endfor %} {% endif %}
+            </div>
+
+            {% block content %}{% endblock content %}
+          </div>
+        </main>        
   </body>
 </html>

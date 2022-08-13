@@ -1,7 +1,16 @@
+.messages {
+  margin-bottom: 30px;
+}
+
 .message {
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 .success {
@@ -9,5 +18,5 @@
 }
 
 .error {
-  background: red;
+  background: rgb(206, 26, 26);
 }
