@@ -23,56 +23,72 @@ from . import excel_logic
 
 
 # Create your views here.
+@login_required
+def template(request):
+    return render(request, "members/sample11.html")
 
 
 @login_required
 def home(request):
-    return render(request, "members/dashboard.html")
+    return render(request, "members/existing_dash.html")
 
 
+@login_required
 def tools(request):
     return render(request, "members/tools.html")
 
 
+@login_required
 def exist(request):
     return render(request, "members/existing_dash.html")
 
 
+@login_required
 def welcome(request):
     return render(request, "members/welcome_dash.html")
 
+
+@login_required
 def newuserfile(request):
     return render(request, "members/NewUserFile.html")
 
 
+@login_required
 def dash_history(request):
     return render(request, "members/dashboard-tour.html")
 
 
+@login_required
 def dash_history3(request):
     return render(request, "members/dashboard-tour3.html")
 
 
+@login_required
 def dash_tour4(request):
     return render(request, "members/dash-tour4.html")
 
 
+@login_required
 def dash_tour5(request):
     return render(request, "members/dashboardtour5.html")
 
 
+@login_required
 def dash_tour1(request):
     return render(request, "members/tour1.html")
 
 
+@login_required
 def dash_tour2(request):
     return render(request, "members/tour2.html")
 
 
+@login_required
 def dash_tour3(request):
     return render(request, "members/tour3.html")
 
 
+@login_required
 def profile_dash(request):
     return render(request, "members/profile-dash.html")
 

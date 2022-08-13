@@ -1,10 +1,16 @@
-<div class="username">Welcome {{ request.user }}</div>
-<nav>
-    <li><a href="{% url 'base:home' %}" class="nav-link">Home</a></li>
-    <li><a href="{% url 'members:setting' %}" class="nav-link">Settings</a></li>
-    <ul class="navbar">
-            {% comment %} <li><a href="{% url 'members:home' %}" class="nav-link">Dashboard</a></li> {% endcomment %}
-            <li><a href="{% url 'accounts:logout' %}" class="nav-link">Logout</a></li>
-    </ul>
-</nav>
-<hr>
+{% load static %}
+
+<header class="main-nav">
+  <ul class="navbar">
+    <li><a href="{% url 'members:welcome' %}" class="nav-link">Explore</a></li>
+    <li><a href="{% url 'members:exist' %}" class="nav-link">Files</a></li>
+    <li><a href="{% url 'base:how_to' %}" class="nav-link">Demo</a></li>
+    <li><a href="{% url 'base:help' %}" class="nav-link">Help</a></li>
+  </ul>
+
+  <div class="user-icon">
+    <a href="#">
+      <img src="{% static './images/profile-circle.svg' %}" alt="user-icon" />
+    </a>
+  </div>
+</header>
