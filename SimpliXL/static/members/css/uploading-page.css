@@ -35,11 +35,13 @@ a {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  padding: 16px 80px;
+  height: 80px;
   line-height: 40px;
-  background: #fcfcfc;
+  background: #FAFAFA;
   box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
 }
 
@@ -51,18 +53,19 @@ header {
   padding: 5px 30px;
   display: block;
   transition: all 0.2s;
+  color: #999999;
 }
 
 /* removes text decoration on all links */
 li a:visited {
-  color: #757472;
+  color: #999999;
 }
 
 li a:hover {
   text-decoration-line: underline;
   text-decoration-color: #2691d9;
   text-decoration-thickness: 3px;
-  color: #302e2b;
+  color: #999999;
 }
 
 li > a:active {
@@ -108,7 +111,7 @@ li > a:active {
 }
 
 body {
-  background-image: url("29.jpg");
+  background-image: url("./images/29.jpg");
 }
 
 body {
@@ -116,13 +119,16 @@ body {
 }
 
 #larr {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #arrow {
   padding-left: 70px;
   padding-top: 30px;
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #350F57;
 }
 
 a#on-arrow:focus {
@@ -151,16 +157,37 @@ a#on-arrow:focus {
   margin: 10px;
 }
 
+#imgOne {
+  width: 160px;
+  height: 160px;
+  border: 2px solid #2691D9;
+  border-radius: 16px;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+#imgTxt {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #171717;
+  width: 144px;
+  margin-left: 1.8rem;
+  position: relative;
+}
+
 .icon {
   position: relative;
   left: 250px;
-  top: 200px;
+  bottom: 35px;
 }
 
 .drag {
   position: relative;
   left: 290px;
-  top: 165px;
+  bottom: 71px;
   font-weight: 400;
   font-size: 14px;
   color: #171717;
@@ -169,13 +196,13 @@ a#on-arrow:focus {
 .line-or {
   position: relative;
   left: 280px;
-  top: 180px;
+  bottom: 55px;
 }
 
 .line {
   width: 48px;
   border: 1px solid #999999;
-  margin-bottom: 3px;
+  margin-bottom: 0.6px;
 }
 
 #or {
@@ -188,7 +215,7 @@ a#on-arrow:focus {
 .buttons {
   position: relative;
   left: 250px;
-  top: 190px;
+  bottom: 35px;
 }
 
 .browse-button {

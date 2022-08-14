@@ -5,30 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
     <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
-=======
-     <link rel="icon" type="image/x-icon" href="{% static 'images/Frame 58827 copy.png' %}">
-
->>>>>>> cbabad36f177dd2c03da17bc38a70c557c2ae1a9
     <title>Sign in</title>
-    <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
-
     <link rel="stylesheet" href="{% static './general/Stylesign.css' %}" />
-    <link rel="stylesheet" href="{% static './general/message.css' %}" />
   </head>
 
   <body>
     <div class="one">
       <section class="section1">
-        <a href=" {% url 'base:home' %} ">
-          <img
-            class="header1"
-            src="{% static './images/firstlogo.png' %}"
-            alt="Website logo"
-          />
-        </a>
-
+        <img
+          class="header1"
+          src="{% static './images/firstlogo.png' %}"
+          alt="Website logo"
+        />
         <h2 class="three1">Accuracy at your fingertips.</h2>
         <p class="three2">
           SimpliXL lets you upload your excel files and compare its content from
@@ -40,43 +29,35 @@
       </section>
       <section class="section2">
         <div>
-            <a href=" {% url 'base:home' %} ">
-                <img
-                  class="fivelogo"
-                  src="{% static './images/secondlogo.png' %}"
-                  alt=""
-                />
-            </a>
+          <img
+            class="fivelogo"
+            src="{% static './images/secondlogo.png' %}"
+            alt=""
+          />
         </div>
         <p class="e2">.</p>
         <p class="e1">.</p>
         <h2 class="five1">Welcome Back!</h2>
         <p class="five2" id="pe">Please enter your information below.</p>
         <div class="f">
-          <form class="six" method="POST" id="frm">
-            {% comment %} Error Messsages Rendering {% endcomment %} 
+          <form class="six" action="" method="POST" id="frm">
             {% if 'next' in request.GET %}
-            <div class="error message">Permission Denied, Login</div>
-            {% endif %} 
-            {% if form.non_field_errors %}
-                <div class="error message">
-                {% for error in form.non_field_errors %} {{ error }} {% endfor %}
-                </div>
+            <div class="error">Permission Denied, Login</div>
+            {% endif %} {% if form.non_field_errors %}
+            <div class="error">
+              {% for error in form.non_field_errors %} {{ error }} {% endfor %}
+            </div>
             {% endif %}
-
-            {% csrf_token %}
-
             <div class="f1">
               <label class="f1" for="email"><h4>Email Address</h4></label>
             </div>
-
             <div class="">
               <input
                 class="f2"
+                placeholder="Enter your email address"
                 type="email"
                 name="username"
                 autofocus=""
-                placeholder="Enter your email address"
                 autocomplete="username"
                 required=""
                 value="{% if form.username.value %} {{form.username.value}} {% endif %}"
@@ -86,11 +67,11 @@
             <div class="f1">
               <label class="f1" for="password"><h4>Password</h4></label>
             </div>
-
-            <div class="mb-7">
+            <div class="">
               <input
                 class="f2"
                 id="icon"
+                placeholder="Enter your password"
                 type="password"
                 name="password"
                 autocomplete="current-password"
@@ -98,19 +79,17 @@
                 required=""
               />
             </div>
-
             <div id="forgot">
-              <a href=" {% url 'accounts:password_reset' %} ">Forgot password?</a>
+              <a href="">Forgot password?</a>
             </div>
-
             <div id="box">
               <input type="checkbox" name="remember" id="remember" />
               <label for="remember" class="checkbox">Remember me</label>
             </div>
-
-            <button class="eight" id="dwn1" type="submit"> Sign into my Account</button>
           </form>
-
+          <button class="eight" id="dwn1">
+            <a href="" id="btna">Sign into my Account</a>
+          </button>
           <p class="e3">.</p>
           <p class="nine" id="dwn2">
             Don't have an account?
@@ -126,8 +105,9 @@
               class="eleven1"
               src="{% static './images/Google.png' %}"
               alt=""
-            />
-            <a href="{% url 'accounts:googlesignin' %}">Sign up with Google</a>
+            /><a href="{% url 'accounts:googlesignin' %}"
+              >Sign up with Google</a
+            >
           </button>
         </div>
       </section>

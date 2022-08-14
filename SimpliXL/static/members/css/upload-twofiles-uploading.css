@@ -29,12 +29,18 @@ a {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  padding: 16px 80px;
+  height: 80px;
   line-height: 40px;
-  background: #fcfcfc;
+  background: #FAFAFA;
   box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+}
+
+#header-img {
+  margin-top: 0.7rem;
 }
 
 .navbar {
@@ -45,22 +51,23 @@ header {
   padding: 5px 30px;
   display: block;
   transition: all 0.2s;
+  color: #999999;
 }
 
 /* removes text decoration on all links */
 li a:visited {
-  color: #757472;
+  color: #999999;
 }
 
 li a:hover {
   text-decoration-line: underline;
   text-decoration-color: #2691d9;
   text-decoration-thickness: 3px;
-  color: #302e2b;
+  color: #999999;
 }
 
 li > a:active {
-  color: #1a1a1a;
+  color: #999999;
 }
 
 .btn {
@@ -103,21 +110,32 @@ li > a:active {
 
 /* body code */
 body {
-  background-image: url("29.jpg");
+  background-image: url("./images/29.jpg");
 }
 
 #larr{
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #350F57;
+}
+
+#on-arrow {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #350F57;
 }
 
 #arrow{
   padding-left: 70px;
   padding-top: 30px;
   font-size: 24px;
+
 }
 
 a#on-arrow:focus{
-  color: #1a1a1a;
+  color: #350F57;
 }
 
 .rec-cont {
@@ -177,6 +195,7 @@ a#on-arrow:focus{
 
 .line {
   padding-bottom: 5px;
+  color: rgba(153, 153, 153, 1);
 }
 
 #or {
@@ -214,6 +233,12 @@ a#on-arrow:focus{
   font-size: 16px;
 }
 
+#link {
+    position: relative;
+    top: 0.2rem;
+
+}
+
 .progress-cont {
   display: flex;
   flex-direction: row;
@@ -237,6 +262,14 @@ a#on-arrow:focus{
   left: 360px;
 }
 
+#percent {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4F1683;
+}
+
 .moving {
   position: relative;
   width: 89.83px;
@@ -256,7 +289,7 @@ a#on-arrow:focus{
 
 #cancel-one {
   position: absolute;
-  left: 580px;
+  left: 565px;
   font-weight: 400;
   font-size: 16px;
 }
@@ -275,7 +308,9 @@ a#on-arrow:focus{
 }
 
 .no-leave {
-  margin-top: 50px;
+  margin-top: 5.5rem;
   text-align: center;
-  color: #4F1683;;
+  color: #4F1683;
 }
+
+

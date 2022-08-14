@@ -113,6 +113,11 @@ def upload_file(request):
     return render(request, "members/uploading-page.html")
 
 
+@login_required
+def file_upload(request):
+    return render(request, "members/FileUpload.html")
+
+
 class UserDetails(LoginRequiredMixin, ListView):
     model = CustomUser
     template_name = "members/profile.html"

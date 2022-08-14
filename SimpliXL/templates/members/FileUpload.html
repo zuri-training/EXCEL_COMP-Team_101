@@ -5,10 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{% static './members/css/upload-onefile-uploading.css' %}"
-    />
+    <link rel="stylesheet" href="{% static './members/css/FileUpload.css' %}" />
     <link
       rel="upload.css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -21,14 +18,16 @@
       <div class="container row">
         <li><img src="{% static './images/Frame 58827.png' %}" /></li>
         <ul class="navbar">
-          <li><a href="#" class="nav-link">Dashboard</a></li>
-          <li><a href="#" class="nav-link">Overview</a></li>
-          <li><a href="#" class="nav-link">Features</a></li>
-          <li><a href="#" class="nav-link">How To</a></li>
-          <li><a href="#" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="{% url 'members:welcome' %}" class="nav-link">Explore</a>
+          </li>
+          <li>
+            <a href="{% url 'members:exist' %}" class="nav-link">Files</a>
+          </li>
+          <li><a href="{% url 'base:how_to' %}" class="nav-link">Demo</a></li>
+          <li><a href="{% url 'base:help' %}" class="nav-link">Help</a></li>
         </ul>
         <div class="row">
-          <!-- <a href="#" class="nav-link blue">Sign In</a> -->
           <a href="#" class="nav-link white"
             ><img src="{% static './images/Group 3598.png' %}" alt=""
           /></a>
@@ -37,8 +36,16 @@
     </header>
 
     <main>
-      <div id="arrow">
-        <a href="" id="on-arrow"><span id="larr">&larr;</span> Go back</a>
+      <div id="radio-select">
+        <p>Select Number of Files</p>
+        <label for=""
+          ><input type="radio" id="one-file" name="file-num" /> Upload 1
+          File</label
+        >
+        <label for=""
+          ><input type="radio" name="file-num" id="two-file" /> Upload 2
+          files</label
+        >
       </div>
 
       <div class="group">
@@ -71,25 +78,6 @@
             >
           </button>
         </div>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-
-      <div class="cancel">
-        <a href=""
-          ><img
-            src="{% static './images/cancel.png' %}"
-            alt="cancel"
-            id="cancel-icon"
-          />
-          Cancel</a
-        >
-      </div>
-
-      <div id="no-leave">
-        <p>Do not leave this page until file fully uploads</p>
       </div>
     </main>
   </body>
