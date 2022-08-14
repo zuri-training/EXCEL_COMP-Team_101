@@ -63,7 +63,7 @@ li a:hover {
 }
 
 li > a:active {
-  color: #999999;
+  color: #1a1a1a;
 }
 
 .btn {
@@ -73,6 +73,7 @@ li > a:active {
 
 .btn-lg {
   padding: 10px 60px;
+
 }
 
 .bg-light-blue {
@@ -95,6 +96,7 @@ li > a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .head h2 {
@@ -104,21 +106,99 @@ li > a:active {
   text-align: center;
 }
 
-/* body code */
 body {
   background-image: url("./images/29.jpg");
 }
 
-#radio-select {
+.group {
+  position: absolute;
+  width: 496px;
+  height: 360px;
+  left: 396px;
+  top: 190px;
+  background: rgba(250, 250, 250, 0.72);
+  border: 2px solid #FFFFFF;
+  backdrop-filter: blur(28px);
+  border-radius: 16px;
+}
+
+#drop-icon{
+  position: relative;
+  left: 200px;
+  top: 50px;
+}
+
+.group-logo {
+  width: 200px;
+  height: 80px;
+  left: 100px;
+  top: 60px;
+  position: absolute;
+}
+
+#file {
+  font-size: 20px;
+  font-weight: 400;
+  width: 300px;
+  position: relative;
+  left: 20px;
+  top: 100px;
+}
+
+#line{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 110px;
+  left: 120px;
+}
+
+#or {
+  position: relative;
+  top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#buttons{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 120px;
+  left: 150px;
+  padding-top: 20px;
+  /* padding-left: 100px; */
+}
+
+button.primary{
+  width: 113px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  margin-left: -40px;
+  padding: 8px 28px;
+  background-color: #52A7E0;;
+}
+
+button.secondary{
+  width: 109px;
+  height: 48px;
+  border: none;
+  margin-left: 40px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+#radio-select{
   display: flex;
   flex-direction: column;
   padding-left: 70px;
   line-height: 32px;
-  color: #4f1683;
+  color: #350F57;
   gap: 8px;
 }
 
-#radio-select > p {
+#radio-select>p{
   padding-top: 20px;
   font-size: 20px;
   line-height: 24px;
@@ -126,119 +206,7 @@ body {
   color: #350F57;
 }
 
-label {
+label{
   font-weight: light;
-  color: #999999;;
-}
-
-.rec-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.rec-within {
-  display: flex;
-  flex-direction: row;
-}
-
-.rec-one {
-  background: rgba(250, 250, 250, 0.72);
-  backdrop-filter: blur(28px);
-  border-radius: 16px;
-  width: 320px;
-  height: 360px;
-  margin: 10px;
-}
-
-.rec-two {
-  background: rgba(250, 250, 250, 0.72);
-  backdrop-filter: blur(28px);
-  border-radius: 16px;
-  width: 320px;
-  height: 360px;
-  margin: 10px;
-}
-
-.icon {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  left: 115.62px;
-  right: 124.38px;
-  top: 54px;
-}
-
-.drag {
-  position: relative;
-  font-weight: 400;
-  font-size: 20px;
-  top: 70.5px;
-  left: 24.62px;
-  right: 42.38px;
-}
-
-.line-or {
-  position: relative;
-  top: 93.5px;
-  left: 25.62px;
-  right: 34.38px;
-}
-
-.line {
-  padding-bottom: 5px;
-}
-
-#or {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.buttons {
-  position: relative;
-  top: 131.5px;
-  left: 24.62px;
-}
-
-.browse-button {
-  width: 113px;
-  height: 48px;
-  background: #52a7e0;
-  border: none;
-  border-radius: 8px;
-}
-
-.browse {
-  color: #ffffff;
-}
-
-.enter-url-button {
-  margin-left: 36.14px;
-  background-color: transparent;
-  border: none;
-}
-
-.enter-url {
-  color: #52a7e0;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.upload-button {
-  position: relative;
-  margin-top: 20px;
-  left: 490px;
-  width: 383px;
-  height: 48px;
-  border: none;
-  background-color: #52A7E0;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
-}
-
-#upload-link {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 16px;
+  color: #999999;
 }
