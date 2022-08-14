@@ -139,3 +139,69 @@ a {
 .main-container {
   padding: 50px 20px 20px;
 }
+
+/* DELETE PAGE */
+.delete-body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #f7f2fd;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.deleteForm {
+  width: 40%;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  padding: 50px 20px;
+  line-height: 40px;
+}
+
+.delPageBtn {
+  display: inline-block;
+  padding: 20px 40px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.backBtn {
+  background-color: rgba(0, 128, 0, 0.637);
+  margin-bottom: 20px;
+}
+
+.backBtn:hover {
+  background-color: rgba(0, 128, 0, 0.842);
+}
+
+.deleteBtn {
+  background-color: rgba(128, 0, 0, 0.637);
+  margin-bottom: 20px;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(128, 0, 0);
+}
+
+@media screen and (max-width: 800px) {
+  .deleteForm {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .deleteForm {
+    width: 90%;
+  }
+
+  .deleteForm p {
+    margin: 30px 0;
+    line-height: 20px;
+  }
+
+  .delPageBtn {
+    padding: 10px 40px;
+  }
+}
