@@ -27,6 +27,7 @@ urlpatterns = [
     path('upload-files/', views.upload_files, name='upload_files'),
     path('upload-one/', views.upload_one, name='upload_one'),
     path('upload-two/', views.upload_two, name='upload_two'),
+    path('FileUpload/', views.file_upload, name='file_upload'),
 
 
     path('welcome-dashboard/', views.welcome, name='welcome'),
