@@ -1,8 +1,8 @@
-{% extends "members/base.html" %}
+{% comment %} {% extends "members/base.html" %} {% endcomment %}
 
-{% block title %} Settings {% endblock title %}
+{% comment %} {% block title %} Settings {% endblock title %} {% endcomment %}
 
-{% block content %}
+{% comment %} {% block content %} {% endcomment %}
     <h1>Settings</h1>
 
     <form action="" method="POST" enctype="multipart/form-data">
@@ -10,19 +10,22 @@
            <div>
                <div >
                    <label for=""> Profile image</label>
-                   <img width="100" height="100" src={{user_profile.profileimg.url}}>
+                   {% comment %} <img width="100" height="100" src={{user_profile.profileimg.url}}> {% endcomment %}
+                   <img width="100" height="100" src=>
                    <input type="file" name="image" value="" class="shadow-none bg-gray-100">
                 </div>
 
 
                 <div>
                     <label for="about">Company Name: </label>
-                    <input type="text" name="bio" value={{user_profile.company}}>
+                    {% comment %} <input type="text" name="bio" value={{user_profile.company}}> {% endcomment %}
+                    <input type="text" name="bio" value=>
                 </div>
                <br>
                 <div>
                     <label for=""> Location: </label>
-                    <input type="text" name="location" value={{user_profile.location}}>
+                    {% comment %} <input type="text" name="location" value={{user_profile.location}}> {% endcomment %}
+                    <input type="text" name="location" value=>
                 </div>
             <br>
            </div>
@@ -32,4 +35,4 @@
                    <button type="submit"> Save </button>
                </div>
        </form>
-{% endblock content %}
+{% comment %} {% endblock content %} {% endcomment %}

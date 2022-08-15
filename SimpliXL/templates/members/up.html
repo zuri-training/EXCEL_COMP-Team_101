@@ -1,0 +1,136 @@
+<!-- {{ form }} -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .not-visible {
+      display: none;
+    }
+
+    .error {
+      background: red;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+
+  <body>
+    <div class="error"></div>
+    <form method="post" id="upload_form">
+      {% csrf_token %} {{form.as_p}}
+      <input type="submit" value="Upload" class="btn btn-primary" />
+    </form>
+
+    <div class="container" id="progress">
+      <div class="progress not-visible">
+        <!-- <div class="progress-bar bg-success" role="progressbar"></div> -->
+      </div>
+    </div>
+
+    <script>
+      const uploadForm = document.getElementById("upload_form"),
+        input_file = document.getElementById("id_file_url"),
+        progress_bar = document.querySelector(".progress"),
+        error = document.querySelector(".error");
+
+      function errorDisplay(value) {
+        error.classList.add("show");
+        error.textContent = value;
+
+        setTimeout(function () {
+          error.classList.remove("show");
+        }, 2000);
+      }
+
+      $("#upload_form").submit(function (e) {
+        e.preventDefault();
+        $form = $(this);
+        var formData = new FormData(this);
+        const media_data = input_file.files[0];
+        progress_bar.classList.add("not-visible");
+
+        if (media_data != null) {
+          if (media_data.size > 5242880) {
+            errorDisplay("File cannot exceed 5mb");
+          } else {
+            if (
+              media_data.type != "text/csv" &&
+              media_data.type !=
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" &&
+              media_data.type != "application/vnd.ms-excel"
+            ) {
+              errorDisplay("Allowed format is CSV, XLSX, XLS");
+            } else {
+              progress_bar.classList.remove("not-visible");
+
+              $.ajax({
+                type: "POST",
+                url: " /members/ff/",
+                // url: POST_URL,
+                data: formData,
+                dataType: "json",
+                beforeSend: function () {},
+                xhr: function () {
+                  const xhr = new window.XMLHttpRequest();
+                  xhr.upload.addEventListener("progress", (e) => {
+                    if (e.lengthComputable) {
+                      const percentProgress = (e.loaded / e.total) * 100;
+                      progress_bar.innerHTML = `<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: ${percentProgress}%" aria-valuenow="${percentProgress}" aria-valuemin="0" aria-valuemax="100">${percentProgress}%</div>`;
+                    }
+                  });
+                  return xhr;
+                },
+                success: function (response) {
+                  uploadForm.reset();
+                  //   console.log(response);
+                  // progress_bar.classList.add("not-visible");
+                },
+                error: function (err) {
+                  if (err.status == 200) {
+                    // console.log("yes");
+                    uploadForm.reset();
+                    window.location.replace("/members/");
+                  }
+                  console.log(err);
+                },
+                cache: false,
+                contentType: false,
+                processData: false,
+              });
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,36 +1,106 @@
 import mimetypes
 import os
-from django.http.response import HttpResponse
-from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
-
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
-
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.messages.views import SuccessMessageMixin
-
-from apps.accounts.models import CustomUser
-from .models import FileUpload, EditedFileUpload, Profile
-
-from django.conf import settings
 import pathlib
 import random
 import uuid
-from . import excel_logic
+import pandas as pd
 
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.http import JsonResponse
+from django.http.response import HttpResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views.generic import View
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import (CreateView, DeleteView, FormView,
+                                       UpdateView)
+from django.views.generic.list import ListView
+
+from apps.accounts.models import CustomUser
+
+from . import excel_logic
+from .forms import UploadForm
+from .models import EditedFileUpload, FileUpload, Profile,  TempTB
 
 # Create your views here.
-@login_required
-def template(request):
-    return render(request, "members/sample11.html")
+
+
+class uu(View):
+    def get(self, request):
+        form = UploadForm()
+
+        return render(request, 'members/up.html', {'form': form})
+
+    def post(self, request):
+        if request.method == 'POST':
+            form = UploadForm(request.POST, request.FILES)
+            if form.is_valid():
+                uuu(request, form)
+                # global actual_file_name, file_operation, file_extension, file_name
+
+                # file_operation = self.request.POST.get("operation")
+                # file_name = pathlib.Path(
+                #     str(self.request.FILES.get("file_url"))).stem
+                # file_extension = pathlib.Path(
+                #     str(self.request.FILES.get("file_url"))).suffix
+                # file_name = f"{file_name}_{random.randint(1000, 10000000)}{file_extension}"
+                # file_url_name = f"{str(uuid.uuid4().hex)}_{random.randint(1000, 10000000)}{file_extension}"
+                # self.request.FILES["file_url"].name = file_url_name
+                # actual_file_name = self.request.FILES["file_url"]
+
+                # # Inserting records into the database
+                # form.instance.user = self.request.user
+                # form.instance.file_name = file_name
+                # form.instance.file_url = self.request.FILES["file_url"]
+
+                # form.save()
+                # return JsonResponse({'data': 'Data uploaded'})
+                return uuu(request, form)
+                # return JsonResponse({'data': form})
+
+            else:
+                return JsonResponse({'data': 'Something went wrong!!'})
+
+
+class uuu(CreateView):
+    model = TempTB
+    fields = ('file_url',)
+    success_url: reverse_lazy('members:home')
+
+    def form_valid(self, form):
+        # file_operation = self.request.POST.get("operation")
+        file_name = pathlib.Path(
+            str(self.request.FILES.get("file_url"))).stem
+        file_extension = pathlib.Path(
+            str(self.request.FILES.get("file_url"))).suffix
+        file_name = f"{file_name}_{random.randint(1000, 10000000)}{file_extension}"
+        file_url_name = f"{str(uuid.uuid4().hex)}_{random.randint(1000, 10000000)}{file_extension}"
+        self.request.FILES["file_url"].name = file_url_name
+        actual_file_name = self.request.FILES["file_url"]
+
+        # # Inserting records into the database
+        form.instance.user = self.request.user
+        form.instance.file_name = file_name
+        form.instance.file_url = self.request.FILES["file_url"]
+
+        form.save()
+        #  form.save()
+        pa = pd.read_csv(f"{settings.MEDIA_ROOT}/temp/{actual_file_name}")
+        print(pa)
+
+        return super(uuu, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('members:home')
 
 
 @login_required
 def home(request):
-    return render(request, "members/existing_dash.html")
+    FinishedFiles = EditedFileUpload.objects.filter(user=request.user)
+    return render(request, "members/dash.html", {'form': FinishedFiles})
 
 
 @login_required
@@ -39,18 +109,8 @@ def tools(request):
 
 
 @login_required
-def exist(request):
-    return render(request, "members/existing_dash.html")
-
-
-@login_required
 def welcome(request):
     return render(request, "members/welcome_dash.html")
-
-
-@login_required
-def newuserfile(request):
-    return render(request, "members/NewUserFile.html")
 
 
 @login_required
@@ -139,30 +199,34 @@ class DeleteUser(LoginRequiredMixin, DeleteView):
 
 @login_required
 def setting(request):
-    user_profile = Profile.objects.get(user=request.user)
+    # user_profile = Profile.objects.filter(user=request.user)
 
-    if request.method == 'POST':
-        if request.FILES.get('image') == None:
-            image = user_profile.profileimg
-            company = request.POST['company']
-            location = request.POST['location']
+    # if user_profile:
+    # if request.method == 'POST':
+    #     if request.FILES.get('image') == None:
+    #         image = user_profile.profileimg
+    #         company = request.POST['company']
+    #         location = request.POST['location']
 
-            user_profile.profileimg = image
-            user_profile.company = company
-            user_profile.location = location
-            user_profile.save()
-        if request.FILES.get('image') != None:
-            image = request.FILES.get('image')
-            company = request.POST['company']
-            location = request.POST['location']
+    #         user_profile.profileimg = image
+    #         user_profile.company = company
+    #         user_profile.location = location
+    #         user_profile.save()
 
-            user_profile.profileimg = image
-            user_profile.company = company
-            user_profile.location = location
-            user_profile.save()
+    #     elif request.FILES.get('image') != None:
+    #         image = request.FILES.get('image')
+    #         company = request.POST['company']
+    #         location = request.POST['location']
 
-        return redirect('settings')
-    return render(request, 'members/settings.html', {'user_profile': user_profile})
+    #         user_profile.profileimg = image
+    #         user_profile.company = company
+    #         user_profile.location = location
+    #         user_profile.save()
+
+    #     return redirect('settings')
+    # return render(request, 'members/settings.html', {'user_profile': user_profile})
+    # return render(request, 'members/settings.html')
+    pass
 
 
 @login_required

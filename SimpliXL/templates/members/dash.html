@@ -2,10 +2,19 @@
 {% block title%}Dashboard {% endblock title%} {% block css %}
 <link rel="stylesheet" href=" {% static 'members/css/existingUser.css' %} " />
 {% endblock css %} {% block content %}
+<style>
+  .no {
+    text-align: center;
+    width:100%;
+    flex-grow: 2;
+    display: flex;
+  }
+</style>
 
 <section class="center">
   <div class="image-row">
-    <div>
+    
+    {% comment %} <div>
       <p class="complete">Recent Files - Uncompleted</p>
       <div class="images">
         <a href="#"><img src="{% static 'images/Frame 59223.png' %}" alt="monthly budgets" id="imgOne" /></a>
@@ -19,7 +28,7 @@
           <img src="{% static 'images/Frame 59219.png' %}" alt="annual travel"/>
         </a>
       </div>
-    </div>
+    </div> {% endcomment %}
 
     <div>
       <p class="complete recent">Recent Files - Completed</p>
@@ -34,29 +43,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <img src="{% static  './images/Frame 59074.png' %} " alt="xls" />
-              Work Schedule.xls
-            </td>
-            <td>
-              August 1, 2022
-            </td>
-            <td>15MB</td>
-            <td>August 1, 2022</td>
-            <td>...</td>
-          </tr>
-            <td>
-              <img src="{% static './images/CSV.png' %}" alt="csv" id="csv" class="down"/>
-                Project phase Calender.csv
-              </td>
-              <td>
-                June 12, 2022
-              </td>
-              <td>40MB</td>
-              <td>June 30, 2022</td>
-              <td>...</td>
-          <tr>
+          {% if form %}
             <tr>
               <td>
                 <img src="{% static './images/Blue folder.png' %}" alt="folder" />
@@ -69,48 +56,11 @@
               <td>August 3, 2022</td>
               <td>...</td>
             </tr>
-            <tr>
-              <td>
-                <img
-                  src="{% static './images/Blue folder.png' %}"
-                  alt="folder"
-                  class="down"
-                />
-                Financial Reports 2021
-              </td>
-              <td>
-                May 27, 2022
-              </td>
-              <td>102MB</td>
-              <td>June 1, 2022</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="{% static './images/Frame 59074.png' %}" alt="xls" />
-                Monthly Budget.xls
-              </td>
-              <td>
-                May 10, 2022
-              </td>
-              <td>10MB</td>
-              <td>May 14, 2022</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="{% static './images/CSV.png' %}" alt="csv" id="csv" />
-                1st Semester
-              </td>
-              <td>
-                May 1, 2022
-              </td>
-              <td>21MB</td>
-              <td>May 3, 2022</td>
-              <td>...</td>
-            </tr>
-  
+          {% else %}
+          <tr class="no">
+            <td >No Record Found</td>
           </tr>
+          {% endif %}
         </tbody>
       </table>
     </div>

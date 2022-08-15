@@ -12,7 +12,7 @@
 
     {% block css %}{% endblock css %}
 
-    <link rel="stylesheet" href=" {% static 'base/css/message.css' %} " />
+    <link rel="stylesheet" href=" {% static 'general/message.css' %} " />
     <link rel="stylesheet" href=" {% static 'members/css/style.css' %} " />
 
     {% comment %}
@@ -25,7 +25,11 @@
       <div class="left-column">
         <div class="side-logo">
           <a href=" {% url 'base:home' %} ">
-            <img src="{% static './images/Brand Logo (big).png' %}" alt="logo" id="logo" />
+            <img
+              src="{% static './images/Brand Logo (big).png' %}"
+              alt="logo"
+              id="logo"
+            />
           </a>
         </div>
 
