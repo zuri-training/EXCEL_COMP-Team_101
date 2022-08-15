@@ -32,6 +32,7 @@ urlpatterns = [
     # File Upload Urls
     path('up/', views.uu.as_view(), name='upload'),
     path('ff/', views.uuu.as_view(), name='displays'),
+    #     path("aa/", .as_view(), name="")
 
     #     path('upload/', views.UploadFilesView.as_view(), name='upload'),
     path('upload-history/', views.UploadFilesHistory.as_view(),
@@ -49,6 +50,6 @@ urlpatterns = [
          views.download_file, name="download-file"),
 
 
-    path('file/<str:file_name>', views.load_file, name='file'),
+    path('file/<str:actual_file_name>', views.load_file, name='file'),
     path('sample/', views.highlight, name='highlight')
 ]

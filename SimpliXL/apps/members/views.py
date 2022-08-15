@@ -87,14 +87,32 @@ class uuu(CreateView):
         form.instance.file_url = self.request.FILES["file_url"]
 
         form.save()
-        #  form.save()
-        pa = pd.read_csv(f"{settings.MEDIA_ROOT}/temp/{actual_file_name}")
-        print(pa)
 
-        return super(uuu, self).form_valid(form)
+        return JsonResponse({'data': file_url_name})
 
     def get_success_url(self):
         return reverse_lazy('members:home')
+
+
+@login_required
+def load_file(request, actual_file_name):
+    actual_file = f"{settings.MEDIA_ROOT}/temp/{actual_file_name}"
+
+    file_name = pathlib.Path(str(actual_file_name)).stem
+    file_extension = pathlib.Path(str(actual_file_name)).suffix
+    data = None
+
+    if file_extension == ".csv":
+        data = pd.read_csv(actual_file)
+
+    elif file_extension == ".xls" or file_extension == ".xlsx":
+        data = pd.read_excel(actual_file)
+
+    dup = data.drop_duplicates()
+    data = data.to_html()
+    dup = dup.to_html()
+
+    return render(request, "members/spreadsheet.html", {'form': data, 'form1': dup})
 
 
 @login_required
@@ -325,16 +343,6 @@ class CorrectedDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
 
     def get_success_url(self):
         return reverse_lazy("members:corrected")
-
-
-@login_required
-def load_file(request, file_name):
-    if request.method == 'GET':
-        value = f"{settings.MEDIA_ROOT}/uploaded/document/{file_name}"
-
-        data = excel_logic.html_open_csv(value)
-
-        return render(request, "members/panda.html", {"form": data})
 
 
 @login_required

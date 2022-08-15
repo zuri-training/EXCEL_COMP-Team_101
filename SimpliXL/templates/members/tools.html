@@ -1,12 +1,12 @@
-{% extends "members/base.html" %} {% load static %} 
-{% block title%}My Tools {% endblock title%} {% block css %}
+{% extends "members/base.html" %} {% load static %} {% block title %} My Tools
+{% endblock title%} {% block css %}
 <link rel="stylesheet" href=" {% static 'members/css/mytools.css' %} " />
 {% endblock css %} {% block content %}
 <!-- users tools section-->
 <section class="your-tools">
   <h1 id="title">Your Tools</h1>
   <div class="tool-box">
-    <a href="{% url 'members:exist' %}" class="bg">
+    <a href="{% url 'members:home' %}" class="bg">
       <img src="{% static './images/Frame 59278.png' %}" alt="files" />
       <span class="tols">Files</span>
     </a>

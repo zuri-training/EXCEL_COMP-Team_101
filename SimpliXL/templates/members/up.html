@@ -1,5 +1,4 @@
-<!-- {{ form }} -->
-
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +12,25 @@
       crossorigin="anonymous"
     />
 
-    <!-- Latest compiled and minified JavaScript -->
+    <link
+      rel="stylesheet"
+      href="{% static './members/css/uploading-page.css' %}"
+    />
+    <link
+      rel="upload.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.cdnfonts.com/css/axiforma"
+      <!--
+      Latest
+      compiled
+      and
+      minified
+      JavaScript
+      --
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
@@ -37,25 +54,86 @@
       color: white;
       padding: 20px;
       display: none;
+      margin-bottom: 30px;
     }
 
     .show {
       display: block;
     }
+
+    form {
+      width: 50%;
+      margin: auto;
+      margin-top: 30px;
+      background-color: #fbfbfb;
+      min-height: 30vh;
+      text-align: center;
+      padding: 40px 40px 70px;
+    }
+    form * {
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background: #b57ce9;
+      padding: 10px 60px;
+    }
+
+    .ee {
+      height: 80vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 
   <body>
-    <div class="error"></div>
-    <form method="post" id="upload_form">
-      {% csrf_token %} {{form.as_p}}
-      <input type="submit" value="Upload" class="btn btn-primary" />
-    </form>
-
-    <div class="container" id="progress">
-      <div class="progress not-visible">
-        <!-- <div class="progress-bar bg-success" role="progressbar"></div> -->
+    <header>
+      <div class="container row">
+        <li><img src="{% static './images/Frame 58827.png' %}" /></li>
+        <ul class="navbar">
+          <li>
+            <a href=" {% url 'members:home' %} " class="nav-link">Dashboard</a>
+          </li>
+          <li>
+            <a href=" {% url 'base:about' %} " class="nav-link">Overview</a>
+          </li>
+          <li>
+            <a href=" {% url 'base:feature' %} " class="nav-link">Features</a>
+          </li>
+          <li>
+            <a href=" {% url 'base:how_to' %} " class="nav-link">How To</a>
+          </li>
+          <li>
+            <a href=" {% url 'base:contact' %} " class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="row">
+          <!-- <a href="#" class="nav-link blue">Sign In</a> -->
+          <a href="#" class="nav-link white"
+            ><img src="{% static './images/Group 3598.png' %}" alt=""
+          /></a>
+        </div>
       </div>
-    </div>
+    </header>
+
+    <section class="ee">
+      <form method="post" id="upload_form">
+        <div class="error"></div>
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" value="Upload" class="btn btn-primary" />
+
+        <div class="container" id="progress">
+        <div class="progress not-visible"></div>
+      </div>
+    </section>
+      </form>
+
+      
 
     <script>
       const uploadForm = document.getElementById("upload_form"),
@@ -112,15 +190,9 @@
                 },
                 success: function (response) {
                   uploadForm.reset();
-                  //   console.log(response);
-                  // progress_bar.classList.add("not-visible");
+                  window.location.replace(`/members/file/${response.data}`);
                 },
                 error: function (err) {
-                  if (err.status == 200) {
-                    // console.log("yes");
-                    uploadForm.reset();
-                    window.location.replace("/members/");
-                  }
                   console.log(err);
                 },
                 cache: false,
