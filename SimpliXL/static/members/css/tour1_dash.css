@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Axiforma, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+}
+
+/* adding stlyes to the navigation bar*/
+li,
+ul {
+    list-style: none;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.col-6 {
+    width: 50%;
+    flex-basis: 50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    line-height: 40px;
+    background: #fcfcfc;
+    box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+    padding-left: 200px;
+}
+
+.navbar {
+    display: flex;
+
+
+}
+
+.nav-link {
+    padding: 0 20px;
+    display: block;
+    transition: all 0.2s;
+    color: #999999;
+
+}
+
+/* removes text decoration on all links */
+li a:visited {
+    color: #757472;
+}
+
+/*adds some animations*/
+li a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #2691d9;
+    text-decoration-thickness: 3px;
+    color: #302e2b;
+}
+
+li>a:active {
+    color: #1a1a1a;
+}
+
+.user-icon {
+    margin: auto;
+}
+/*Middle*/
+
+
+.center {
+    width: 850px;
+    margin: auto;
+    margin-top: 20rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-right: 1rem;
+}
+
+/*styling the select uploads by the left*/
+.select-files{
+    position: relative;
+    bottom:13rem;
+    right: 10rem;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 1rem;
+    color: #333333;
+}
+
+#choice{
+    font-size:20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 1rem;
+    color: #1A072C;
+    margin-bottom: 1rem;
+}
+#radio{
+    margin-bottom: 1.5rem;
+}
+input:hover{
+    cursor: pointer;
+}
+/*
+aligns the  first image (on thel eft) and its contents  correctly*/
+.images-flex {
+    display: flex;
+    
+}
+
+.box1{
+    font-size:16px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+    bottom: 7rem;
+    right: 2rem;
+    width: 500px;
+    height: 360px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+}
+
+#drag {
+    height:80px;
+    width: 80px;
+    position: relative;
+    left:13rem;
+    top: 3rem;
+     
+}
+.drag{
+    font-size:20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 5rem;
+}
+.or1 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size:12px;
+    font-weight: 400;
+    line-height:18px;
+    color: #B3B3B3;
+    
+}
+
+.btrow {
+    text-align: center;
+    margin-top: 2.8rem; 
+}
+
+/*adds  a different color to the "enter url" text*/
+#color {
+    color: #2691d9;
+}
+
+/*aligns the two small buttons beside the images*/
+button {
+    background-color: #2691d9;
+    border: none;
+    border-radius: 8px;
+    color: #fcfcfc;
+    height: 32px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    padding-right: 28px;
+    cursor: pointer;
+}
+
+/*aligns the link icons */
+
+#link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*aligns the lines on both sides of the word "OR"*/
+#lineup {
+    position: relative;
+    bottom: 5px;
+    left: 6px;
+    width: 96px;
+}
+
+#lineUp {
+    position: relative;
+    bottom: 5px;
+    right: 6px;
+    width: 96px;
+}
+
+/* second section :dashboard menu panel - left column*/
+.left-column {
+    background-color: #F7F2FD;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 17%;
+    margin: auto;
+    line-height: 100px;
+    height: 80rem;
+
+}
+
+#logo {
+    margin-top: 38px;
+    padding-top: 2.4rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+#profileImage {
+    margin-top: 20px;
+    margin-left: 3.7rem;
+    align-items: center;
+}
+
+#name {
+    position: relative;
+    bottom: 1.5rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4D4D4D;
+}
+
+#line {
+    width: 220px;
+    margin-bottom: 2rem;
+}
+
+.dashboard {
+    position: relative;
+    bottom: 3rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#dashboard {
+    position: relative;
+    top: 0.4rem;
+}
+
+.tools {
+    position: relative;
+    top: 0.5rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#tools,
+#settings,
+#support,
+#logout {
+    position: relative;
+    top: 0.3rem;
+}
+
+#collapse {
+    position: absolute;
+    right: 0;
+    top: 33.5rem;
+}
+
+#line1 {
+    width: 200px;
+    position: relative;
+    bottom: 7.05rem;
+}
+
+.setting {
+    position: relative;
+    bottom: 6rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.support {
+    position: relative;
+    bottom: 2rem;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#line2 {
+    width: 220px;
+    position: relative;
+    bottom: 2rem;
+}
+
+.logout {
+    position: relative;
+    left: 3rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.left-column>a:visited {
+    color: #4D4D4D;
+}
+
+/* third section :dashboard panel - right column*/
+.right-column {
+    position: absolute;
+    top: 12rem;
+    right: 0rem;
+    width: 18.1%;
+    margin: auto;
+    height: 67.6rem;
+    padding-left: 1rem;
+    border-left: 1px solid #D9D9D9;
+}
+
+
+.more-options{
+    margin-top: 2.5rem;
+}
+#more{
+    font-weight: 600;
+    font-size: 16px;
+    color: #350F57;
+    background-color: #F7F2FD;
+    line-height: 24px;
+    padding:1.5rem 2.5rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+   
+    margin-left: 0.6rem; 
+    margin-top: 1.5rem ;
+   
+}
+.options{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4D4D4D;
+    line-height: 24px;
+    margin-left: 1.5rem; 
+ }
+#blueBg{
+   background-color: #aad2ec;
+   border-radius: 10px;
+   padding: 0.5rem;
+   margin-top: 0.8rem;
+}
+.prop{
+    position: relative;
+    left:0.4rem;
+    bottom: 1rem;
+}
+.one{
+    padding: 5rem;
+}
+.prop1{
+    position:relative;
+    left:0.4rem;
+    bottom:0.5rem;
+}
+.rowbg{
+    background-color: #F4F9FD;
+
+}
+.giv{
+    color: #9D50E1;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 2rem; 
+    margin-top: 3rem;
+}
+#star{
+    margin-left: 0.5rem; 
+    margin-top: 1rem;
+}
+#rowbg{
+    background-color: #F4F9FD;
+    color: #4D4D4D;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    margin-right: 0.8rem;
+    padding: 1.5rem;
+    font-weight: 400;
+    font-size:12px;
+    line-height:18px;
+}
+ 
+.btn{ 
+    font-weight: 400;
+    font-size:12px;
+    line-height:18px; 
+    color: #FFFFFF;
+    background-color: #9D50E1;
+    border-radius: 8px;
+    width: 100px;
+    height: 32px;
+    margin-top:1rem;
+    margin-left:3rem;
+
+}
+
+.req{
+    font-weight: 400;
+    font-size:12px;
+    line-height:18px; 
+    color: #350F57;
+    margin-top:0.8rem;
+    margin-left:2.1rem;
+}

@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,18 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
-    <title>Sign up</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/Frame 58827 copy.png' %}"
+    />
     <link rel="stylesheet" href="{% static './general/Stylesign.css' %}" />
+    <link rel="stylesheet" href="{% static './general/message.css' %}" />
+
+    <title>Sign up</title>
   </head>
 
   <body>
     <div class="one">
       <section class="section1">
-        <img
-          class="header1"
-          src="{% static './images/firstlogo.png' %}"
-          alt="Website logo"
-        />
+        <a href=" {% url 'base:home' %} ">
+          <img
+            class="header1"
+            src="{% static './images/firstlogo.png' %}"
+            alt="Website logo"
+          />
+        </a>
         <h2 class="three1">Accuracy at your fingertips.</h2>
         <p class="three2">
           SimpliXL lets you upload your excel files and compare its content from
@@ -29,11 +39,13 @@
       </section>
       <section class="section2">
         <div>
-          <img
-            class="fivelogo"
-            src="{% static './images/secondlogo.png' %}"
-            alt=""
-          />
+          <a href=" {% url 'base:home' %} ">
+            <img
+              class="fivelogo"
+              src="{% static './images/secondlogo.png' %}"
+              alt=""
+            />
+          </a>
         </div>
         <p class="e2">.</p>
         <h2 class="five1">Create your Account</h2>
@@ -42,9 +54,9 @@
           Please enter your information to create your SimpliXL account.
         </p>
         <div class="f">
-          <form class="six" action="POST">
+          <form class="six" method="POST">
             {% if form.errors %}
-            <div class="error">
+            <div class="message error">
               {% for field in form %} {% for error in field.errors %}
               <p>{{ error }}</p>
               {% endfor %} {% endfor %}
@@ -79,7 +91,7 @@
             </div>
 
             <div class="f1">
-              <label class="f1" for="password"><h4>Password</h4></label>
+              <label class="f1" for="password1"><h4>Password</h4></label>
             </div>
             <div class="">
               <input
@@ -91,17 +103,35 @@
                 placeholder="Enter your password"
               />
             </div>
-          </form>
-          <p class="seven">
-            By clicking the 'Create my Account' button, you confirm that you
-            have read and accepted SimpliXL <a href="">Terms of service</a> and
-            <a href="">Privacy policy.</a>
-          </p>
-          <p class="e3">.</p>
 
-          <button class="eight">
-            <a href="" id="btna">Create my Account</a>
-          </button>
+            <div class="f1">
+              <label class="f1" for="password2"
+                ><h4>Password Confirm</h4></label
+              >
+            </div>
+            <div class="">
+              <input
+                class="f2"
+                id="icon"
+                type="password"
+                name="password2"
+                required=""
+                placeholder="Enter your password"
+              />
+            </div>
+            <p class="seven">
+              By clicking the 'Create my Account' button, you confirm that you
+              have read and accepted SimpliXL
+              <a href=" {% url 'base:terms' %} ">Terms of service</a> and
+              <a href="#">Privacy policy.</a>
+            </p>
+            <p class="e3">.</p>
+
+            <button class="eight" type="submit" id="btna">
+              Create my Account
+            </button>
+          </form>
+
           <p class="nine">
             Already have an account?
             <a href="{% url 'accounts:login' %}">Sign In</a>
@@ -116,7 +146,7 @@
               class="eleven1"
               src="{% static './images/Google.png' %}"
               alt=""
-            /><a href="{% url 'accounts:googlesignin' %}"
+            /><a href="{% provider_login_url 'google' %}" 'accounts:googlesignin'
               >Sign up with Google</a
             >
           </button>

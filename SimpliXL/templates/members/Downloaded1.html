@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <link
+      rel="stylesheet"
+      href="{% static './members/css/Downloaded1.css' %}"
+    />
+  </head>
+  <body>
+    <section>
+      <main>
+        <div class="container">
+          <img src="{% static './images/tick-circle.png' %}" alt="" />
+          <h1>Great</h1>
+          <p class="sideline">File have been downloaded successfully</p>
+          <a href="#" class="btn">Go to Dashboard</a>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
