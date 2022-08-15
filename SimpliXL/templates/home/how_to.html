@@ -1,0 +1,195 @@
+{% extends "home/base.html" %} 
+{% load static %} 
+{% block title %}Demo Page{% endblock title %} 
+{% block css %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
+<link rel="stylesheet" href=" {% static 'base/css/demo.css' %} " />
+{% endblock css %} {% block content %}
+
+<main>
+  <section class="one">
+    <img src="{% static './images/Ellipse 255.png' %}" alt="green" id="green" />
+
+    <div class="text1">
+      <h1>Compare the content of your Excel files, in SimpliXL</h1>
+      <p>
+        Boost your productivty by comparing and finding discrepancies in the
+        content of your excel files with SimpliXL
+      </p>
+    </div>
+  </section>
+
+  <section class="two container">
+    <div class="flex">
+      <div class="list">
+        <p class="bold">Find discrepancies in</p>
+        <ul>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            Excel/CSV files
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            cell values
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            defined tables
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            fill colour
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            text color
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            CSV files
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            worksheet tables
+          </li>
+        </ul>
+        <p class="bold">Added features</p>
+        <ul>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            Merge excel files
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            Merge two excel sheets into one
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            Combine all sheets into one
+          </li>
+          <li>
+            <img
+              src="{% static './images/Ellipse 250.png' %}"
+              alt="dark"
+              id="list"
+            />
+            Add-ins
+          </li>
+        </ul>
+      </div>
+
+      <div class="tools">
+        <img src="{% static './images/Frame 28 (1).png' %}" alt="tools image" />
+      </div>
+    </div>
+
+    <div class="learn-more">
+      <p id="learn">Want to Learn More?</p>
+      <img
+        src="{% static './images/Ellipse 251.png' %}"
+        alt="purple"
+        id="purple"
+      />
+      <p id="find">Find more about what SimpliXL can do for you</p>
+    </div>
+
+    <div class="samplesheet">
+      <img src="{% static './images/Ellipse 250.png' %}" alt="dark" id="dark" />
+      <img src="{% static './images/Group 3587.png' %}" alt="sample" />
+    </div>
+
+    <div class="flex-text">
+      <div class="flex1">
+        <h3>Highlights duplicates in a single file</h3>
+        <p>
+          SimpliXL searches your worksheets for changed cells and generates a
+          colored report that highlights changed cells and rows.
+        </p>
+      </div>
+      <div class="flex2">
+        <h3>Removes duplicates and return a single file</h3>
+        <p>
+          With a single click, you can read duplicated records. To draw
+          attention to these rows, highlight duplicates with different
+          background colors. By filtering the duplicate rows on the worksheet,
+          you can move and copy them. Remove Duplicate Rows and Keys
+        </p>
+      </div>
+      <div class="flex3">
+        <h3>Removes duplicates and returns 2 files</h3>
+        <p>
+          Remove duplicate rows, leading and trailing spaces, split and join
+          columns, text to numbers... SimpliXL provides quick commands to help
+          you simplify your work with Excel files and return 2 files.
+        </p>
+      </div>
+      <div class="flex4">
+        <h3>Highlights duplicates and returns 2 files</h3>
+        <p>
+          Get the best comparison results in seconds with primary key columns
+          and rows (table headings) defined on the worksheet. Get an accurate
+          and simple comparison report.
+        </p>
+      </div>
+    </div>
+
+    <img
+      src="{% static './images/Ellipse 254.png' %}"
+      alt="orange"
+      id="orange"
+    />
+    <p class="paragraph">
+      SimpliXL is an ultimate tool for Comparing contents in CSV files
+    </p>
+  </section>
+</main>
+
+{% endblock content %} 
+
+{% block footer %} 
+  {% include 'home/footer.html' %}
+{% endblock footer %}

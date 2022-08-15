@@ -1,4 +1,5 @@
 from django.shortcuts import redirect
+from django.shortcuts import render
 
 from django.views.generic.edit import FormView
 from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
@@ -29,7 +30,7 @@ class RegisterPage(FormView):
         user = form.save()
         if user is not None:
             login(self.request, user)
-            success_url = reverse_lazy('members:home')
+            success_url = reverse_lazy('members:welcome')
         return super(RegisterPage, self).form_valid(form)
 
     def get(self, *args, **kwargs):
@@ -38,7 +39,7 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
     def get_success_url(self):
-        return reverse_lazy('members:home')
+        return reverse_lazy('members:welcome')
 
 
 class ResetPasswordView(PasswordResetView):
@@ -61,3 +62,7 @@ class ResetPasswordConfirmView(PasswordResetConfirmView):
 
 class ResetPasswordCompleteView(PasswordResetCompleteView):
     template_name = "password_reset/password_reset_complete.html"
+
+
+def googlesign(request):
+    return render(request, 'accounts/googlesign.html')

@@ -1,167 +1,157 @@
+{% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/Frame 58827 copy.png' %}"
+    />
+    <link rel="stylesheet" href="{% static './general/Stylesign.css' %}" />
+    <link rel="stylesheet" href="{% static './general/message.css' %}" />
+
     <title>Sign up</title>
-    <link rel="stylesheet" href="Stylesign.css">
-</head>
-   
-    <body> 
-            
-             <div class="one">
-                <img class="header1" src="firstlogo.png" alt="Website logo">
-               
-                <div class="grad"> 
-                    <div class="grad1"></div>
-                    <div class="grad2"></div>
-                    <div class="grad3"></div>
-                    <div class="two"> 
-                    <div class="three"><h2 class="three1">Accuracy at your fingertips.</h2>
-                     <p class="three2">SimpliXL lets you upload your excel files and compare its content from anywhere!</p></div>
-                    <div class="four"><img class="four1" src="Db.jpg" alt="dashboard"></div>                     
+  </head>
+
+  <body>
+    <div class="one">
+      <section class="section1">
+        <a href=" {% url 'base:home' %} ">
+          <img
+            class="header1"
+            src="{% static './images/firstlogo.png' %}"
+            alt="Website logo"
+          />
+        </a>
+        <h2 class="three1">Accuracy at your fingertips.</h2>
+        <p class="three2">
+          SimpliXL lets you upload your excel files and compare its content from
+          anywhere!
+        </p>
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <div class="grad3"></div>
+      </section>
+      <section class="section2">
+        <div>
+          <a href=" {% url 'base:home' %} ">
+            <img
+              class="fivelogo"
+              src="{% static './images/secondlogo.png' %}"
+              alt=""
+            />
+          </a>
+        </div>
+        <p class="e2">.</p>
+        <h2 class="five1">Create your Account</h2>
+        <p class="e1">.</p>
+        <p class="five2">
+          Please enter your information to create your SimpliXL account.
+        </p>
+        <div class="f">
+          <form class="six" method="POST">
+            {% if form.errors %}
+            <div class="message error">
+              {% for field in form %} {% for error in field.errors %}
+              <p>{{ error }}</p>
+              {% endfor %} {% endfor %}
             </div>
-        </div> 
-            <div class="five">
+            {% endif %} {% csrf_token %}
+            <div class="f1">
+              <label class="f1" for="full_name"><b>Full Name</b></label>
+            </div>
+            <div class="">
+              <input
+                class="f2"
+                type="text"
+                name="full_name"
+                value="{% if form.full_name.value %} {{form.full_name.value}} {% endif %}"
+                required=""
+                placeholder="Enter your full name"
+              />
+            </div>
 
-                <p class="e1">.</p>
-                <p class="e2">.</p>
-                <p class="e3">.</p>
-                <div><img class="fivelogo" src="secondlogo.png" alt=""></div>
-                
-                <div class="f">  
-                <h2 class="five1">Create your Account</h2>
-                <p class="five2">Please enter your information to create your SimpliXL account.</p>
-                <form class="six" action="" method="POST">
-                    {% if form.errors %}
-                        <div class="error">
-                            {% for field in form %}
-                            {% for error in field.errors %} 
-                            <p>{{ error }}</p>
-                            {% endfor %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                        {% csrf_token %}
-                    <div class="f1">
-                        <label class="f1" for="first_name"><b>First Name</b></label>
-                    </div> 
-                    <div class="">
-                        <input class="f2" type="text" name="first_name" value="{% if form.first_name.value %} {{form.first_name.value}} {% endif %}" 
-            required="" placeholder="Enter your first name">
-                    </div>
-                    <div class="f1">
-                        <label class="f1" for="last_name"><b>Last Name</b></label>
-                    </div> 
-                    <div class="">
-                        <input class="f2"  type="text" name="last_name" value="{% if form.last_name.value %}{{form.last_name.value}}{% endif %}" 
-            required="" placeholder="Enter your last name">
-                    </div>
+            <div class="f1">
+              <label class="f1" for="email"><h4>Email Address</h4></label>
+            </div>
+            <div class="">
+              <input
+                class="f2"
+                type="email"
+                name="email"
+                value=" {% if form.email.value %}{{form.email.value}}{% endif %} "
+                required=""
+                placeholder="Enter your email address"
+              />
+            </div>
 
-                    <div class="f1">
-                        <label class="f1" for="email"><h4>Email Address</h4></label>
-                    </div> 
-                    <div class="">  
-                         
-                        <input class="f2" type="email" name="email" value=" {% if form.email.value %}{{form.email.value}}{% endif %} " 
-            required=""  placeholder="Enter your email address">
-                    </div>
+            <div class="f1">
+              <label class="f1" for="password1"><h4>Password</h4></label>
+            </div>
+            <div class="">
+              <input
+                class="f2"
+                id="icon"
+                type="password"
+                name="password1"
+                required=""
+                placeholder="Enter your password"
+              />
+            </div>
 
-                    <div class="f1">
-                        <label class="f1" for="password"><h4>Password</h4></label>
-                    </div> 
-                    <div class="">
-                        <input class="f2" id="icon" type="password" name="password1" required=""  placeholder="Enter your password">
-                    
-                    </div>  
-                    <div class="f1">
-                        <label class="f1" for="password"><h4>Confirm password</h4></label>
-                    </div> 
-                    <div class="">
-                        <input class="f2" id="icon" type="password" name="password2" required=""  placeholder="Confirm your password">>
-                    
-                    </div>  
-                </form>
-                <p class="seven">By clicking the 'Create my Account' button, you confirm that you have read and accepted SimpliXL <a href="">Terms of service</a> and <a href="">Privacy policy.</a></p>
-                <button class="eight" ><a href="" id="btna">Create my Account</a></button>
-                <p class="nine">Already have an account? <a href="signin.html">Sign In</a></p>
-                <div class="ten"> 
-                    <div class="l1"></div> 
-                    <div class="1p"> or </div>
-                    <div class="l2"></div>
-                </div>
-                <button class="eleven"><img class= "eleven1" src="Google.png" alt=""><a href="">Sign up with Google</a></button>
-                </div>
-        </body>
+            <div class="f1">
+              <label class="f1" for="password2"
+                ><h4>Password Confirm</h4></label
+              >
+            </div>
+            <div class="">
+              <input
+                class="f2"
+                id="icon"
+                type="password"
+                name="password2"
+                required=""
+                placeholder="Enter your password"
+              />
+            </div>
+            <p class="seven">
+              By clicking the 'Create my Account' button, you confirm that you
+              have read and accepted SimpliXL
+              <a href=" {% url 'base:terms' %} ">Terms of service</a> and
+              <a href="#">Privacy policy.</a>
+            </p>
+            <p class="e3">.</p>
+
+            <button class="eight" type="submit" id="btna">
+              Create my Account
+            </button>
+          </form>
+
+          <p class="nine">
+            Already have an account?
+            <a href="{% url 'accounts:login' %}">Sign In</a>
+          </p>
+          <div class="ten">
+            <div class="l1"></div>
+            <div class="1p">or</div>
+            <div class="l2"></div>
+          </div>
+          <button class="eleven">
+            <img
+              class="eleven1"
+              src="{% static './images/Google.png' %}"
+              alt=""
+            /><a href="{% provider_login_url 'google' %}" 'accounts:googlesignin'
+              >Sign up with Google</a
+            >
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
-
-
-                <div class="f">  
-                <h2 class="five1">Create your Account</h2>
-                <p class="five2">Please enter your information to create your SimpliXL account.</p>
-                <form class="six" action="" method="POST">
-                    {% if form.errors %}
-                        <div class="error">
-                            {% for field in form %}
-                            {% for error in field.errors %} 
-                            <p>{{ error }}</p>
-                            {% endfor %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                        {% csrf_token %}
-                    <div class="f1">
-                        <label class="f1" for="first_name"><b>First Name</b></label>
-                    </div> 
-                    <div class="f2">
-                        <input class="f2" type="text" name="first_name" value="{% if form.first_name.value %} {{form.first_name.value}} {% endif %}" 
-            required="" placeholder="Enter your first name">
-                    </div>
-                    <div class="f1">
-                        <label class="f1" for="last_name"><b>Last Name</b></label>
-                    </div> 
-                    <div class="f2">
-                        <input class="f2"  type="text" name="last_name" value="{% if form.last_name.value %}{{form.last_name.value}}{% endif %}" 
-            required="" placeholder="Enter your last name">
-                    </div>
-
-                    <div class="f1">
-                        <label class="f1" for="email"><h4>Email Address</h4></label>
-                    </div> 
-                    <div class="f2">  
-                         
-                        <input class="f2" type="email" name="email" value=" {% if form.email.value %}{{form.email.value}}{% endif %} " 
-            required=""  placeholder="Enter your email address">
-                    </div>
-
-                    <div class="f1">
-                        <label class="f1" for="password"><h4>Password</h4></label>
-                    </div> 
-                    <div class="f2">
-                        <input class="f2" id="icon" type="password" name="password1" required=""  placeholder="Enter your password">
-                    
-                    </div>  
-                    <div class="f1">
-                        <label class="f1" for="password"><h4>Confirm password</h4></label>
-                    </div> 
-                    <div class="f2">
-                        <input class="f2" id="icon" type="password" name="password2" required=""  placeholder="Confirm your password">>
-                    
-                    </div>  
-                </form>
-                <p class="seven">By clicking the 'Create my Account' button, you confirm that you have read and accepted SimpliXL Terms of service and Privacy policy.</p>
-                <button class="eight">Create my Account</button>
-                <p class="nine">Already have an account? Sign In</p>
-                <div class="ten"> 
-                    <div class="l1"></div> 
-                    <div class="1p"> or </div>
-                    <div class="l2"></div>
-                </div>
-                <button class="eleven"><img class= "eleven1" src="Google.png" alt="">Sign up with Google</button>
-                </div>
-        </body>
-</html>
-
-
