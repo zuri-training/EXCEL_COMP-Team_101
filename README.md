@@ -46,6 +46,17 @@ The name of our product for the excel_comp-team 101 is **simpliXL**. This is a p
 - Commit the changes and push to the repository
 - Allow review on your pull request _(Don't do it yourself)_
 
+## Server Deployment
+
+- Clone github repo
+- Create a virtual environment in the root directory
+- Activate the virtual environment and install all the required dependencies in the requirements.txt file
+- Generate your .env file to to help hide environment variables
+- Create a mysql database and oonect
+- Navigate into the simplixl folder and run "python manage.py makemigrations" in order to create required sql statements
+- Run "python manage.py migrate" in order to create required tables
+- Run "python manage.py runserver"
+
 ## Contributors/Team Members
 
 - Amarachi Iheakam
