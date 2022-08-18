@@ -29,13 +29,11 @@ a {
 
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 80px;
-  height: 80px;
+  height: 60px;
   line-height: 40px;
-  background: #FAFAFA;
+  background: #fcfcfc;
   box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
 }
 
@@ -47,19 +45,18 @@ header {
   padding: 5px 30px;
   display: block;
   transition: all 0.2s;
-  color: #999999;
 }
 
 /* removes text decoration on all links */
 li a:visited {
-  color: #999999;
+  color: #757472;
 }
 
 li a:hover {
   text-decoration-line: underline;
   text-decoration-color: #2691d9;
   text-decoration-thickness: 3px;
-  color: #999999;
+  color: #302e2b;
 }
 
 li > a:active {
@@ -107,7 +104,7 @@ li > a:active {
 }
 
 body {
-  background-image: url("./images/29.jpg");
+  background-image: url("29.jpg");
 }
 
 .group {
@@ -194,21 +191,17 @@ button.secondary{
   flex-direction: column;
   padding-left: 70px;
   line-height: 32px;
-  color: #350F57;
-  gap: 8px;
+  color: #4F1683;;
 }
 
 #radio-select>p{
   padding-top: 20px;
   font-size: 20px;
-  line-height: 24px;
-  font-weight: 500;
-  color: #350F57;
 }
 
 label{
   font-weight: light;
-  color: #999999;
+  color: #000000;
 }
 
 .upload-button {
@@ -216,10 +209,10 @@ label{
   margin-top: 20px;
   top: 380px;
   left: 500px;
-  width: 320px;
+  width: 300px;
   height: 48px;
   border: none;
-  background-color: #52A7E0;
+  background-color: #2691d9;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
 }

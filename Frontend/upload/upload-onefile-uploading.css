@@ -29,13 +29,11 @@ a {
 
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 80px;
-  height: 80px;
+  height: 60px;
   line-height: 40px;
-  background: #FAFAFA;
+  background: #fcfcfc;
   box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
 }
 
@@ -47,19 +45,18 @@ header {
   padding: 5px 30px;
   display: block;
   transition: all 0.2s;
-  color: #999999;
 }
 
 /* removes text decoration on all links */
 li a:visited {
-  color: #999999;
+  color: #757472;
 }
 
 li a:hover {
   text-decoration-line: underline;
   text-decoration-color: #2691d9;
   text-decoration-thickness: 3px;
-  color: #999999;
+  color: #302e2b;
 }
 
 li > a:active {
@@ -107,7 +104,7 @@ li > a:active {
 }
 
 body {
-  background-image: url("./images/29.jpg");
+  background-image: url("29.jpg");
 }
 
 .group {
@@ -196,15 +193,11 @@ button.secondary{
 #arrow{
   padding-left: 70px;
   padding-top: 30px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  gap: 8px;
-  border-radius: 6px;
+  font-size: 24px;
 }
 
 a#on-arrow:focus{
-  color: #350F57;
+  color: #1a1a1a;
 }
 
 .progress-bar{
