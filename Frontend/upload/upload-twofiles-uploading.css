@@ -106,17 +106,17 @@ body {
   background-image: url("29.jpg");
 }
 
-#larr{
+#larr {
   font-size: 30px;
 }
 
-#arrow{
+#arrow {
   padding-left: 70px;
   padding-top: 30px;
   font-size: 24px;
 }
 
-a#on-arrow:focus{
+a#on-arrow:focus {
   color: #1a1a1a;
 }
 
@@ -277,5 +277,5 @@ a#on-arrow:focus{
 .no-leave {
   margin-top: 50px;
   text-align: center;
-  color: #4F1683;;
+  color: #4f1683;
 }
