@@ -1,0 +1,380 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+   font-family: axiforma;
+}
+.header1{
+    width: 24px;
+    height: 29px;
+    margin-top: 40px;
+}
+
+.e1{
+   transform: matrix(1, 0, 0, -1, 0, 0);
+   font-size: 70px;
+   color:#2F9803;
+   margin-left: 4%;
+   margin-top: -9%;
+}
+
+.e2{
+    margin-left: 92%;
+   transform: matrix(1, 0, 0, -1, 0, 0);
+   font-size: 70px;
+   color:#f38707;
+}
+
+.e3{
+   transform: matrix(1, 0, 0, -1, 0, 0);
+   font-size: 70px;
+   color:#A76BDC;
+   margin-left: -7%;
+   margin-top: -7%;
+   margin-bottom: -8%;
+}
+
+.one {
+    display: flex;
+    background-color: #2691D9;
+    width: 100%;
+    min-height: 100vh;
+    }   
+
+ .section1{
+    width: 45%;
+    margin-left: 4%;
+ }
+
+
+.grad1{
+    background: linear-gradient(89.89deg, rgba(38, 145, 217, 0) 3.1%, rgba(70, 161, 222, 0) 14.52%, rgba(89, 171, 226, 0.44) 20.22%, rgba(106, 180, 229, 0.37) 39.66%, rgba(126, 189, 232, 0.384428) 53.49%, rgba(186, 220, 243, 0.37) 67.33%, rgba(255, 255, 255, 0.28) 81.69%);
+    width: 100%;
+    height: 12%;
+    transform: rotate(-54deg);
+    /*margin-top: -155px;
+    margin-left: 70px;*/
+    margin-top: -27%;
+    margin-left: 10%;
+}
+
+.grad2{
+    width: 100%;
+    height: 12%;
+    background: linear-gradient(89.89deg, rgba(38, 145, 217, 0) 3.1%, rgba(70, 161, 222, 0) 14.52%, rgba(89, 171, 226, 0) 21.39%, rgba(106, 180, 229, 0) 32%, rgba(126, 189, 232, 0.384428) 54.67%, rgba(255, 255, 255, 0.28) 81.69%);
+    transform: rotate(35.66deg); 
+    /*margin-left: 70px;
+    margin-top: 70px;*/
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.grad3{
+    width: 100%;
+    height: 12%;
+    background: linear-gradient(89.89deg, rgba(38, 145, 217, 0) 3.1%, rgba(70, 161, 222, 0) 3.1%, rgba(89, 171, 226, 0.2) 24.26%, rgba(106, 180, 229, 0.28) 39.14%, rgba(126, 189, 232, 0.384428) 69.4%, rgba(255, 255, 255, 0.18) 81.69%);
+    transform: rotate(-50.33deg);
+    /*margin-top: 120px;
+    margin-left: -140px;*/    
+    margin-top: 20%;
+    margin-left: -25%;
+}
+
+.three1{ 
+    font-family: Axiforma;
+    font-style: normal;
+    font-weight: 700px;
+    font-size: 32px;
+    overflow: hidden;
+    color: #FFFFFF;
+    margin-top: 17%;
+    animation: accuracy 3s steps(28);
+}
+@keyframes accuracy {
+   0%{
+      width: 0ch;
+   }
+   100%{
+      width: 28ch;
+   }
+}
+
+@font-face {
+    font-family: Axiforma; 
+    src: url(Axiforma-Regular.ttf);
+}
+
+.three2{
+    width: 53%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: nullpx;
+    transform: translateX(50px);
+    opacity: 0;
+    animation: upload 2s ease 2s forwards;
+}
+@keyframes upload{
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+.section2{
+    background: #FFFFFF;
+    border-radius: 30px 0px 0px 30px; 
+    width: 55%; 
+}
+.fivelogo{
+    width: 98px;
+    height: 29px;
+    margin-left: 12%;
+    margin-top: 40px;  
+}
+
+.five1{
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+color: #0D0D0D;
+text-align: center;
+margin-top: -10%;
+}
+
+.five2{
+font-family: 'Axiforma';
+font-style: normal;
+font-weight: 700px;
+font-size: 18px;
+color: #333333;
+    margin-top: -6%;
+    text-align: center;
+margin-bottom: 10%;
+}
+
+
+.f{
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.f1{
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 22px;
+align-items: center;
+color: #0D0D0D;
+
+}
+
+.f2{
+    width: 97%;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 30px;
+border-radius: 6px;
+padding: 10px;
+border-width: 1px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.f2:hover {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+#icon{
+    background: url(eye.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    background-size: 23px;
+}
+
+.seven{
+font-family: 'Axiforma';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: rgba(0, 0, 0, 0.6);
+width: 92%;
+}
+
+.eight{
+    background: #2691D9;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px: 50px; 
+    width: 97%;
+    height: 40px; 
+    margin-top: -100px;
+}
+button{
+    border: 0px solid blue;
+    color: white;
+}
+#btna{
+    color: white;
+}
+button:hover{
+    width: 600px;
+    height: 50px;
+}
+.nine{
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin-top: 3%;
+}
+
+.ten{
+    display: flex;
+    margin-top: 4%;
+}
+
+.l1{
+    height: 0.3px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 97%;
+    margin-top: 10px;
+}
+
+.l2{
+    height: 0.3px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 97%;
+    margin-top: 10px;
+}
+
+.lp{
+    margin-top: -10px;
+    width: 97%;
+    height: 1px;
+}
+
+.eleven{
+font-family: 'Axiforma';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: #302E2B;
+    padding: 5px;
+    background: #FFFFFF;
+border-radius: 8px;
+border-width: 1px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+width: 97%;
+margin-top: 4%;
+margin-bottom: 25%;
+}
+.eleven a{
+    color: #302E2B;
+    font-weight: bold;
+}
+.eleven1{
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 30px;
+    }
+a{
+    font-weight: bold;
+}
+/*additional style for the newpassword page*/
+#pwd1{
+    margin-top: 1%;
+}
+
+#pwd2{
+    margin-top: 1%;
+}
+#btn{
+    margin-top: 2%;
+}
+#p{
+    margin-bottom: 30%;
+    margin-top: -8%;
+}
+/*additional style for forgotpassword page*/
+#fpw{
+    margin-top: 1%;
+}
+#fpw2{
+    margin-top: 1%;
+    text-align: justify;
+}
+#btn1{
+    color: white;
+    margin-top: 4%;
+}
+#p1{
+    text-align: center;
+    color: black;
+}
+#point{
+    margin-top: 7%;
+    margin-bottom: 32%;
+}
+/*additional reset successful page style*/
+.right{
+    text-align: center;
+}
+.resend{
+    color: blue;
+    font-weight: normal;
+}
+#purpledot{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    margin-left: -85%;
+}
+/*styling signin page*/
+
+#pe{
+    margin-top: 1%;
+}
+#box{
+    margin-top: -3%;
+    margin-left: 1%;
+}
+#forgot{
+    float: right;
+    margin-top: -18px;
+    color: blueviolet;
+}
+#dwn1{
+    margin-top: 5%;
+}
+#dwn2{
+    margin-top: -11%;
+}
+#dwn3{
+    margin-top: 4%;
+}
+#remember{
+    transform: scale(2.0);
+    border-radius: 8px;
+}
+.checkbox{
+    margin-left: 10px;
+}
+@media screen and (max-width: 700px){
+    .one{
+        display: block;
+    }
+    .section1{
+        display: none;
+    }
+    .section2{
+        width: 100%;
+        border-radius: 90px;
+    }
+}

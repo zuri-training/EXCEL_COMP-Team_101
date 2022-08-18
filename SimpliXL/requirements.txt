@@ -11,8 +11,8 @@ MarkupSafe==2.1.1
 mysqlclient==2.1.1
 numpy==1.23.1
 openpyxl==3.0.10
+panda==0.3.1
 pandas==1.4.3
-Pillow==9.2.0
 pycodestyle==2.8.0
 python-dateutil==2.8.2
 python-decouple==3.6
@@ -24,4 +24,3 @@ toml==0.10.2
 tzdata==2022.1
 urllib3==1.26.11
 XlsxWriter==3.0.3
-django-allauth==0.43.0

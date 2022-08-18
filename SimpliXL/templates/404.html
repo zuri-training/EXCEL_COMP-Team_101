@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Error Page</title>
     <link href="http://fonts.cdnfonts.com/css/axiforma" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'general/404.css' %}" />
+    <link rel="stylesheet" href="error.css" />
   </head>
   <body>
     <main class="error-content">
-      
-      <img src="{% static 'images/error.png' %}" alt="error pic" />
-
-      <h1>Oops!... Page not found</h1>
+      <img src="Frowning Fac (Traced).png" alt="" />
+      <h1>OOps!... Page not found</h1>
       <p>
         We apologize for the inconvenience. It appears that you are attempting
         to reach a page that is either no longer available or was never
@@ -24,3 +21,4 @@
     </main>
   </body>
 </html>
+<a href="{% url 'base:home' %}">Back</a>
