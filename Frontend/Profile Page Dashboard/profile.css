@@ -32,7 +32,7 @@ a {
 .row {
     display: flex;
     justify-content: space-between;
-    
+    margin-left: 4rem;
 }
 
 .col-6 {
@@ -106,15 +106,14 @@ li>a:active {
     left: 777px;
     top: 208px;
     padding-top: 50px;
-    margin-left: 42rem;
-   
+    margin-left: 42.6rem;
+
 }
 
 .Tbuttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     gap: 8px;
     width: 232px;
     height: 103px;
@@ -122,13 +121,10 @@ li>a:active {
     top: 390px;
     margin-left: 40rem;
     margin-top: 6rem;
+    cursor: pointer;
 }
 
 .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 8px 16px;
     gap: 16px;
     width: 232px;
@@ -139,8 +135,9 @@ li>a:active {
 
 }
 
-.txt {
-    
+.txt,
+.txts1,
+.txts2 {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -148,9 +145,6 @@ li>a:active {
 }
 
 .btn1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     padding: 11.5px 0px;
     gap: 16px;
@@ -170,7 +164,7 @@ li>a:active {
     text-decoration-line: underline;
     text-decoration-color: #800080;
     text-decoration-thickness: 3px;
-    
+
 }
 
 .contain {
@@ -184,12 +178,10 @@ li>a:active {
     margin-left: 29rem;
     margin-top: 3rem;
 }
-
 .name-side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     gap: 8px;
     width: 614px;
     height: 77px;
@@ -207,9 +199,6 @@ li>a:active {
 }
 
 #fname {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 11.5px 16px;
     gap: 8px;
     width: 614px;
@@ -220,9 +209,6 @@ li>a:active {
 }
 
 .email-side {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 0px;
     gap: 8px;
     width: 614px;
@@ -235,16 +221,10 @@ li>a:active {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    display: flex;
-    align-items: center;
     color: #1A1A1A;
 }
 
 #email {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 11.5px 16px;
     gap: 8px;
     width: 614px;
@@ -253,7 +233,12 @@ li>a:active {
     border: 1px solid #E9E9E9;
     border-radius: 8px;
 }
-
+input:placeholder-shown{
+    Font-family: Axiforma , sans-serif;
+    Font-size: 16px;
+    Line-height: 20px;
+   Color :#CCCCCC;
+}
 .Dbuttons {
     display: flex;
     flex-direction: row;
@@ -263,14 +248,10 @@ li>a:active {
     width: 496px;
     height: 48px;
     margin-left: 32rem;
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 
 .btns1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 8px 16px;
     gap: 16px;
     width: 198px;
@@ -280,18 +261,7 @@ li>a:active {
     border: none;
 }
 
-.txts1 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-}
-
 .btns2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 8px 16px;
     gap: 16px;
     width: 198px;
@@ -301,12 +271,10 @@ li>a:active {
     border: none;
 }
 
-.txts2 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
+button:hover {
+    cursor: pointer;
 }
+
 /* second section :dashboard menu panel - left column*/
 .left-column {
     background-color: #F7F2FD;

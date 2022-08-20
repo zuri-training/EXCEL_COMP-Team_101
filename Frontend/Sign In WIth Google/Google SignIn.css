@@ -28,7 +28,7 @@ body{
 .google-up{
     width: 704px;
     height: 44px;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #CCCCCC; 
     margin-left:rem;
 }
 #google-icon{
@@ -105,7 +105,15 @@ input{
     font-weight: 500;
     line-height: 20px;
     color: #999999;
+    background-color: #FCFCFC;
 
+}
+input:placeholder-shown{
+    Font-family: Axiforma;
+    font-weight: 500;
+    Font-size: 14px;
+    Line-height: 20px;
+   Color :#999999;
 }
 /* removing the border of the input on focus */
 input:focus{
@@ -134,15 +142,8 @@ input:focus{
 .choose-account:hover{
     cursor: pointer;
     color: #262626;
-    transition: 1s;
-    animation-name: btn;
-    animation-duration: 1s;
  }
- @keyframes btn{
-    from{background-color: white;}
-    to{background-color: rgb(230, 215, 215);}
-    
- }
+ 
  
 /* styling and aligning the user icon and text*/
 #user{
