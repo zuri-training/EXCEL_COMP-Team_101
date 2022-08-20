@@ -26,13 +26,11 @@ a {
 .container {
     width: 90%;
     margin: auto;
-
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .col-6 {
@@ -53,8 +51,6 @@ header {
 
 .navbar {
     display: flex;
-
-
 }
 
 .nav-link {
@@ -62,9 +58,10 @@ header {
     display: block;
     transition: all 0.2s;
     color: #999999;
-
 }
-
+.ex{
+   margin-left: 10rem;
+}
 /* removes text decoration on all links */
 li a:visited {
     color: #757472;
@@ -167,8 +164,7 @@ aligns the  first image (on thel eft) and its contents  correctly*/
     font-size:12px;
     font-weight: 400;
     line-height:18px;
-    color: #B3B3B3;
-    
+    color: #B3B3B3; 
 }
 
 .btrow {
@@ -188,34 +184,35 @@ button {
     border-radius: 8px;
     color: #fcfcfc;
     height: 32px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-right:35px;
     cursor: pointer;
 }
 
 /*aligns the link icons */
-
 #link {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    top: 0.3rem;
 }
 
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
     position: relative;
     bottom: 5px;
-    left: 6px;
+    left: 20px;
     width: 96px;
 }
 
 #lineUp {
     position: relative;
     bottom: 5px;
-    right: 6px;
+    right: 20px;
     width: 96px;
 }
+
 
 /* second section :dashboard menu panel - left column*/
 .left-column {
@@ -227,7 +224,6 @@ button {
     margin: auto;
     line-height: 100px;
     height: 80rem;
-
 }
 
 #logo {
@@ -388,19 +384,18 @@ button {
     bottom:0.5rem;
 }
 
-
-}
 .giv{
     color: #9D50E1;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem; 
+    margin-left: 1.8rem; 
     margin-top: 3rem;
 }
-#star{
-    margin-left: 0.5rem; 
-    margin-top: 1rem;
+
+.star{
+    margin: 0.9rem ;
+    margin-left: 2rem;
 }
 #rowbg{
     background-color: #F4F9FD;
@@ -412,6 +407,8 @@ button {
     font-weight: 400;
     font-size:12px;
     line-height:18px;
+    width: 200px;
+    height: 96px;
 }
  
 .btn{ 
@@ -425,7 +422,6 @@ button {
     height: 32px;
     margin-top:1rem;
     margin-left:3rem;
-
 }
 
 .req{

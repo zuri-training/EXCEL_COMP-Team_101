@@ -111,7 +111,7 @@ li>a:active {
     margin-bottom: 1rem;
 }
 #radio{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 input:hover{
     cursor: pointer;
@@ -177,32 +177,36 @@ button {
     border-radius: 8px;
     color: #fcfcfc;
     height: 32px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-right:35px;
     cursor: pointer;
 }
 
 /*aligns the link icons */
-
 #link {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    top: 0.3rem;
 }
+
 
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
     position: relative;
     bottom: 5px;
-    left: 6px;
+    left: 20px;
+    width: 96px;
 }
 
 #lineUp {
     position: relative;
     bottom: 5px;
-    right: 6px;
+    right: 20px;
+    width: 96px;
 }
+
 
 .box2{
     font-size:16px;
@@ -410,18 +414,18 @@ button {
 
 
 /* styling the "give feedback" and the stars*/
-.giv {
+.giv{
     color: #9D50E1;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem;
+    margin-left: 1.8rem; 
     margin-top: 3rem;
 }
 
-#star {
-    margin-left: 0.5rem;
-    margin-top: 1rem;
+.star{
+    margin: 0.9rem ;
+    margin-left: 2rem;
 }
 
 /*styling the feedback/ message box*/

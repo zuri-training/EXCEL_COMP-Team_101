@@ -374,7 +374,7 @@ span {
 }
  /*styles the texts in the file upload box*/
 
-.uploads {
+ .uploads {
     width: 200px;
     height: 128px;
     background-color: #F4F9FD;
@@ -387,13 +387,11 @@ span {
     border-radius: 16px;
     padding: 0.5rem 1.7rem 6rem;
 }
- /*positions the  arrow icons in the file upload box*/
 
 #arrow {
     position: relative;
     top: 0.4rem;
 }
- /*positions the line in the file upload box*/
 
 #line3 {
     width: 190px;
@@ -401,23 +399,22 @@ span {
     right:1.5rem;
     top: 0.5rem;
 }
-
- /* adds styles to the more options section*/
-
 .more-options{
     margin-top: 2.5rem;
+    margin-right: 1.5rem;
 }
 #more{
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     color: #350F57;
-    margin-left: 0.6rem; 
-    margin-top: 1.5rem ;
-    margin-right: 1rem;
     background-color: #F7F2FD;
-    padding:1.5rem 2.5rem;
+    line-height: 24px;
+    padding:  1.7rem;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    margin-left: 0.8rem; 
+    margin-top: 1.5rem ;
+   
 }
 .options{
     font-weight: 500;
@@ -426,7 +423,6 @@ span {
     line-height: 24px;
     margin-left: 1.5rem; 
  }
- /* adds blue background to the icons and aligns them*/
 #blueBg{
    background-color: #aad2ec;
    border-radius: 10px;
@@ -446,60 +442,68 @@ span {
     left:0.4rem;
     bottom:0.5rem;
 }
-/*adds very light blue background to two rows in the more options box*/
 .rowbg{
     background-color: #F4F9FD;
+    padding-left: 0.5rem;
 }
-
-/* styling the "give feedback" and the stars*/
+.curve{
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
+}
+.nobg{
+    padding-left: 0.5rem;
+}
+ 
 .giv{
     color: #9D50E1;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem; 
+    margin-left: 1.8rem; 
     margin-top: 3rem;
 }
-#star{
-    margin-left: 0.5rem; 
-    margin-top: 1rem;
+
+.star{
+    margin: 0.9rem ;
+    margin-left: 2rem;
 }
- /*styling the feedback/ message box*/
 #rowbg{
     background-color: #F4F9FD;
     color: #4D4D4D;
     border: 1px solid #D9D9D9;
     border-radius: 10px;
-    margin-right: 0.8rem;
-    padding: 1.5rem;
+    width: 200px;
+    height: 96px;
+    margin-left: 0.8rem;
+    padding:1rem;
+    padding-top: 0.65rem;
     font-weight: 400;
     font-size:12px;
     line-height:18px;
 }
-
-  /*styling the submit button and adding a pointer effect*/
+ 
 .btn{ 
     font-weight: 400;
     font-size:12px;
     line-height:18px; 
     color: #FFFFFF;
-    background-color: #cf3fec;
+    background-color: #9D50E1;
     border-radius: 8px;
     width: 100px;
     height: 32px;
     margin-top:1rem;
-    margin-left:3rem;
+    margin-left:4rem;
     border: none;
 }
-button:hover{
-    cursor: pointer;
-}
- /*styling the request feature*/
+ button:hover{
+     cursor: pointer;
+ }
+
 .req{
     font-weight: 400;
     font-size:12px;
     line-height:18px; 
     color: #350F57;
     margin-top:0.8rem;
-    margin-left:2rem;
+    margin-left:3.1rem;
 }

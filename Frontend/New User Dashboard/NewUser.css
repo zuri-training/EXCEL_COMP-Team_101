@@ -52,8 +52,6 @@ header {
 
 .navbar {
     display: flex;
-
-
 }
 
 .nav-link {
@@ -63,7 +61,9 @@ header {
     color: #999999;
 
 }
-
+.ex{
+    padding-left: 13rem;
+}
 /* removes text decoration on all links */
 li a:visited {
     color: #757472;
@@ -82,7 +82,7 @@ li>a:active {
 }
 
 .user-icon {
-    margin: auto;
+   padding-right: 10rem;
 }
 /*Middle*/
 .center {
@@ -112,16 +112,14 @@ li>a:active {
 }
 
 .images {
-
     width: 648px;
     margin: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 120px;
     justify-content: center;
-    padding-top: 133px;
+    padding-top: 145px;
 }
 
 .first {
@@ -338,6 +336,7 @@ li>a:active {
 }
 .more-options{
     margin-top: 2.5rem;
+    margin-right: 1.5rem;
 }
 #more{
     font-weight: 600;
@@ -345,11 +344,10 @@ li>a:active {
     color: #350F57;
     background-color: #F7F2FD;
     line-height: 24px;
-    padding:1.5rem 2.5rem;
+    padding:  1.7rem;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-   
-    margin-left: 0.6rem; 
+    margin-left: 0.8rem; 
     margin-top: 1.5rem ;
    
 }
@@ -381,18 +379,25 @@ li>a:active {
 }
 .rowbg{
     background-color: #F4F9FD;
-
+    padding-left: 0.5rem;
+}
+.curve{
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
+}
+.nobg{
+    padding-left: 0.5rem;
 }
 .giv{
     color: #9D50E1;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem; 
+    margin-left: 2.3rem; 
     margin-top: 3rem;
 }
 #star{
-    margin-left: 0.5rem; 
+    margin-left: 0.8rem; 
     margin-top: 1rem;
 }
 #rowbg{
@@ -400,7 +405,7 @@ li>a:active {
     color: #4D4D4D;
     border: 1px solid #D9D9D9;
     border-radius: 10px;
-    margin-right: 0.8rem;
+    margin-left: 0.8rem;
     padding: 1.5rem;
     font-weight: 400;
     font-size:12px;
@@ -417,7 +422,8 @@ li>a:active {
     width: 100px;
     height: 32px;
     margin-top:1rem;
-    margin-left:3rem;
+    margin-left:4rem;
+    border: none;
 
 }
 
@@ -427,5 +433,5 @@ li>a:active {
     line-height:18px; 
     color: #350F57;
     margin-top:0.8rem;
-    margin-left:2.1rem;
+    margin-left:3.1rem;
 }

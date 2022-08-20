@@ -89,6 +89,7 @@ li>a:active {
     font-weight: 400;
     line-height: 22px;
 }
+
 /*aligns the  first image (on thel eft) and its contents  correctly*/
 .images-flex {
     display: flex;
@@ -129,7 +130,8 @@ li>a:active {
     line-height: 22px;
 
 }
- /*adds border to image*/
+
+/*adds border to image*/
 #imgOne {
     border: 2px solid #2691d9;
     border-radius: 20px;
@@ -141,7 +143,7 @@ li>a:active {
     position: relative;
     left: 26.6rem;
     bottom: 11rem;
-    box-shadow: 0px  2px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     width: 414px;
     height: 300px;
     padding: 0px 8px;
@@ -149,14 +151,15 @@ li>a:active {
 
 .box2 {
     position: relative;
-    left: 38.5rem;
+    left: 38rem;
     bottom: 28rem;
 }
 
 #dragD {
     position: relative;
     top: 0.6rem;
-    right: 0.5rem
+    right: 0.2rem;
+    left: 0.1rem;
 }
 
 .or2 {
@@ -173,7 +176,7 @@ li>a:active {
 /*aligns the texts under the images*/
 .under2 {
     position: relative;
-    top:4rem;
+    top: 4rem;
     right: 10rem;
     width: 144px;
     text-align: center;
@@ -181,6 +184,7 @@ li>a:active {
     font-weight: 400;
     line-height: 22px;
 }
+
 /*adds  a different color to the "enter url" text*/
 #color {
     color: #2691d9;
@@ -193,49 +197,48 @@ button {
     border-radius: 8px;
     color: #fcfcfc;
     height: 32px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
     cursor: pointer;
-    text-align: center;
 }
 
 /*aligns the link icons */
 
 #link {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.4rem;
 }
 
 #linkMid {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.4rem;
 }
- 
+
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
     position: relative;
     bottom: 5px;
-    left: 5px;
+    left: 15px;
 }
 
 #lineUp {
     position: relative;
     bottom: 5px;
-    right: 5px;
+    right: 15px;
 }
 
 /*continue button below the page content */
 .continue {
     position: relative;
     left: 23rem;
-    bottom: 5rem;
+    bottom: 15rem;
     font-size: 16px;
     font-weight: 400;
     padding: 8px 44px;
-
-
+    width: 232px;
+    height: 48px;
 }
 
 /* second section :dashboard menu panel - left column*/
@@ -433,13 +436,13 @@ button {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem;
+    margin-left: 1.8rem;
     margin-top: 3rem;
 }
 
-#star {
-    margin-left: 0.5rem;
-    margin-top: 1rem;
+.star {
+    margin: 0.9rem;
+    margin-left: 2rem;
 }
 
 /*styling the feedback/ message box*/
