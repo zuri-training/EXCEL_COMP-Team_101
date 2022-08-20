@@ -185,12 +185,13 @@ button {
 .continue {
     position: relative;
     left: 7rem;
-    top: 16rem;
+    top: 3rem;
     font-size: 16px;
     font-weight: 400;
     padding: 8px 44px;
+    width: 232px;
+    height: 48px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
-
 }
 
 /* second section :dashboard menu panel - left column*/

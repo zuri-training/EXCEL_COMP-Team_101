@@ -92,43 +92,39 @@ li>a:active {
 }
 
 /*styling the select uploads by the left*/
-.select-files {
+.select-files{
     position: relative;
-    bottom: 10rem;
+    bottom:10rem;
     right: 10rem;
-    font-size: 16px;
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     margin-right: 1rem;
     color: #333333;
 }
-
-#choice {
-    font-size: 20px;
+#choice{
+    font-size:20px;
     font-weight: 500;
     line-height: 24px;
     margin-right: 1rem;
     color: #1A072C;
     margin-bottom: 1rem;
 }
-
-#radio {
-    margin-bottom: 1rem;
+#radio{
+    margin-bottom: 1.5rem;
 }
-
-input:hover {
+input:hover{
     cursor: pointer;
 }
-
 /*
 aligns the  first image (on thel eft) and its contents  correctly*/
 .images-flex {
     display: flex;
-
+    
 }
 
-.box1 {
-    font-size: 16px;
+.box1{
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     position: relative;
@@ -141,34 +137,32 @@ aligns the  first image (on thel eft) and its contents  correctly*/
 }
 
 #drag {
-    height: 80px;
+    height:80px;
     width: 80px;
     position: relative;
-    left: 7rem;
+    left:7rem;
     top: 3rem;
-
+     
 }
-
-.drag {
-    font-size: 20px;
+.drag{
+    font-size:20px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     margin-top: 5rem;
 }
-
 .or1 {
     text-align: center;
     margin-top: 1rem;
-    font-size: 12px;
+    font-size:12px;
     font-weight: 400;
-    line-height: 18px;
+    line-height:18px;
     color: #B3B3B3;
 }
 
 .btrow {
     text-align: center;
-    margin-top: 2.8rem;
+    margin-top: 2.8rem; 
 }
 
 /*adds  a different color to the "enter url" text*/
@@ -183,40 +177,39 @@ button {
     border-radius: 8px;
     color: #fcfcfc;
     height: 32px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-right:35px;
     cursor: pointer;
 }
 
 /*aligns the link icons */
-
 #link {
-
+    margin-left: 1rem;
     position: relative;
-    top: 0.6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-
+    top: 0.3rem;
 }
+
 
 /*aligns the lines on both sides of the word "OR"*/
 #lineup {
     position: relative;
     bottom: 5px;
-    left: 6px;
+    left: 20px;
+    width: 96px;
 }
 
 #lineUp {
     position: relative;
     bottom: 5px;
-    right: 6px;
+    right: 20px;
+    width: 96px;
 }
 
-.box2 {
-    font-size: 16px;
+
+.box2{
+    font-size:16px;
     font-weight: 400;
     line-height: 24px;
     position: relative;
@@ -230,9 +223,8 @@ button {
 
 .btrow2 {
     text-align: center;
-    margin-top: 2.8rem;
+    margin-top: 2.8rem; 
 }
-
 /* second section :dashboard menu panel - left column*/
 
 /*positions the items at the left-hand-side*/
@@ -422,18 +414,18 @@ button {
 
 
 /* styling the "give feedback" and the stars*/
-.giv {
+.giv{
     color: #9D50E1;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin-left: 2rem;
+    margin-left: 1.8rem; 
     margin-top: 3rem;
 }
 
-#star {
-    margin-left: 0.5rem;
-    margin-top: 1rem;
+.star{
+    margin: 0.9rem ;
+    margin-left: 2rem;
 }
 
 /*styling the feedback/ message box*/

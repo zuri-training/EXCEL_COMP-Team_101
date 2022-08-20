@@ -34,7 +34,7 @@ body {
     font-size: 24px;
     line-height:36px;
     color: #4d4d4d;
-    margin-left:4rem; 
+    margin-left:5.5rem; 
     margin-right:0.5rem;
     margin-top:1rem;
 }
@@ -89,13 +89,14 @@ body {
 button{
     position: relative;
     margin-left: 31rem;
-    margin-top: 10rem;
+    margin-top: 9rem;
     width: 200px;
     color: #FFFFFF;
     background-color: #2691D9;
     border: none;
     border-radius: 8px;
-    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-bottom:12px;
     padding-left: 16px;
     padding-right: 16px;
     cursor: pointer;

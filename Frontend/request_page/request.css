@@ -85,8 +85,16 @@ li > a:active {
 }
 
 .bg-blue {
+  margin-top: 0.25rem;
   background-color: #2691d9;
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 38px;
+  height: 30px;
+  width: 100px;
 }
+
 
 .bg-light-blue {
   background: #d2ebf9;
@@ -104,7 +112,7 @@ li > a:active {
 hr {
   position: absolute;
   width: 600px;
-  height: 0px;
+  height: 1px;
   left: 370px;
   top: 180px;
   border: 2px solid #E9E9E9;
@@ -166,8 +174,8 @@ label {
   position: absolute;
   width: 5px;
   height: 5px;
-  left: 1050px;
-  top: 630px;
+  left: 1100px;
+  top: 750px;
   background: #A76BDC;
   border-radius: 10px;
 }
@@ -192,12 +200,19 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
-
-
+input:placeholder-shown,
+textarea:placeholder-shown{
+  font-family: 'Axiforma' , sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #CCCCCC;
+}
+ 
 .form-fill {
-  width: 44%;
+  width: 49%;
+  margin-left: 5rem;
   height: 40px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -205,32 +220,29 @@ label {
   margin-bottom: 10px;
 }
 
-
-
-
 .request-content h1 {
   font-family: 'Axiforma', sans-serif;
   font-weight: 600;
   font-size: 25px;
-  /* line-height: 32px; */
+  line-height: 32px; 
   margin-top: 30px;
 }
 
 .request-content p {
   font-family: 'Axiforma', sans-serif;
   font-weight: 400;
-  font-size: 14.5px;
-  /* line-height: 24px; */
+  font-size: 14.5px; 
   margin-bottom: 100px;
 }
 
 #message {
-  height: 130px;
+  height: 272px;
+  width: 49%;
+  margin-left: 5rem;
 }
 
 .submit-btn {
   width: 44%;
-  justify-items: flex-start;
 }
 
 input, textarea {
@@ -246,7 +258,9 @@ input, textarea {
   border: none;
   border-radius: 5px;
 }
-
+button:hover{
+  cursor: pointer;
+}
 
 /* I added the footer code from here*/
 .footer-container {
@@ -258,9 +272,12 @@ input, textarea {
 .footer-container{
   display: flex;
   justify-content:space-around;
+  margin-top: 1rem;
 
 }
-
+.foot > a{
+  color: #FFFFFF;
+}
 @media screen and (max-width: 768px) {
   .row{
     flex-direction: column;
