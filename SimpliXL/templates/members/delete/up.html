@@ -20,17 +20,8 @@
       rel="upload.css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.cdnfonts.com/css/axiforma"
-      <!--
-      Latest
-      compiled
-      and
-      minified
-      JavaScript
-      --
-    />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/axiforma" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
@@ -42,7 +33,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-  </head>
   <style>
     .not-visible {
       display: none;
@@ -70,9 +60,8 @@
       text-align: center;
       padding: 40px 40px 70px;
     }
-    form * {
-      display: block;
-      margin: auto;
+    form label,
+    form input {
       margin-bottom: 20px;
     }
 
@@ -89,7 +78,40 @@
       align-items: center;
       justify-content: center;
     }
+
+    .continue {
+      display: inline-block;
+      background: blue;
+      padding: 10px 60px;
+      color: #fff;
+      font-weight: 700;
+      transition: all 0.4s;
+      display: none;
+      margin-top: 30px;
+    }
+
+    .continue:hover {
+      padding: 10px 80px;
+      background: darkblue;
+      color: #fff21a;
+      font-size: 18px;
+    }
+
+    label {
+      background-color: indigo;
+      color: white;
+      padding: 10px 60px;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    #file-chosen {
+      margin-left: 0.3rem;
+      font-family: sans-serif;
+    }
   </style>
+  </head>
 
   <body>
     <header>
@@ -124,22 +146,40 @@
     <section class="ee">
       <form method="post" id="upload_form">
         <div class="error"></div>
-        {% csrf_token %} {{form.as_p}}
-        <input type="submit" value="Upload" class="btn btn-primary" />
+
+        {% csrf_token %}
+
+        <!-- actual upload which is hidden -->
+        <input
+          type="file"
+          name="file_url"
+          required=""
+          id="id_file_url"
+          hidden
+        />
+
+        <!-- our custom upload button -->
+        <label for="id_file_url">Browse</label>
+
+        <!-- name of file chosen -->
+        <span id="file-chosen"></span>
 
         <div class="container" id="progress">
-        <div class="progress not-visible"></div>
-      </div>
-    </section>
-      </form>
+          <div class="progress not-visible"></div>
+        </div>
 
-      
+        <a href="#" class="btn continue">Continue</a>
+      </form>
+    </section>
 
     <script>
-      const uploadForm = document.getElementById("upload_form"),
-        input_file = document.getElementById("id_file_url"),
-        progress_bar = document.querySelector(".progress"),
-        error = document.querySelector(".error");
+      const label = document.querySelector("label");
+      const fileChosenDisplay = document.querySelector("#file-chosen");
+      const uploadForm = document.querySelector("#upload_form");
+      const input_file = document.querySelector("#id_file_url");
+      const progress_bar = document.querySelector(".progress");
+      const error = document.querySelector(".error");
+      const continueBtn = document.querySelector(".continue");
 
       function errorDisplay(value) {
         error.classList.add("show");
@@ -150,11 +190,23 @@
         }, 2000);
       }
 
-      $("#upload_form").submit(function (e) {
+      function formSuccess(link) {
+        input_file.disabled = true;
+        label.style.background = "#aaa";
+        uploadForm.reset();
+        continueBtn.href = link;
+        continueBtn.style.display = "inline-block";
+      }
+
+      $("#id_file_url").change(function (e) {
         e.preventDefault();
-        $form = $(this);
-        var formData = new FormData(this);
-        const media_data = input_file.files[0];
+
+        $form = uploadForm;
+        var formData = new FormData(uploadForm);
+
+        const media_data = this.files[0];
+        fileChosenDisplay.textContent = this.files[0].name;
+
         progress_bar.classList.add("not-visible");
 
         if (media_data != null) {
@@ -174,7 +226,6 @@
               $.ajax({
                 type: "POST",
                 url: " /members/ff/",
-                // url: POST_URL,
                 data: formData,
                 dataType: "json",
                 beforeSend: function () {},
@@ -182,15 +233,17 @@
                   const xhr = new window.XMLHttpRequest();
                   xhr.upload.addEventListener("progress", (e) => {
                     if (e.lengthComputable) {
-                      const percentProgress = (e.loaded / e.total) * 100;
+                      const percentProgress = Math.round(
+                        (e.loaded / e.total) * 100
+                      );
+                      console.log(percentProgress);
                       progress_bar.innerHTML = `<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: ${percentProgress}%" aria-valuenow="${percentProgress}" aria-valuemin="0" aria-valuemax="100">${percentProgress}%</div>`;
                     }
                   });
                   return xhr;
                 },
                 success: function (response) {
-                  uploadForm.reset();
-                  window.location.replace(`/members/file/${response.data}`);
+                  formSuccess(`/members/file/${response.data}`);
                 },
                 error: function (err) {
                   console.log(err);

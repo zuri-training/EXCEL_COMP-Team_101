@@ -9,13 +9,12 @@ urlpatterns = [
     # settings urls
     path('settings/', views.setting, name='settings'),
     path('tools/', views.tools, name='tools'),
-    path('profile-dashboard/', views.profile_dash, name='profile_dash'),
 
     path('welcome-dashboard/', views.welcome, name='welcome'),
     path('tour/', views.dash_tour1, name='tour'),
 
 
-
+    # File Upload Urls
     path('upload-file/', views.upload_file, name='upload_file'),
 
     path('upload-files/', views.upload_files, name='upload_files'),
@@ -26,14 +25,15 @@ urlpatterns = [
 
 
     # User Profile Urls
-    path('profile/', views.UserDetails.as_view(), name='profile'),
     path('delete/<int:pk>', views.DeleteUser.as_view(), name='delete'),
+    path('profile/<int:pk>',
+         views.UpdateUser.as_view(), name='profile_dash'),
+
 
     # File Upload Urls
     path('up/', views.uu.as_view(), name='upload'),
     path('ff/', views.uuu.as_view(), name='displays'),
     #     path("aa/", .as_view(), name="")
-
     #     path('upload/', views.UploadFilesView.as_view(), name='upload'),
     path('upload-history/', views.UploadFilesHistory.as_view(),
          name='upload-history'),

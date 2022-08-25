@@ -15,39 +15,47 @@ Profile{% endblock title%} {% block css %}
     </div>
 
     <div class="contain">
-      <form action="" class="name-side">
-        {% csrf_token %}
+      <form class="name-side" method="POST">
+        {% csrf_token %} 
+        
+        {% if form.errors %}
+          <div class="message error">
+            {% for field in form %} {% for error in field.errors %}
+              <p>{{ error }}</p>
+            {% endfor %} {% endfor %}
+          </div>
+        {% endif %} {% csrf_token %}
 
-        <label for="fname" id="fnames">{{ profile.full_name }}</label>
-        <label for="fname" id="fnames">Full Name</label>
+        <label for="id_full_name">Full name:</label>
         <input
           type="text"
-          id="fname"
-          name="fullname"
-          placeholder="Danjuma Tyson"
-          value=" {{user.full_name}} "
-          disabled
+          name="full_name"
+          value="{{ form.full_name.value }}"
+          maxlength="200"
+          id="id_full_name"
         />
 
-        <label for="fname" id="emails">{{ profile.email }}</label>
-
-        <label for="fname" id="emails">Email Address</label>
+        <label for="id_email_a"
+          >Email Address:
+          <span class="not-permitted">(Edit not permitted)</span></label
+        >
         <input
           type="email"
-          id="email"
-          name="emailaddress"
-          placeholder="danjumatyson@gmail.com"
-          value=" {{user.email}} "
+          name="email_address"
+          value="{{ user.email }}"
+          maxlength="254"
+          required=""
+          id="id_email_a"
           disabled
         />
-      </form>
 
-      <div class="Dbuttons">
-        <a href=" {% url 'members:delete' user.id %} " class="btn txts1">
-          Delete account
-        </a>
-        <button type="submit" class="btn txts2">Save Changes</button>
-      </div>
+        <div class="Dbuttons">
+          <a href=" {% url 'members:delete' user.id %} " class="btn txts1">
+            Delete account
+          </a>
+          <button type="submit" class="btn txts2">Save Changes</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>

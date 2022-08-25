@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
+  background-image: url("/static/images/29.jpg");
+  background-size: cover;
+  background-position: bottom;
   font-family: Axiforma, sans-serif;
 }
 
@@ -31,29 +29,30 @@ a {
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px 80px;
-  height: 80px;
+  justify-content: center;
+  height: 60px;
   line-height: 40px;
-  background: #FAFAFA;
+  background: #fafafa;
   box-shadow: 0px 2px 19px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .navbar {
   display: flex;
+  align-items: center;
 }
 
 .nav-link {
-  padding: 5px 30px;
-  display: block;
   transition: all 0.2s;
   color: #999999;
+  display: block;
+  padding: 0 20px;
 }
 
 /* removes text decoration on all links */
@@ -93,48 +92,130 @@ li > a:active {
   color: #2691d9;
 }
 
-.head {
-  align-items: center;
-  padding-top: 80px;
-  padding-left: 304px;
-  padding-right: 304px;
+.not-visible {
+  display: none;
+}
+
+.error {
+  background: red;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  display: none;
+  margin-bottom: 30px;
+}
+
+.show {
+  display: block;
+}
+
+.ee {
+  height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.head h2 {
-  font-size: 40px;
-  line-height: 48px;
-  align-items: center;
+form {
+  width: 40%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #fbfbfb;
   text-align: center;
+  padding: 40px 20px;
 }
 
-body {
-  background-image: url("./images/29.jpg");
+label {
+  background-color: indigo;
+  color: white;
+  padding: 10px 60px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  display: inline-block;
 }
 
-body {
-  font-family: Axiforma, sans-serif;
+#file-chosen {
+  display: block;
 }
 
-#larr {
+.btn-primary {
+  background: #b57ce9;
+  padding: 10px 60px;
+}
+
+.continue {
+  display: inline-block;
+  background-color: #2691d9;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 10px 60px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.4s;
+  display: none;
+}
+
+.continue:hover {
+  padding: 10px 80px;
+  background: darkblue;
+  color: #fff21a;
+  font-size: 18px;
+}
+
+#progress {
+  overflow: hidden;
+  margin: 20px auto 10px;
+}
+
+.progress {
+  border-radius: 8px;
+  background-color: rgb(212, 204, 204);
+}
+
+.bg-success {
+  font-size: 15px;
+  background-color: #1a072c;
+  text-align: center;
+  color: white;
+  border-radius: inherit;
+}
+
+/* SPREAD SHEET */
+.sep {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: darkblue;
+  margin-bottom: 30px;
+  padding: 20px 40px;
+}
+
+#arrow * {
+  color: #350f57;
+  color: white;
   font-size: 25px;
-}
-
-#arrow {
-  padding-left: 70px;
-  padding-top: 30px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #350F57;
 }
 
 a#on-arrow:focus {
   color: #1a1a1a;
 }
 
+.are {
+  display: flex;
+  gap: 20px;
+}
+.are button {
+  display: inline-block;
+  padding: 10px 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* 
 .rec-cont {
   margin-top: 20px;
   display: flex;
@@ -160,7 +241,7 @@ a#on-arrow:focus {
 #imgOne {
   width: 160px;
   height: 160px;
-  border: 2px solid #2691D9;
+  border: 2px solid #2691d9;
   border-radius: 16px;
   margin-left: 2rem;
   margin-top: 2rem;
@@ -251,4 +332,54 @@ a#on-arrow:focus {
   color: #ffffff;
   font-weight: 400;
   font-size: 16px;
+} */
+
+.content {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+table,
+th,
+td {
+  border: 1px solid white;
+}
+
+table {
+  background-color: rgba(41, 32, 32, 0.342);
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 40px;
+  overflow: scroll;
+  max-width: 50% !important;
+  width: 50% !important;
+  /* display: flex;
+  flex-direction: column; */
+  height: calc(100vh - 30vh);
+  table-layout: fixed;
+}
+
+tr > :first-child {
+  text-align: center;
+}
+
+/* tr {
+  width: 100%;
+} */
+
+th,
+td {
+  padding: 10px;
+  /* flex-grow: 2; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+thead th {
+  background-color: darkblue;
+  color: white;
+  text-align: left;
 }

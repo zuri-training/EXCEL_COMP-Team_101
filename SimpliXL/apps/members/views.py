@@ -4,6 +4,7 @@ import pathlib
 import random
 import uuid
 import pandas as pd
+import numpy as np
 
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -94,6 +95,30 @@ class uuu(CreateView):
         return reverse_lazy('members:home')
 
 
+def color_dupes(x):
+    c1 = 'background-color:red'
+    c2 = ''
+    cond = x.stack().duplicated(keep=False).unstack()
+    df1 = pd.DataFrame(np.where(cond, c1, c2),
+                       columns=x.columns, index=x.index)
+    return df1
+    # if df has many columns: df.style.apply(color_dupes,axis=None,subset=['A','B'])
+
+
+# def cc(s):
+#     is_max = s == s.max()
+#     return ['background-color: red' if v else '' for v in is_max]
+#     color = 'red' if x < 2 else 'black'
+#     return 'color: %s' % color
+
+def cc(s, dup):
+    for i in s:
+        if i in dup:
+            return ['background-color: red']
+        else:
+            pass
+
+
 @login_required
 def load_file(request, actual_file_name):
     actual_file = f"{settings.MEDIA_ROOT}/temp/{actual_file_name}"
@@ -108,9 +133,15 @@ def load_file(request, actual_file_name):
     elif file_extension == ".xls" or file_extension == ".xlsx":
         data = pd.read_excel(actual_file)
 
-    dup = data.drop_duplicates()
+    dup = data.drop_duplicates().to_html()
+
+    dupli = data[data.duplicated(keep=False)].index.values
+    # data = data.style.apply(lambda x: [
+    #                         'background:green; color:#fff;' if i not in dupli else '' for i in x])
+    data = data.style.apply(
+        lambda x: ['background:red; color:#fff;' if x.name in dupli else '' for i in x], axis=1)
+    exp = data.to_excel("sample.xlsx", engine='openpyxl')
     data = data.to_html()
-    dup = dup.to_html()
 
     return render(request, "members/spreadsheet.html", {'form': data, 'form1': dup})
 
@@ -204,6 +235,16 @@ class UserDetails(LoginRequiredMixin, ListView):
     def get_queryset(self):
         email = self.request.user.email
         return CustomUser.objects.get(email=email)
+
+
+class UpdateUser(LoginRequiredMixin, UpdateView):
+    model = CustomUser
+    fields = ["full_name", ]
+    template_name = "members/profile-dash.html"
+    success_url: reverse_lazy('members:home')
+
+    def get_success_url(self):
+        return reverse_lazy("members:home")
 
 
 class DeleteUser(LoginRequiredMixin, DeleteView):

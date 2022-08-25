@@ -108,3 +108,17 @@ input::placeholder {
 .txts2 {
   background: #2691d9;
 }
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+.not-permitted {
+  color: red;
+  font-style: italic;
+  font-size: 12px;
+}
+
+label.not-permitted {
+  cursor: not-allowed;
+}

@@ -10,7 +10,9 @@
   </head>
   <body class="delete-body">
     <form method="POST" class="deleteForm">
-      <a href=" {% url 'members:profile_dash' %}" class="backBtn delPageBtn"
+      <a
+        href=" {% url 'members:profile_dash' user.id %}"
+        class="backBtn delPageBtn"
         >Go back</a
       >
       <h1>Delete Your Account</h1>
